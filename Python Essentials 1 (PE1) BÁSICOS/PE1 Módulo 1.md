@@ -1,7 +1,7 @@
 # Python Essentials 1:
 # Módulo 1
 
-# Introdução ao Python e à programação informática
+## Introdução ao Python e à programação informática
 
 Neste módulo, aprenderá sobre:
 
