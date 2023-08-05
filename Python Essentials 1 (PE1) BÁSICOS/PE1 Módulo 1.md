@@ -121,16 +121,53 @@ Se a linha parecer boa, o intérprete tenta executá-la (nota: cada linha é nor
 Pode perguntar agora: o que é melhor? O modelo "compilador" ou o modelo "intérprete"? Não há uma resposta óbvia. Se houvesse, um destes modelos já teria deixado de existir há muito tempo. Ambos têm as suas vantagens e as suas desvantagens.
 
 ## Compilação vs. Interpretação - vantagens e desvantagens
-|teste|**COMPILAÇÃO**|**INTERPRETAÇÃO**|
-|**VANTAGENS**|a execução do código traduzido é geralmente mais rápida;|pode executar o código assim que o concluir - não há fases adicionais de tradução;|
-|teste|apenas o utilizador tem de ter o compilador - o end-user (utilizador final) pode usar o código sem ele;|o código é armazenado usando linguagem de programação, não de máquina - isto significa que pode ser executado em computadores utilizando diferentes linguagens de máquina; não se compila o código separadamente para cada arquitetura diferente.|
-|teste|o código traduzido é armazenado utilizando linguagem de máquina - como é muito difícil de entender, as suas próprias invenções e truques de programação provavelmente permanecerão segredo.|teste|
-|**DESVANTAGENS**|a compilação em si pode ser um processo muito demorado - pode não ser capaz de executar o seu código imediatamente após qualquer alteração;|não espere que a interpretação aumente o seu código para alta velocidade - o seu código irá partilhar o poder do computador com o intérprete, pelo que não pode ser realmente rápido;|
-|teste|tem de ter tantos compiladores quanto plataformas de hardware em que queira que o seu código seja executado|tanto você como o end-user têm de ter o intérprete para executar o seu código.|
+
+### VANTAGENS
+
+#### COMPILAÇÃO
+
+* a execução do código traduzido é geralmente mais rápida;
+* apenas o utilizador tem de ter o compilador - o end-user (utilizador final) pode usar o código sem ele;
+* o código traduzido é armazenado utilizando linguagem de máquina - como é muito difícil de entender, as suas próprias invenções e truques de programação provavelmente permanecerão segredo.
+
+#### INTERPRETAÇÃO
+
+* pode executar o código assim que o concluir - não há fases adicionais de tradução;
+* o código é armazenado usando linguagem de programação, não de máquina - isto significa que pode ser executado em computadores utilizando diferentes linguagens de máquina; não se compila o código separadamente para cada arquitetura diferente.
+
+### DESVANTAGENS
+
+#### COMPILAÇÃO
+
+* a compilação em si pode ser um processo muito demorado - pode não ser capaz de executar o seu código imediatamente após qualquer alteração;
+* tem de ter tantos compiladores quanto plataformas de hardware em que queira que o seu código seja executado.
+
+#### INTERPRETAÇÃO
+
+* não espere que a interpretação aumente o seu código para alta velocidade - o seu código irá partilhar o poder do computador com o intérprete, pelo que não pode ser realmente rápido;
+* tanto você como o end-user têm de ter o intérprete para executar o seu código.
 
 ## O que significa tudo isto para si?
 
 * O Python é uma **linguagem interpretada**. Isto significa que herda todas as vantagens e desvantagens descritas. Naturalmente, acrescenta algumas das suas características únicas a ambos os conjuntos.
 * Se quiser programar em Python, precisará do **intérprete Python**. Não será capaz de executar o seu código sem ele. Felizmente, **o Python é gratuito**. Esta é uma das suas vantagens mais importantes.
 
-Devido a razões históricas, as linguagens concebidas para serem utilizadas na forma de interpretação são muitas vezes chamadas linguagens de scripting, enquanto os source programs codificados que as utilizam são chamados scripts.
+Devido a razões históricas, as linguagens concebidas para serem utilizadas na forma de interpretação são muitas vezes chamadas **linguagens de scripting**, enquanto os source programs codificados que as utilizam são chamados **scripts.**
+
+## O que é o Python?
+
+O Python é uma linguagem de programação de grande utilização, interpretada, orientada a objetos, e de alto nível com semântica dinâmica, utilizada para programação de uso geral.
+
+E embora possa conhecer o python (pitão) como uma grande cobra, o nome da linguagem de programação Python vem de uma antiga série de comédia televisiva da BBC chamada **Monty Python's Flying Circus.**
+
+No auge do seu sucesso, a equipa Monty Python estava a realizar os seus sketches para audiências ao vivo em todo o mundo, incluindo no Hollywood Bowl.
+
+Uma vez que os Monty Python são considerados um dos dois nutrientes fundamentais para um programador (sendo o outro pizza), o criador de Python nomeou a linguagem em honra do programa de televisão.
+
+## Quem criou o Python?
+
+Uma das características espantosas de Python é o facto de ser realmente o trabalho de uma pessoa. Normalmente, novas linguagens de programação são desenvolvidas e publicadas por grandes empresas que empregam muitos profissionais, e devido às regras de direitos de autor, é muito difícil nomear qualquer uma das pessoas envolvidas no projeto. O Python é uma exceção.
+
+Não há muitas linguagens cujos autores sejam conhecidos pelo nome. O Python foi criado por **Guido van Rossum**, nascido em 1956 em Haarlem, Holanda. É claro que Guido van Rossum não desenvolveu e evoluiu ele próprio todos os componentes de Python.
+
+![Guido Von Rossum](imagens/GuidoVanRossum.jpg)
