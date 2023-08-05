@@ -251,11 +251,11 @@ enquanto esta não o fará:
 
 ```print("\\")```
 
-![Barra Escape](Imagens/BarraEcape.jpg)
-
 2. Nem todos os pares de escape (a barra invertida acoplada a outro caratere) significam algo.
 
 Experimente o seu código no editor, execute-o e veja o que acontece.
+
+![Barra Escape](Imagens/BarraEcape.jpg)
 
 ## A função print() - utilizar múltiplos argumentos
 
@@ -403,5 +403,5 @@ Sem ```print()```, não seria capaz de ver nenhum resultado.
 
 8. Os **argumentos de keyword** são aqueles cujo significado não é ditado pela sua localização, mas por uma palavra especial (keyword) utilizada para os identificar.
 
-9. Os loops ```end``` e ```sep``` podem ser usados para formatar o output da função ```print()``` . O parâmetro ```sep``` especifica o separador entre os argumentos de output (por exemplo, o parâmetro p```rint("H", "E", "L", "L", "O", sep="-")```), enquanto o parâmetro ```end``` especifica o que imprimir no final da declaração print.
+9. Os loops ```end``` e ```sep``` podem ser usados para formatar o output da função ```print()``` . O parâmetro ```sep``` especifica o separador entre os argumentos de output (por exemplo, o parâmetro ```print("H", "E", "L", "L", "O", sep="-")```), enquanto o parâmetro ```end``` especifica o que imprimir no final da declaração print.
 
