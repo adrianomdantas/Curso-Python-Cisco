@@ -1,5 +1,5 @@
 # Python Essentials 1:
-# Módulo 2
+# Módulo 2.1
 
 ##Tipos de dados, variáveis, operações básicas de input-output, operadores básicos
 
