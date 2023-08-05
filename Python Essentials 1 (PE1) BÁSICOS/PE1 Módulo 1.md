@@ -121,12 +121,12 @@ Se a linha parecer boa, o intérprete tenta executá-la (nota: cada linha é nor
 Pode perguntar agora: o que é melhor? O modelo "compilador" ou o modelo "intérprete"? Não há uma resposta óbvia. Se houvesse, um destes modelos já teria deixado de existir há muito tempo. Ambos têm as suas vantagens e as suas desvantagens.
 
 ## Compilação vs. Interpretação - vantagens e desvantagens
-||**COMPILAÇÃO**|**INTERPRETAÇÃO**|
+|teste|**COMPILAÇÃO**|**INTERPRETAÇÃO**|
 |**VANTAGENS**|a execução do código traduzido é geralmente mais rápida;|pode executar o código assim que o concluir - não há fases adicionais de tradução;|
-||apenas o utilizador tem de ter o compilador - o end-user (utilizador final) pode usar o código sem ele;|o código é armazenado usando linguagem de programação, não de máquina - isto significa que pode ser executado em computadores utilizando diferentes linguagens de máquina; não se compila o código separadamente para cada arquitetura diferente.|
-||o código traduzido é armazenado utilizando linguagem de máquina - como é muito difícil de entender, as suas próprias invenções e truques de programação provavelmente permanecerão segredo.||
+|teste|apenas o utilizador tem de ter o compilador - o end-user (utilizador final) pode usar o código sem ele;|o código é armazenado usando linguagem de programação, não de máquina - isto significa que pode ser executado em computadores utilizando diferentes linguagens de máquina; não se compila o código separadamente para cada arquitetura diferente.|
+|teste|o código traduzido é armazenado utilizando linguagem de máquina - como é muito difícil de entender, as suas próprias invenções e truques de programação provavelmente permanecerão segredo.|teste|
 |**DESVANTAGENS**|a compilação em si pode ser um processo muito demorado - pode não ser capaz de executar o seu código imediatamente após qualquer alteração;|não espere que a interpretação aumente o seu código para alta velocidade - o seu código irá partilhar o poder do computador com o intérprete, pelo que não pode ser realmente rápido;|
-||tem de ter tantos compiladores quanto plataformas de hardware em que queira que o seu código seja executado|tanto você como o end-user têm de ter o intérprete para executar o seu código.|
+|teste|tem de ter tantos compiladores quanto plataformas de hardware em que queira que o seu código seja executado|tanto você como o end-user têm de ter o intérprete para executar o seu código.|
 
 ## O que significa tudo isto para si?
 
