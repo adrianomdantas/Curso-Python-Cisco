@@ -183,5 +183,193 @@ Nota:
 o **expoente** (o valor após o E) deve ser um número inteiro;
 a **base** (o valor à frente do E) pode ser um inteiro.
 
+## Codificação de floats
+
+Vejamos como esta convenção é utilizada para registar números que são muito pequenos (no sentido do seu valor absoluto, que está próximo de zero).
+
+Uma constante física chamada constante de Planck (e denotada com um h), de acordo com os manuais escolares, tem o valor de: **6.62607 x <sup>10<sup>-34**.
+
+Se quiser utilizá-la num programa, deve escrevê-la desta forma:
+
+```
+6.62607E-34
+```
+
+Nota: o fato de ter escolhido uma das formas possíveis de codificação de valores float não significa que o Python o apresente da mesma forma.
+
+O Python pode, por vezes, escolher uma **notação diferente** da sua.
+
+
+Por exemplo, digamos que decidiu usar o seguinte float literal:
+
+```
+0.0000000000000000000001
+```
+
+Quando executa este literal através do Python:
+
+```
+print(0.0000000000000000000001)
+```
+
+este é o resultado:
+
+```
+1e-22
+```
+
+O Python escolhe sempre **a forma mais económica de apresentação do número**, e deve ter isto em consideração ao criar literais.
+
+## Strings
+
+Strings são utilizadas quando é necessário processar texto (como nomes de todos os tipos, endereços, romances, etc.), não números.
+
+Já sabe um pouco sobre elas. Por exemplo, que as **strings precisam de aspas** da mesma forma que floats precisam de pontos.
+
+Esta é uma string muito típica: `"I am a string."`
+
+No entanto, há um senão. O senão é como codificar uma aspa dentro de uma string que já está delimitada por aspas.
+
+Vamos supor que queremos imprimir uma mensagem muito simples dizendo:
+
+```
+I like "Monty Python"
+```
+
+Como fazemos isto sem gerar um erro? Existem duas soluções possíveis.
+
+A primeira baseia-se no conceito que já conhecemos do **caratere de escape**, que como se deve lembrar é representado pela **barra invertida**. A barra invertida também pode escapar às aspas. Uma aspa precedida por uma barra invertida muda o seu significado - não é um delimitador, mas apenas uma aspa. Isto funcionará como pretendido:
+
+```
+print("I like \"Monty Python\"")
+```
+
+Nota: existem duas aspas escapadas dentro da string - consegue vê-las?
+
+A segunda solução pode ser um pouco surpreendente. O Python pode utilizar **uma apóstrofe em vez de uma aspa**. Qualquer um destes carateres pode delimitar strings, mas deve ser **consistente**.
+
+Se abrir uma string com uma aspa, tem de fechá-la com uma aspa.
+
+Se começar uma string com uma apóstrofe, tem de a acabar com uma apóstrofe.
+
+Este exemplo também funcionará:
+
+```
+print('I like "Monty Python"')
+```
+
+Nota: não precisa de fazer nenhum escape aqui.
+
+## Codificar strings
+
+Agora, a questão seguinte é: como incorporar uma apóstrofe numa string colocada entre apóstrofes?
+
+Já deve saber a resposta, ou, para ser mais preciso, as duas respostas possíveis.
+
+Tente imprimir uma string contendo a seguinte mensagem:
+
+I'm Monty Python.
+
+Sabe como fazê-lo? Verifique abaixo para ver:
+```
+print('I\'m Monty Python.')
+```
+ou
+```
+print("I'm Monty Python.")
+```
+Como pode ver, a barra invertida é uma ferramenta muito poderosa - pode escapar não só às aspas, mas também às apóstrofes.
+
+Já o mostrámos, mas queremos enfatizar mais uma vez este fenómeno - **uma string pode estar vazia** - pode não conter quaisquer carateres.
+
+Uma string vazia ainda assim permanece uma string:
+
+```
+''
+""
+```
+
+## Valores Booleanos
+
+Para concluir com os literais de Python, existem mais dois.
+
+Não são tão óbvios como os anteriores, uma vez que são usados para representar um valor muito abstrato - **truthfulness** (veracidade).
+
+Cada vez que pergunta ao Python se um número é maior que outro, a pergunta resulta na criação de alguns dados específicos - um valor **Booleano**.
+
+O nome vem de George Boole (1815-1864), autor da obra fundamental, As Leis do Pensamento, que contém a definição de **álgebra Booleana** - uma parte da álgebra que faz uso de apenas dois valores distintos: `True` e `False`, denotado como `1` e `0`.
+
+Um programador escreve um programa, e o programa faz perguntas. O Python executa o programa, e fornece as respostas. O programa deve ser capaz de reagir de acordo com as respostas recebidas.
+
+Felizmente, os computadores conhecem apenas dois tipos de respostas:
+
+* Sim, isto é verdade;
+* Não, isto é falso.
+Nunca obterá uma resposta como: *Não sei* ou *Provavelmente sim*, *mas não sei ao certo*.
+
+O Python, então, é um réptil **binário**.
+
+Estes dois valores Booleanos têm denotações rigorosas em Python:
+```
+True
+False
+```
+Não se pode mudar nada - é preciso tomar estes símbolos tal como eles são, incluindo case-sensitivity.
+
+Desafio: Qual será o output do seguinte snippet de código?
+```
+print(True > False)
+print(True < False)
+```
+
+Execute o código na Sandbox para verificar. Consegue explicar o resultado?
+
+## Key takeaways
+
+1. Os **literais** são notações para representar alguns valores fixos em código. O Python tem vários tipos de literais - por exemplo, um literal pode ser um número (literais numéricos, por exemplo, `123`), ou uma string (literais de string, por exemplo, “Eu sou um literal.“).
+
+2. O **sistema binário** é um sistema de números que emprega 2 como base. Portanto, um número binário é composto apenas por 0s e 1s, por exemplo, `1010` é 10 em decimal.
+
+Os sistemas de numeração octal e hexadecimal, do mesmo modo, empregam 8 e 16 como suas bases, respetivamente. O sistema hexadecimal utiliza os números decimais e seis letras extra.
+3. **Inteiros** (ou simplesmente **int**s) são um dos tipos numéricos suportados pelo Python. São números escritos sem um componente fracionário, por exemplo, `256`, ou `-1` (inteiros negativos).
+
+4. Números de **floating-point** (ou simplesmente **float**s) são outro dos tipos numéricos suportados pelo Python. São números que contêm (ou são capazes de conter) um componente fracionário, por exemplo `1.27`.
+
+5. Para codificar uma apóstrofe ou uma aspa dentro de uma string, pode usar o caratere de escape, por exemplo, `'I\'m happy.'`, ou abrir e fechar a string utilizando um conjunto de símbolos opostos aos que deseja codificar, por exemplo `"I'm happy."` codificar uma apóstrofe, e `'He said "Python", not "typhoon"'` para codificar umas aspas (duplas).
+
+6. **Valores booleanos** são os dois objetos constantes `True` e `False` usado para representar valores de verdade (em contextos numéricos `1` é `True`, enquanto `0` é `False`.
+
+EXTRA
+
+Há mais um literal especial que é usado em Python: o literal `None` . Este literal é um chamado `NoneType` objeto, e é utilizado para representar **a ausência de um valor**. Em breve, contar-lhe-emos mais sobre isso.
+
+**Exercício 1**
+
+Que tipos de literais são os dois exemplos seguintes?
+
+`"Hello ", "007"`
+
+Verifique
+Ambos são strings/literais de strings.
+
+
+**Exercício 2**
+
+Que tipos de literais são os quatro exemplos seguintes?
+
+`"1.5", 2.0, 528, False`
+
+Verifique
+O primeiro é uma string, o segundo é um literal numérico (um float), o terceiro é um literal numérico (um inteiro), e o quarto é um literal booleano.
+
+
+**Exercício 3**
+
+Qual é o valor decimal do seguinte número binário?
+
+`1011`
+
+Verifique
+É 11, porque (2**0) + (2**1) + (2**3) = 11
 
 
