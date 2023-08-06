@@ -187,7 +187,7 @@ a **base** (o valor à frente do E) pode ser um inteiro.
 
 Vejamos como esta convenção é utilizada para registar números que são muito pequenos (no sentido do seu valor absoluto, que está próximo de zero).
 
-Uma constante física chamada constante de Planck (e denotada com um h), de acordo com os manuais escolares, tem o valor de: **6.62607 x <sup>10<sup>-34**.
+Uma constante física chamada constante de Planck (e denotada com um h), de acordo com os manuais escolares, tem o valor de: **6.62607 x 10<sup>-34</sup>**.
 
 Se quiser utilizá-la num programa, deve escrevê-la desta forma:
 
