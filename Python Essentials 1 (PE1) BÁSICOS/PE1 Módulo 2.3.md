@@ -331,10 +331,10 @@ Veja a tabela abaixo:
 
 |Prioridade|Operador||
 |---|---|---|	
-|1	|+, -	|unário|
-|2	|**	||
-|3	|*, /, //, %||	
-|4	|+, -	|binário|
+|1	|`+`, `-`	|unário|
+|2	|`**`	||
+|3	|`*`, `/`, `//`, `%`||	
+|4	|`+`, `-`	|binário|
 
 Nota: enumeramos os operadores por ordem **das prioridades mais altas (1) até às mais baixas (4).**
 
