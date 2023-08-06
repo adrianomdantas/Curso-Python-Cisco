@@ -180,14 +180,14 @@ Nota: o operador às vezes é chamado modulo noutras linguagens de programação
 
 Dê uma vista de olhos no snippet - tente prever o seu resultado e, em seguida, execute-o:
 
-print(14 % 4)
+`print(14 % 4)`
 
 
 Como pode ver, o resultado é dois. Esta é a razão:
 
-14 // 4 dá 3 → este é o quociente inteiro;
-3 * 4 dá 12 → como resultado da multiplicação de quocientes e divisores;
-14 - 12 dá 2 → este é o resto.
+`14 // 4` dá `3` → este é o quociente inteiro;
+`3 * 4` dá `12` → como resultado da multiplicação de quocientes e divisores;
+`14 - 12` dá `2` → este é o resto.
 
 Este exemplo é um pouco mais complicado:
 
