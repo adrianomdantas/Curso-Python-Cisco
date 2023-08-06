@@ -13,6 +13,6 @@ Treinamento de Python baseado no treinamento da Cisco
    * PE1 Módulo 2.1 - O seu primeiro programa
    * PE1 Módulo 2.2 - Literais Python
    * PE1 Módulo 2.3 - Operadores - ferramentas de manipulação de dados
-   * PE1 Módulo 2.4
+   * PE1 Módulo 2.4 - Variáveis - caixas data-shaped
 3. PE1: Módulo 3 – Valores Booleanos, Execução Condicional, Loops, Listas e Processamento de Lista, Operações Lógicas e Bitwise
 4. PE1: Módulo 4 – Funções, Tuples, Dicionários e Processamento de DadosExternal tool
