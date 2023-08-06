@@ -9,6 +9,7 @@ Os fundamentos da programação informática, ou seja, como o computador funcion
 a diferença entre compilação e interpretação;
 o que é o Python, como se posiciona entre outras linguagens de programação, e o que distingue as diferentes versões de Python
 
+## 1.1.1.1 Programação - noções básicas
 ## Como funciona um programa de computador?
 
 Este curso tem como objetivo mostrar o que é a linguagem Python e para o que é utilizada. Vamos começar a partir do básico.
@@ -34,6 +35,7 @@ Estas quatro simples ações formam um programa. É claro que estes exemplos nã
 
 **Linguagem (Language)** é a palavra-chave.
 
+## 1.1.1.2 Programação - noções básicas
 ## Linguagens naturais vs. linguagens de programação
 
 Uma linguagem é um meio (e uma ferramenta) para expressar e registar pensamentos. Há muitas linguagens ao nosso redor. Algumas delas não requerem nem a fala nem a escrita, como a linguagem corporal; é possível expressar os seus sentimentos mais profundos com muita precisão sem dizer uma palavra.
@@ -52,6 +54,7 @@ Atualmente, nenhum computador é capaz de criar uma nova linguagem. No entanto, 
 
 São criadas novas palavras todos os dias e as palavras antigas desaparecem. Estas línguas são chamadas linguagens **naturais.**
 
+## 1.1.1.3 Programação - noções básicas
 ## O que faz uma linguagem?
 
 Podemos dizer que cada linguagem (de máquina ou natural, não importa) é constituída pelos seguintes elementos:
@@ -72,6 +75,7 @@ Tais linguagens são muitas vezes chamadas linguagens de programação de alto n
 
 Um programa escrito numa linguagem de programação de alto nível é chamado **source code** (em contraste com o machine code executado por computadores). Da mesma forma, o ficheiro que contém o source code chama-se **source file**.
 
+## 1.1.1.4 Programação - noções básicas | Compilação vs. Interpretação
 ## Compilação vs. interpretação
 
 A programação informática é o ato de compor os elementos da linguagem de programação selecionada pela ordem que provocará o efeito desejado. O efeito pode ser diferente em cada caso específico - depende da imaginação, conhecimento e experiência do programador.
@@ -96,6 +100,7 @@ Devido a algumas razões muito fundamentais, uma linguagem de programação part
 
 Há muito poucas linguagens que possam ser compiladas e interpretadas. Normalmente, uma linguagem de programação é projetada com este fator na mente dos seus construtores - será ela compilada ou interpretada?
 
+## 1.1.1.5 Programação - noções básicas | Compilação vs. Interpretação
 ## O que é que o intérprete realmente faz?
 
 Vamos assumir mais uma vez que escreveu um programa. Agora, existe como um **arquivo de computador**: um programa de computador é na realidade um pedaço de texto, por isso o source code é normalmente colocado em **arquivos de texto.**
@@ -120,6 +125,7 @@ Se a linha parecer boa, o intérprete tenta executá-la (nota: cada linha é nor
 
 Pode perguntar agora: o que é melhor? O modelo "compilador" ou o modelo "intérprete"? Não há uma resposta óbvia. Se houvesse, um destes modelos já teria deixado de existir há muito tempo. Ambos têm as suas vantagens e as suas desvantagens.
 
+## 1.1.1.6 Programação - noções básicas | Compilação vs. Interpretação
 ## Compilação vs. Interpretação - vantagens e desvantagens
 
 ### VANTAGENS
@@ -154,6 +160,7 @@ Pode perguntar agora: o que é melhor? O modelo "compilador" ou o modelo "intér
 
 Devido a razões históricas, as linguagens concebidas para serem utilizadas na forma de interpretação são muitas vezes chamadas **linguagens de scripting**, enquanto os source programs codificados que as utilizam são chamados **scripts.**
 
+## 1.1.2.1 Python - uma ferramenta, não um réptil
 ## O que é o Python?
 
 O Python é uma linguagem de programação de grande utilização, interpretada, orientada a objetos, e de alto nível com semântica dinâmica, utilizada para programação de uso geral.
@@ -174,6 +181,7 @@ Não há muitas linguagens cujos autores sejam conhecidos pelo nome. O Python fo
 
 A rapidez com que o Python se espalhou pelo mundo é o resultado do trabalho contínuo de milhares (muitas vezes anónimos) de programadores, testadores, utilizadores (muitos deles não são especialistas em IT) e entusiastas, mas deve dizer-se que a primeira ideia (a semente da qual o Python brotou) chegou a uma cabeça - a de Guido.
 
+## 1.1.2.2 Python - uma ferramenta, não um réptil
 ## Um projeto de programação de hobby
 As circunstâncias em que o Python foi criado são um pouco confusas. De acordo com Guido van Rossum:
 
@@ -197,6 +205,7 @@ Seja como for, continua a ocupar uma posição elevada no top dez do [PYPL Popul
 
 O Python não é uma linguagem jovem. É **madura e confiável**. Não é uma one-hit wonder. É uma estrela brilhante no firmamento da programação, e o tempo gasto a aprender Python é um investimento muito bom.
 
+## 1.1.2.3 Python - uma ferramenta, não um réptil | Porquê Python?
 ## O que torna o Python especial?
 
 Como é que os programadores, jovens e velhos, experientes e novatos, querem utilizá-lo? Como aconteceu que grandes empresas adotassem o Python e implementassem os seus principais produtos utilizando-o?
@@ -218,6 +227,7 @@ Deve também ser afirmado que o Python não é a única solução do seu género
 
 Tem muitos seguidores, mas há muitos que preferem outras linguagens e nem sequer consideram o Python para os seus projetos.
 
+## 1.1.2.4 Python - uma ferramenta, não um réptil | Porquê Python, porque não?
 ## Rivais do Python?
 
 O Python tem dois concorrentes diretos, com propriedades e predisposições comparáveis. Estes são:
@@ -243,6 +253,7 @@ Apesar da popularidade crescente de Python, ainda existem alguns nichos onde o P
 * **programação de baixo nível** (por vezes chamada programação "close to metal"): se quiser implementar um condutor ou motor gráfico extremamente eficaz, não utilizaria Python;
 * **aplicações para dispositivos móveis**: embora este território ainda esteja à espera de ser conquistado pelo Python, é muito provável que um dia tal venha a acontecer.
 
+## 1.1.3.1 Python 2 vs. Python 3
 ## Há mais do que um Python
 
 Existem dois tipos principais de Python, chamados Python 2 e Python 3.
@@ -267,6 +278,7 @@ Se vai iniciar um novo projeto Python, **deve usar Python 3, e esta é a versão
 
 Todas as amostras de código que irá encontrar durante o curso foram testadas contra Python 3.4, Python 3.6, Python 3.7, e Python 3.8.
 
+## 1.1.3.2 Há mais do que um Python: CPython e Cython
 ## Python aka CPython
 
 Para além do Python 2 e Python 3, existe mais de uma versão de cada uma. 
@@ -291,6 +303,7 @@ Como são conciliadas estas duas contradições? Uma solução é escrever as su
 
 É isto que o Cython pretende fazer - traduzir automaticamente o código Python (limpo e claro, mas não demasiado rápido) em código "C" (complicado e falador, mas ágil).
 
+## 1.1.3.3 Há mais do que um Python: Jython, PyPy e RPython
 ## Jython
 
 Outra versão do Python é chamada **Jython**.

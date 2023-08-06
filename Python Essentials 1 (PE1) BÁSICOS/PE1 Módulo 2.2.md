@@ -1,6 +1,7 @@
 # Python Essentials 1:
 # Módulo 2.2
 
+## 2.2.1.1 Literais Python
 ## Literais - os dados em si
 
 Agora que tem um pouco de conhecimento de algumas das poderosas características oferecidas pela função ```print()``` , é hora de aprender sobre algumas novas questões, e um novo termo importante - o **literal**.
@@ -28,6 +29,9 @@ E esta é a pista: `123` é um literal, e `c` não é.
 
 Utiliza literais **para codificar dados e para os colocar no seu código**. Vamos agora mostrar-lhe algumas convenções a que tem de obedecer quando utiliza o Python.
 
+## 2.2.1.2 Literais Python
+## Literais - os dados em si
+
 Comecemos com uma simples experiência - veja o snippet no editor.
 
 A primeira linha parece familiar. A segunda parece estar errada devido à visível falta de aspas.
@@ -51,6 +55,7 @@ O número é convertido em representação mecânica (um conjunto de bits). A fu
 
 Vamos agora gastar algum tempo a discutir os literais numéricos e a sua vida interna.
 
+## 2.2.1.3 Literais Python
 ## Inteiros
 
 Pode já saber um pouco sobre como os computadores efetuam cálculos sobre números. Talvez já tenha ouvido falar do **sistema binário**, e saiba que é o sistema que os computadores utilizam para armazenar números, e que eles podem realizar qualquer operação sobre eles.
@@ -85,6 +90,7 @@ E como codificamos números negativos em Python? Como de costume - adicionando u
 
 Os números positivos não precisam de ser precedidos pelo sinal de mais, mas é permitido, se o desejar fazer. As linhas a seguir descrevem o mesmo número: `+11111111` e `11111111`.
 
+## 2.2.1.4 Literais Python
 ## Inteiros: números octais e hexadecimais
 
 Há duas convenções adicionais em Python que são desconhecidas no mundo da matemática. A primeira permite-nos utilizar números numa representação octal.
@@ -107,6 +113,7 @@ A segunda convenção permite-nos utilizar números hexadecimais. Estes números
 
 ![hexadecimal](Imagens/Hexadecimal.jpg)
 
+## 2.2.1.5 Literais Python
 ## Floats
 
 Agora é hora de falar de outro tipo, que foi concebido para representar e armazenar os números que (como diria um matemático) têm uma **fração decimal não vazia**.
@@ -145,6 +152,7 @@ Por exemplo: o valor de `4.0` pode ser escrito como:
 ```
 Isto não mudará nem o seu tipo nem o seu valor.
 
+## 2.2.1.6 Literais Python
 ## Ints vs. floats
 
 O ponto decimal é essencialmente importante no reconhecimento de números de floating-point em Python.
@@ -183,6 +191,7 @@ Nota:
 o **expoente** (o valor após o E) deve ser um número inteiro;
 a **base** (o valor à frente do E) pode ser um inteiro.
 
+## 2.2.1.7 Literais Python
 ## Codificação de floats
 
 Vejamos como esta convenção é utilizada para registar números que são muito pequenos (no sentido do seu valor absoluto, que está próximo de zero).
@@ -220,6 +229,7 @@ este é o resultado:
 
 O Python escolhe sempre **a forma mais económica de apresentação do número**, e deve ter isto em consideração ao criar literais.
 
+## 2.2.1.8 Literais Python
 ## Strings
 
 Strings são utilizadas quando é necessário processar texto (como nomes de todos os tipos, endereços, romances, etc.), não números.
@@ -260,6 +270,7 @@ print('I like "Monty Python"')
 
 Nota: não precisa de fazer nenhum escape aqui.
 
+## 2.2.1.9 Literais Python
 ## Codificar strings
 
 Agora, a questão seguinte é: como incorporar uma apóstrofe numa string colocada entre apóstrofes?
@@ -289,6 +300,7 @@ Uma string vazia ainda assim permanece uma string:
 ""
 ```
 
+## 2.2.1.10 Literais Python 
 ## Valores Booleanos
 
 Para concluir com os literais de Python, existem mais dois.
@@ -324,6 +336,7 @@ print(True < False)
 
 Execute o código na Sandbox para verificar. Consegue explicar o resultado?
 
+## 2.2.1.12 RESUMO DA SECÇÃO
 ## Key takeaways
 
 1. Os **literais** são notações para representar alguns valores fixos em código. O Python tem vários tipos de literais - por exemplo, um literal pode ser um número (literais numéricos, por exemplo, `123`), ou uma string (literais de string, por exemplo, “Eu sou um literal.“).

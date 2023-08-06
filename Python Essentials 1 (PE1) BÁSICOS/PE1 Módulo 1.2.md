@@ -1,6 +1,7 @@
 # Python Essentials 1:
 # Módulo 1.2
 
+## 1.2.1.1 Comece a sua viagem em Python
 ## Como obter o Python e como conseguir utilizá-lo
 
 Existem várias maneiras de obter a sua própria cópia do Python 3, dependendo do sistema operativo que utilize.
@@ -33,7 +34,8 @@ Todos os utilizadores que não sejam Linux podem descarregar uma cópia em [http
 
 ![Terminal](Imagens/Terminal.jpg)
 
-## Descarregar e instalar o Python
+## 1.2.1.2 Comece a sua viagem em Python | Descarregar e instalar o Python
+## Baixar e instalar o Python
 
 Como o browser diz ao site onde entrou o sistema operativo que utiliza, o único passo que tem de dar é clicar na versão Python apropriada que deseja.
 
@@ -49,6 +51,7 @@ Se for um **utilizador MacOS**, uma versão do Python 2 pode já ter sido pré-i
 
 ![Pagina Python](Imagens/PaginaPython.jpg)
 
+## 1.2.1.3 Comece a sua viagem em Python
 ## Iniciar o seu trabalho com Python
 
 Agora que tem o Python 3 instalado, é altura de verificar se funciona, e fazer o primeiro uso do mesmo.
@@ -70,6 +73,7 @@ Navegue pelos menus do seu sistema operativo, encontre o IDLE algures sob Python
 
 ![Console Idle](Imagens/Console_Idle.jpg)
 
+## 1.2.1.4 Comece a sua viagem em Python
 ## Como escrever e executar o seu primeiro programa
 
 É agora tempo de escrever e executar o seu primeiro programa de Python 3. Será muito simples, por agora.
@@ -88,6 +92,7 @@ Clique em File (na nova janela), depois clique em Save as..., selecione uma past
 
 Nota: não defina nenhuma extensão para o nome do ficheiro que vai utilizar. O Python precisa que os seus ficheiros tenham a extensão .py, por isso deve confiar nas predefinições da janela de diálogo. A utilização da extensão padrão .py permite que o sistema operativo abra adequadamente estes ficheiros.
 
+## 1.2.1.5 Comece a sua viagem em Python
 ## Como escrever e executar o seu primeiro programa
 
 Agora coloque apenas uma linha na sua janela do editor recém-aberta e nomeada.
@@ -114,6 +119,7 @@ Tente executá-lo mais uma vez. E mais uma vez.
 
 Agora feche ambas as janelas e regresse ao ambiente de trabalho.
 
+## 1.2.1.6 Comece a sua viagem em Python
 ## Como estragar e corrigir o seu código
 
 Agora reinicie o IDLE.
@@ -144,11 +150,8 @@ Retire novamente o parêntesis final. O código torna-se incorreto. Contém agor
 
 Tente executar o programa novamente. O IDLE irá lembrá-lo de guardar o ficheiro modificado. Siga as instruções.
 
-Cada vez que colocar o parêntesis final no seu programa, o IDLE mostrará a parte do texto limitada com um par de parêntesis correspondentes. Isto ajuda-o a lembrar-se de ***os colocar em pares***.
-
-Retire novamente o parêntesis final. O código torna-se incorreto. Contém agora um erro de sintaxe. O IDLE não deve deixar que o execute.
-
-Tente executar o programa novamente. O IDLE irá lembrá-lo de guardar o ficheiro modificado. Siga as instruções.
+## 1.2.1.7 Comece a sua viagem em Python
+## Como estragar e corrigir o seu código
 
 Observe cuidadosamente todas as janelas.
 
@@ -168,6 +171,9 @@ Execute-o para ver se “sibila” novamente.
 
 Vamos estragar o código mais uma vez. Remova uma letra da palavra print. Execute o código pressionando F5. O que acontece agora?
 
+## 1.2.1.8 Comece a sua viagem em Python
+## Como estragar e corrigir o seu código
+
 Deve ter notado que a mensagem de erro gerada para o erro anterior é bastante diferente da primeira.
 
 ![Janela de erro 2](Imagens/JanelaErro2.jpg)
@@ -185,6 +191,7 @@ A mensagem (a vermelho) mostra (nas linhas subsequentes):
 
 Experimente criar novos ficheiros e executar o seu código. Tente fazer output de uma mensagem diferente para o ecrã, por exemplo ``` roar! ```, ``` meow ```, ou até mesmo talvez um ``` oink! ```. Tente estragar e corrigir o seu código - veja o que acontece.
 
+## 1.2.1.9 Conclusão do Módulo
 ## Parabéns!
 ## Concluiu o Módulo 1.
 

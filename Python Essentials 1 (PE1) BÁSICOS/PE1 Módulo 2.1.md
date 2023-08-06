@@ -1,7 +1,8 @@
 # Python Essentials 1:
 # Módulo 2.1
 
-##Tipos de dados, variáveis, operações básicas de input-output, operadores básicos
+
+## Tipos de dados, variáveis, operações básicas de input-output, operadores básicos
 
 Neste módulo, aprenderá:
 
@@ -10,6 +11,7 @@ Neste módulo, aprenderá:
 * o que são as variáveis e quais as regras que as regem;
 * como realizar operações básicas de input e output.
 
+## 2.1.1.1 O seu primeiro programa
 ## Hello, World!
 
 É tempo de começar a escrever algum **código Python real e funcional**. Vai ser muito simples por enquanto.
@@ -35,6 +37,7 @@ Como pode ver, o primeiro programa consiste nas seguintes partes:
 
 Cada um dos itens acima desempenha um papel muito importante no código.
 
+## 2.1.1.2 O seu primeiro programa
 ## A função print()
 
 Veja a linha de código abaixo:
@@ -66,6 +69,7 @@ O nome da função deve ser **significativo** (o nome da função print é evide
 
 Claro que, se vai fazer uso de qualquer função já existente, não tem influência no seu nome, mas quando começar a escrever as suas próprias funções, deve considerar cuidadosamente a sua escolha de nomes.
 
+## 2.1.1.3 O seu primeiro programa
 ## A função print()
 
 Como dissemos antes, uma função pode ter:
@@ -95,6 +99,7 @@ A função ``` print() ``` no nosso exemplo tem algum argumento?
 
 Claro que sim, mas o que são eles?
 
+## 2.1.1.4 O seu primeiro programa
 ## A função print()
 
 O único argumento entregue à função ``` print() ``` neste exemplo é uma **string**:
@@ -109,11 +114,11 @@ Pode imaginar que as aspas dizem algo como: o texto entre nós não é código. 
 
 Quase tudo o que colocar dentro das aspas será tomado literalmente, não como código, mas como **dados**. Tente jogar com esta string em particular - modificá-la, introduzir algum conteúdo novo, apagar algum do conteúdo existente.
 
-
 Há mais do que uma maneira de especificar uma string dentro do código Python, mas por agora, esta é suficiente.
 
 Até agora, aprendeu sobre duas partes importantes do código: a função e a string. Falámos sobre elas em termos de sintaxe, mas agora é altura de os discutir em termos de semântica
 
+## 2.1.1.5 O seu primeiro programa
 ## A função print()
 
 O nome da função (***print*** neste caso) juntamente com os parêntesis e o(s) argumento(s), formam a **invocação da função.**
@@ -138,6 +143,9 @@ Vamos ver:
 * quarto, a função executa o seu código, causa o efeito desejado (se houver um), avalia o(s) resultado(s) desejado(s) (se existir(em)) e termina a sua tarefa;
 * finalmente, o Python regressa ao seu código (ao local imediatamente após a invocação) e retoma a sua execução.
 
+## 2.1.1.7 O seu primeiro programa
+## A função print()
+
 Três questões importantes têm de ser respondidas assim que possível:
 
 **1. Qual é o efeito que a função print() causa?**
@@ -159,6 +167,7 @@ Quaisquer. Mostrar-lhe-emos em breve que print() é capaz de operar com virtualm
 
 Nenhum. O seu efeito é suficiente.
 
+## 2.1.1.8 O seu primeiro programa
 ## A função print() - instruções
 
 Já viu um **programa** de computador que contém uma invocação de função. Uma invocação de função é um dos muitos tipos possíveis de **instruções** Python.
@@ -182,11 +191,13 @@ Down came the rain and washed the spider out
 output
 
 
-
 Esta é uma boa oportunidade para fazer algumas observações:
 
 * o programa **invoca a função ``` print() ``` duas vezes**, e pode ver duas linhas separadas no console - isto significa que ``` print() ``` começa o seu output a partir de uma nova linha cada vez que inicia a sua execução; pode alterar este comportamento, mas também pode utilizá-lo em seu proveito;
 * cada invocação ``` print() ``` contém uma string diferente, uma vez que o seu argumento e o conteúdo da consola a refletem - **isto significa que as instruções no código são executadas pela mesma ordem** em que foram colocadas no source file; nenhuma instrução seguinte é executada até que a anterior esteja concluída (há algumas exceções a esta regra, mas pode ignorá-las por agora)
+
+## 2.1.1.9 O seu primeiro programa
+## A função print() - instruções
 
 Mudamos um pouco o exemplo - acrescentámos uma invocação de função vazia print() . Chamamos-lhe vazia porque não apresentámos quaisquer argumentos para a função.
 
@@ -209,6 +220,7 @@ Como pode ver, a invocação vazia ``` print() ``` não é tão vazia como se po
 
 Esta não é a única forma de produzir uma **newline** na consola de output. Vamos agora mostrar-lhe outra forma.
 
+## 2.1.1.10 O seu primeiro programa
 ## A função print() - os carateres de escape e de newline
 
 Modificamos novamente o código. Olhe com atenção.
@@ -241,6 +253,9 @@ output
 
 Como pode ver, duas newlines aparecem na canção de embalar, nos locais onde as ```\n``` foram usadas.
 
+## 2.1.1.11 O seu primeiro programa
+## A função print() - os carateres de escape e de newline
+
 Esta convenção tem duas consequências importantes:
 
 1. Se quiser colocar apenas uma barra invertida dentro de uma string, não se esqueça da sua natureza de escape - tem de a duplicar, por exemplo, uma tal invocação causará um erro:
@@ -257,6 +272,7 @@ Experimente o seu código no editor, execute-o e veja o que acontece.
 
 ![Barra Escape](Imagens/BarraEcape.jpg)
 
+## 2.1.1.12 O seu primeiro programa
 ## A função print() - utilizar múltiplos argumentos
 
 Até agora, testamos o comportamento da função ```print()``` sem argumentos, e com um argumento. Também vale a pena tentar alimentar a função print() com mais do que um argumento.
@@ -289,6 +305,7 @@ Duas conclusões emergem deste exemplo:
 * a função ```print()``` invocada com mais do que um argumento **faz output de todos eles numa só linha**;
 * a função ```print()``` **coloca um espaço entre os argumentos de output**, por sua própria iniciativa.
 
+## 2.1.1.13 O seu primeiro programa
 ## A função print() - a forma posicional de passar os argumentos
 
 Agora que sabe um pouco sobre ```print()``` costumes da função, vamos mostrar-lhe como alterá-los.
@@ -301,6 +318,7 @@ Execute o código e verifique se o output corresponde às suas previsões.
 
 ![Forma posicional](Imagens/FormaPosicional.jpg)
 
+## 2.1.1.14 O seu primeiro programa
 ## A função print() - os argumentos de keyword
 
 O Python oferece outro mecanismo para a passagem de argumentos, que pode ser útil quando se quer convencer a ```print()``` função a alterar um pouco o seu comportamento.
@@ -335,6 +353,9 @@ Como pode ver, o argumento de keyword end determina os carateres que a função 
 
 O comportamento padrão reflete a situação em que o argumento de keyword ```end``` é **implicitamente** usado da seguinte maneira: ```end="\n"```.
 
+## 2.1.1.15 O seu primeiro programa
+## A função print() - os argumentos de keyword
+
 E agora é tempo de tentar algo mais difícil.
 
 Se olhar cuidadosamente, verá que utilizámos o argumento ```end``` , mas a string atribuída a ele está vazia (não contém nenhum caratere).
@@ -354,6 +375,9 @@ Nota: **não foram enviadas newlines para o output.**
 
 A string atribuída ao argumento de keyword ```end``` pode ter qualquer comprimento. Experimente-a se quiser.
 
+## 2.1.1.16 O seu primeiro programa
+## A função print() - os argumentos de keyword
+
 Já dissemos anteriormente que a função ```print()``` separa os seus argumentos de output com espaços. Este comportamento também pode ser alterado.
 
 O **argumento de keyword* que pode fazer isto é chamado ```sep``` (como separador).
@@ -371,6 +395,9 @@ A função ```print()``` agora utiliza um traço, em vez de um espaço, para sep
 
 Nota: o valor do argumento ```sep``` também pode ser uma string vazia. Experimente você mesmo.
 
+## 2.1.1.17 O seu primeiro programa
+## A função print() - os argumentos de keyword
+
 Ambos os argumentos de keyword podem ser **misturados numa só invocação**, tal como aqui na janela do editor.
 
 O exemplo não faz muito sentido, mas apresenta visivelmente as interações entre ```end``` e ```sep```.
@@ -385,6 +412,7 @@ Agora que compreende a função ```print()``` , está pronto a considerar como a
 
 Sem ```print()```, não seria capaz de ver nenhum resultado.
 
+## 2.1.1.20 RESUMO DA SECÇÃO
 ## Key takeaways
 
 1. A função ```print()``` é uma função **incorporada**. Imprime/faz output de uma mensagem especificada para a janela do ecrã/consola.

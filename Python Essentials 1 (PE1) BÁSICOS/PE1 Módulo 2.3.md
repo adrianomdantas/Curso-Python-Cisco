@@ -1,5 +1,4 @@
 ## 2.3.1.1 Operadores - ferramentas de manipulação de dados
-
 ## Python como uma calculadora
 
 Agora, vamos mostrar-lhe um lado completamente novo da função print(). Já sabe que a função é capaz de lhe mostrar os valores dos literais que lhe são transmitidos pelos argumentos.
@@ -36,6 +35,7 @@ A ordem do seu aparecimento não é acidental. Falaremos mais sobre o assunto de
 
 **Lembre-se**: Os dados e os operadores, quando ligados entre si, formam **expressões**. A expressão mais simples é um literal em si.
 
+## 2.3.1.2 Operadores - ferramentas de manipulação de dados
 ## Operadores aritméticos: exponenciação
 
 Um sinal `**` (duplo asterisco) é um operador de **exponenciação** (potência). O seu argumento esquerdo é a **base**, o seu direito, o **expoente**.
@@ -60,6 +60,7 @@ Execute o código e veja cuidadosamente os resultados que produz. Consegue ver a
 
 Esta é uma distinção importante a lembrar.
 
+## 2.3.1.3 Operadores - ferramentas de manipulação de dados
 ## Operadores aritméticos: multiplicação
 
 Um sinal `*` (asterisco) é um **operador de multiplicação**.
@@ -75,6 +76,7 @@ print(2. * 3.)
 
 ![Multiplicação](Imagens/Multiplicacao.jpg)
 
+## 2.3.1.4 Operadores - ferramentas de manipulação de dados
 ## Operadores aritméticos: divisão
 
 O sinal `/` (barra) é um **operador de divisão**.
@@ -164,6 +166,7 @@ NOTA
 
 A divisão inteira também pode ser chamada **floor division**. Definitivamente, no futuro, deparar-se-á com este termo.
 
+## 2.3.1.5 Operadores - ferramentas de manipulação de dados
 ## Operadores: remainder (modulo)
 
 O próximo operador é bastante peculiar, visto não ter equivalente entre os operadores aritméticos tradicionais.
@@ -216,6 +219,7 @@ finalizado
 iniciar a partir do 
 2.3.1.6 Operadores - ferramentas de manipulação de dados
 
+## 2.3.1.6 Operadores - ferramentas de manipulação de dados
 ## Operadores: adição
 
 O operador de **adição** é o sinal `+` (mais), que está totalmente de acordo com os padrões matemáticos.
@@ -259,6 +263,7 @@ Embora tal construção seja sintaticamente correta, a sua utilização não faz
 
 Dê uma vista de olhos no snippet acima - consegue adivinhar o seu output?
 
+## 2.3.1.7 Operadores - ferramentas de manipulação de dados
 ## Os operadores e as suas prioridades
 
 Até agora, temos tratado cada operador como se não tivesse qualquer ligação com os outros. Obviamente, uma situação tão ideal e simples é uma raridade na programação real.
@@ -300,6 +305,7 @@ Execute o exemplo e veja o que obtém.
 
 O resultado deve ser `1`. Este operador tem **ligação do lado esquerdo**. Mas há uma exceção interessante.
 
+## 2.3.1.8 Operadores - ferramentas de manipulação de dados
 ## Operadores e seus bindings: exponenciação
 
 Repita a experiência, mas agora com exponenciação.
@@ -321,6 +327,7 @@ Execute o código. O que vê?
 
 O resultado mostra claramente que **o operador de exponenciação utiliza a ligação do lado direito**.
 
+## 2.3.1.9 Operadores - ferramentas de manipulação de dados
 ## Lista de prioridades
 
 Uma vez que é novo nos operadores Python, não queremos apresentar neste momento a lista completa de prioridades dos operadores.
@@ -363,6 +370,7 @@ Tente calcular o valor que é impresso para a consola. Qual é o resultado da fu
 
 ![Parênteses](Imagens/Parenteses.jpg)
 
+## 2.3.1.10 RESUMO DA SECÇÃO
 ## Key takeaways
 
 1. Uma **expressão** é uma combinação de valores (ou variáveis, operadores, chamadas a funções - em breve aprenderá sobre elas) que avalia a um valor, por exemplo, `1 + 2`.

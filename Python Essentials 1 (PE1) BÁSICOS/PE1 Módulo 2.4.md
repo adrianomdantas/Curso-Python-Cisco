@@ -1,5 +1,4 @@
 ## 2.4.1.1 Variáveis - caixas data-shaped
-
 ## O que são variáveis?
 
 Parece bastante óbvio que o Python deveria permitir-lhe codificar literais transportando valores de número e texto.
@@ -32,6 +31,7 @@ Se quiser **dar um nome a uma variável**, deve seguir algumas regras estritas:
 * letras maiúsculas e minúsculas são tratadas como diferentes (um pouco diferente do que no mundo real - Alice e ALICE são os mesmos nomes próprios, mas em Python são dois nomes de variáveis diferentes, e consequentemente, duas variáveis diferentes);
 * o nome da variável não deve ser nenhuma das palavras reservadas de Python (as keywords - explicaremos mais sobre isto em breve).
 
+## 2.4.1.2 Variáveis - caixas data-shaped
 ## Nomes de variável corretos e incorretos
 
 Note-se que as mesmas restrições se aplicam a nomes de funções.
@@ -83,6 +83,7 @@ Não se deve ter uma variável assim nomeada - é proibido. Mas, em vez disso, p
 
 Estas palavras podem ser um mistério para si agora, mas em breve aprenderá o seu significado.
 
+## 2.4.1.3 Variáveis - caixas data-shaped
 ## Criar variáveis
 
 O que se pode colocar dentro de uma variável?
@@ -136,6 +137,7 @@ Nota: print() tem ainda outro lado - também pode tratar de variáveis. Sabe qua
 Verifique
 1
 
+## 2.4.1.4 Variáveis - caixas data-shaped
 ## Utilização de variáveis
 
 É-lhe permitido utilizar tantas declarações de variáveis quantas forem necessárias para atingir o seu objetivo, como esta:
@@ -173,6 +175,7 @@ Consegue adivinhar o output do snippet acima?
 Verifique
 `Python version: 3.8.5`
 
+## 2.4.1.5 Variáveis - caixas data-shaped
 ## Atribuição de um novo valor a uma variável já existente
 
 Como se atribui um novo valor a uma variável já criada? Da mesma forma. Basta usar o sinal de igualdade.
@@ -222,6 +225,7 @@ Verifique
 
 `500` - porquê? Bem, primeiro, a variável `var` é criada e é-lhe atribuído um valor de 100. Depois, é atribuído um novo valor à mesma variável: o resultado da adição de 200 a 300, que é 500.
 
+## 2.4.1.6 Variáveis - caixas data-shaped
 ## Resolução de problemas matemáticos simples
 Agora deverá ser capaz de construir um programa curto que resolva problemas matemáticos simples, como o teorema de Pitágoras:
 
@@ -246,6 +250,7 @@ Verifique abaixo e execute o código no editor para confirmar as suas previsões
 Verifique
 `c = 5.0`
 
+## 2.4.1.8 Variáveis - caixas data-shaped
 ## Operadores de atalho
 
 Chegou a hora do próximo conjunto de operadores que facilitam a vida de um programador.
@@ -288,6 +293,7 @@ Verifique os exemplos abaixo. Certifique-se de que os compreende a todos.
 
 `x = x ** 2` ⇒ `x **= 2`
 
+## 2.4.1.11 RESUMO DA SECÇÃO
 ## Key takeaways
 
 1. Uma **variável** é um local nomeado, reservado para armazenar valores na memória. Uma variável é criada ou inicializada automaticamente quando se lhe atribui um valor pela primeira vez. (2.1.4.1)
