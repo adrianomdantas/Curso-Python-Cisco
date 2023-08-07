@@ -13,7 +13,7 @@ Intermédio
 ## Cenário
 A sua tarefa é a de completar o código, de forma a avaliar a seguinte expressão:
 
-![Lab Operadores](../Imagens/LabOperadores.jpg)
+![Lab Operadores](/Imagens/LabOperadores.jpg)
 
 O resultado deve ser atribuído a `y`. Tenha cuidado - observe os operadores e mantenha as suas prioridades em mente. Não hesite em utilizar os parêntesis de que necessitar.
 
