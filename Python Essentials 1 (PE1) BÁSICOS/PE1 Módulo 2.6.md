@@ -134,7 +134,7 @@ Acabará por ser capaz de escrever programas completos, aceitando dados sob a fo
 É claro que estes programas serão muito primitivos e pouco utilizáveis, uma vez que não podem tomar decisões, e consequentemente não são capazes de reagir de forma diferente a diferentes situações.
 
 No entanto, isto não é realmente um problema; vamos mostrar-lhe como ultrapassá-lo em breve.
-<br>
+<hr>
 O nosso próximo exemplo refere-se ao programa anterior para encontrar o comprimento de uma hipotenusa. Vamos reescrevê-lo e torná-lo capaz de ler o comprimento das pernas a partir da consola.
 
 Veja a janela do editor - é este o aspeto que tem agora.
@@ -151,7 +151,7 @@ print("Hypotenuse length is", hypo)
 O programa - infelizmente - não reage a este erro óbvio.
 
 Vamos ignorar esta fraqueza por agora. Voltaremos a este assunto em breve.
-<br>
+<hr>
 Note que no programa que pode ver no editor, a variável `hypo` é utilizada apenas para uma única finalidade - para guardar o valor calculado entre a execução da linha de código adjacente.
 
 Como a função `print()` aceita uma expressão como seu argumento, pode **remover a variável** do código.
@@ -188,7 +188,7 @@ Em contraste com o seu irmão aritmético, o operador da concatenação **não �
 Não se esqueça - se quiser que o sinal `+` seja um **concatenador**, não um adicionador, deve assegurar-se de que **ambos os seus argumentos são strings**.
 
 Não se podem misturar tipos aqui.
-<br>
+<hr>
 Este programa simples mostra o sinal `+` na sua segunda utilização:
 ```
 fnam = input("May I have your first name, please? ")

@@ -5,9 +5,9 @@
 
 Neste módulo, aprenderá sobre:
 
-Os fundamentos da programação informática, ou seja, como o computador funciona, como o programa é executado, como a linguagem de programação é definida e construída;
-a diferença entre compilação e interpretação;
-o que é o Python, como se posiciona entre outras linguagens de programação, e o que distingue as diferentes versões de Python
+* Os fundamentos da programação informática, ou seja, como o computador funciona, como o programa é executado, como a linguagem de programação é definida e construída;
+* a diferença entre compilação e interpretação;
+* o que é o Python, como se posiciona entre outras linguagens de programação, e o que distingue as diferentes versões de Python
 
 ## 1.1.1.1 Programação - noções básicas
 ## Como funciona um programa de computador?
