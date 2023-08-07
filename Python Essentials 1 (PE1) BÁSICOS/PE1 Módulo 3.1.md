@@ -179,3 +179,5 @@ Agora precisamos de atualizar a nossa **tabela de prioridades** e colocar todos 
 |4	|`+`, `-`	|binário|
 |5	|`<`, `<=`, `>`, `>=`||	
 |6	|`==`, `!=`||
+
+## 3.1.1.4 LAB: Perguntas e respostas
