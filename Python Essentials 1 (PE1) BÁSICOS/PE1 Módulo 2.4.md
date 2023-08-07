@@ -246,7 +246,9 @@ Nota: precisamos de fazer uso do operador `**` para avaliar a raiz quadrada como
 Consegue adivinhar o output do código?
 
 Verifique abaixo e execute o código no editor para confirmar as suas previsões.
+
 ![Pitágoras no Console](Imagens/PitagorasConsole.jpg)
+
 Verifique
 `c = 5.0`
 
