@@ -30,10 +30,12 @@ Input de amostra: `spathiphyllum`
 
 Output esperado: `No, I want a big Spathiphyllum!`
 <hr>
+
 Input de amostra: `pelargonium`
 
 Output esperado: `Spathiphyllum! Not pelargonium!`
 <hr>
+
 Input de amostra: `Spathiphyllum`
 
 Output esperado: `Yes - Spathiphyllum is the best plant ever!`
