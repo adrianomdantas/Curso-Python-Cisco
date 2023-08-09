@@ -534,10 +534,13 @@ Vamos falar sobre estas (e muitas outras) funções em breve. Por enquanto, o no
 |Operador	|Descrição	|Exemplo|
 |---|---|---|
 |`==`|retorna se os valores dos operandos forem iguais, eFalse caso contrário|`x == y  # False` `x == z  # True`|
+|`!=`|retorna Truese os valores dos operandos não forem iguais, eFalse caso contrário|`x != y  # True`<br> `x != z  # False`|
+||||
+||||
+||||
 
-!=	retorna Truese os valores dos operandos não forem iguais, eFalse caso contrário	
-x != y  # True
-x != z  # False
+		
+
 
 >	Truese o valor do operando esquerdo for maior que o valor do operando direito, eFalse caso contrário	
 x > y  # False
