@@ -533,45 +533,25 @@ Vamos falar sobre estas (e muitas outras) funções em breve. Por enquanto, o no
 
 |Operador	|Descrição	|Exemplo|
 |---|---|---|
-|`==`|retorna se os valores dos operandos forem iguais, eFalse caso contrário|`x == y  # False` `x == z  # True`|
+|`==`|retorna se os valores dos operandos forem iguais, eFalse caso contrário|`x == y  # False`<br> `x == z  # True`|
 |`!=`|retorna Truese os valores dos operandos não forem iguais, eFalse caso contrário|`x != y  # True`<br> `x != z  # False`|
-||||
-||||
-||||
+|`>`|Truese o valor do operando esquerdo for maior que o valor do operando direito, eFalse caso contrário|`x > y  # False` <br> `y > z  # True`|
+|`<`|Truese o valor do operando esquerdo for inferior ao valor do operando direito, eFalse caso contrário|`x < y  # True` <br> `y < z  # False`|
+|`≥`|Truese o valor do operando esquerdo for maior ou igual ao valor do operando direito, eFalse caso contrário|`x >= y  # False` <br>`x >= z  # True`<br>`y >= z  # True`|
+|`≤`|Truese o valor do operando esquerdo for inferior ou igual ao valor do operando direito, eFalse caso contrário|`x <= y  # True`<br>`x <= z  # True`<br>`y <= z  # False`|
 
-		
+1. Quando quiser executar algum código apenas se uma determinada condição for cumprida, pode usar uma **declaração condicional**:
 
-
->	Truese o valor do operando esquerdo for maior que o valor do operando direito, eFalse caso contrário	
-x > y  # False
-y > z  # True
-
-<	Truese o valor do operando esquerdo for inferior ao valor do operando direito, eFalse caso contrário	
-x < y  # True
-y < z  # False
-
-≥	Truese o valor do operando esquerdo for maior ou igual ao valor do operando direito, eFalse caso contrário	
-x >= y  # False
-x >= z  # True
-y >= z  # True
-
-≤	Truese o valor do operando esquerdo for inferior ou igual ao valor do operando direito, eFalse caso contrário	
-x <= y  # True
-x <= z  # True
-y <= z  # False
-
-2. Quando quiser executar algum código apenas se uma determinada condição for cumprida, pode usar uma declaração condicional:
-
-uma únicaif declaração, por exemplo:
-
+* uma única `if` declaração, por exemplo:
+```
 x = 10
 
 if x == 10: # condition
     print("x is equal to 10")  # Executed if the condition is True.
+```
 
-
-uma série de if declarações, por exemplo:
-
+* uma série de `if` declarações, por exemplo:
+```
 x = 10
 
 if x > 5: # condition one
@@ -582,15 +562,12 @@ if x < 10: # condition two
 
 if x == 10: # condition three
     print("x is equal to 10")  # Executed if condition three is True.
-    
+```  
 
-Cada ifdeclaração é testada separadamente.
-
-
-
-
-uma if-elsedeclaração, por exemplo:
-
+Cada `if` declaração é testada separadamente.
+ 
+* uma `if-else` declaração, por exemplo:
+```
 x = 10
 
 if x < 10:  # Condition
@@ -598,10 +575,10 @@ if x < 10:  # Condition
 
 else:
     print("x is greater than or equal to 10")  # Executed if the condition is False.
+```
 
-
-uma série de if declarações seguidas por um else, por exemplo:
-
+* uma série de `if` declarações seguidas por um else, por exemplo:
+```
 x = 10
 
 if x > 5:  # True
@@ -615,12 +592,12 @@ if x > 10:  # False
 
 else:
     print("else will be executed")
+```
 
+Cada `if` é testado separadamente. O corpo de `else` é executado se o último `if` for `False`.
 
-Cada if é testado separadamente. O corpo de else é executado se o último if for False.
-
-A if-elif-elsedeclaração, por exemplo:
-
+* A `if-elif-else` declaração, por exemplo:
+```
 x = 10
 
 if x == 10:  # True
@@ -637,12 +614,12 @@ elif x > 5:  # True
 
 else:
     print("else will not be executed")
+```
 
+Se a condição `if` for `False`, o programa verifica as condições dos `elif` blocos subsequentes - o primeiro `elif` bloco que `True` é executado. Se todas as condições forem `False`, o `else` bloco será executado.
 
-Se a condição if for False, o programa verifica as condições dos elif blocos subsequentes - o primeiro elif bloco que True é executado. Se todas as condições forem False, o else bloco será executado.
-
-Declarações condicionais nested, por exemplo:
-
+* Declarações condicionais nested, por exemplo:
+```
 x = 10
 
 if x > 5:  # True
@@ -654,3 +631,135 @@ if x > 5:  # True
         print("nested: else")
 else:
     print("else")
+```
+
+## 3.1.1.14 RESUMO DA SECÇÃO (2/2)
+## Key takeaways: continuação
+
+**Exercício 1**
+
+Qual é o output do seguinte snippet?
+```
+x = 5
+y = 10
+z = 8
+
+print(x > y)
+print(y > z)
+```
+
+Verifique
+```
+False
+True
+output
+```
+
+**Exercício 2**
+
+Qual é o output do seguinte snippet?
+```
+x, y, z = 5, 10, 8
+
+print(x > z)
+print((y - 5) == x)
+
+```
+Verifique
+```
+False
+True
+output
+```
+
+**Exercício 3**
+
+Qual é o output do seguinte snippet?
+```
+x, y, z = 5, 10, 8
+x, y, z = z, y, x
+
+print(x > z)
+print((y - 5) == x)
+
+```
+Verifique
+```
+True
+False
+output
+```
+
+**Exercício 4**
+
+Qual é o output do seguinte snippet?
+```
+x = 10
+
+if x == 10:
+    print(x == 10)
+if x > 5:
+    print(x > 5)
+if x < 10:
+    print(x < 10)
+else:
+    print("else")
+```
+
+Verifique
+```
+True
+True
+else
+output
+```
+
+**Exercício 5**
+
+Qual é o output do seguinte snippet?
+```
+x = "1"
+
+if x == 1:
+    print("one")
+elif x == "1":
+    if int(x) > 1:
+        print("two")
+    elif int(x) < 1:
+        print("three")
+    else:
+        print("four")
+if int(x) == 1:
+    print("five")
+else:
+    print("six")
+```
+
+Verifique
+```
+four
+five
+output
+```
+
+**Exercício 6**
+
+Qual é o output do seguinte snippet?
+```
+x = 1
+y = 1.0
+z = "1"
+
+if x == y:
+    print("one")
+if y == int(z):
+    print("two")
+elif x == y:
+    print("three")
+else:
+    print("four")
+```
+
+Verifique
+`one
+two`
