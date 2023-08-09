@@ -537,8 +537,8 @@ Vamos falar sobre estas (e muitas outras) funções em breve. Por enquanto, o no
 |`!=`|retorna `True` se os valores dos operandos não forem iguais, <br>e `False` caso contrário|`x != y  # True`<br> `x != z  # False`|
 |`>`|`True` se o valor do operando esquerdo for maior que o valor do operando direito,<br> e `False` caso contrário|`x > y  # False` <br> `y > z  # True`|
 |`<`|`True` se o valor do operando esquerdo for inferior ao valor do operando direito,<br> e `False` caso contrário|`x < y  # True` <br> `y < z  # False`|
-|`≥`|`True` se o valor do operando esquerdo for maior ou igual ao valor do operando direito, e `False` caso contrário|`x >= y  # False` <br>`x >= z  # True`<br>`y >= z  # True`|
-|`≤`|`True` se o valor do operando esquerdo for inferior ou igual ao valor do operando direito, e `False` caso contrário|`x <= y  # True`<br>`x <= z  # True`<br>`y <= z  # False`|
+|`≥`|`True` se o valor do operando esquerdo for maior ou igual ao valor do operando direito,<br> e `False` caso contrário|`x >= y  # False` <br>`x >= z  # True`<br>`y >= z  # True`|
+|`≤`|`True` se o valor do operando esquerdo for inferior ou igual ao valor do operando direito,<br> e `False` caso contrário|`x <= y  # True`<br>`x <= z  # True`<br>`y <= z  # False`|
 
 1. Quando quiser executar algum código apenas se uma determinada condição for cumprida, pode usar uma **declaração condicional**:
 
