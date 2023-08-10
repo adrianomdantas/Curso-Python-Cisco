@@ -241,3 +241,196 @@ O primeiro valor mostrado é `2` (retirado do primeiro argumento `range()`.)
 O último é `7` (embora o `range()` segundo argumento seja `8`).
 
 ## 3.2.1.5 Loops em Python | for
+
+# Mais sobre o loop for e a range() função com três argumentos
+
+A função `range()` também pode aceitar **três argumentos** - dê uma olhada no código no editor.
+```
+for i in range(2, 8, 3):
+    print("The value of i is currently", i)
+```
+
+O terceiro argumento é um **incremento** - é um valor acrescentado para controlar a variável em cada volta do loop (como se pode suspeitar, **o valor por defeito do incremento é 1**).
+
+Consegue dizer-nos quantas linhas irão aparecer na consola, e que valores irão conter?
+
+Execute o programa para saber se estava certo.
+
+
+Deve ser capaz de ver as seguintes linhas na janela da consola:
+```
+The value of i is currently 2
+The value of i is currently 5
+```
+
+Sabe porquê? O primeiro argumento passado para a função `range()` diz-nos qual o **número inicial da sequência (logo, `2` no output). O segundo argumento informa à função onde parar a sequência (a função gera números até ao número indicado pelo segundo argumento, mas não o inclui). Finalmente, o terceiro argumento indica a etapa, que na realidade significa a diferença entre cada número na sequência de números gerados pela função.**
+
+`2` (número inicial) → `5` (`2` incremento de `3` é igual a `5` - o número está dentro do intervalo de 2 a 8) → `8` (`5` incremento de 3 é igual a 8 - o número não está dentro do intervalo de 2 a 8, porque o parâmetro stop não está incluído na sequência de números gerados pela função.)
+<hr>
+
+Nota: se o conjunto gerado pela função `range()` está vazio, o loop não irá executar de todo o seu corpo.
+
+Tal como aqui - não haverá output:
+```
+for i in range(1, 1):
+    print("The value of i is currently", i)
+```
+<hr>
+
+Nota: o conjunto gerado pelo `range()` tem de estar ordenado por **ordem crescente**. Não há como forçar o `range()` a criar um conjunto de uma forma diferente quando a função `range()` aceita exatamente dois argumentos. Isto significa que o segundo argumento de `range()` deve ser maior que o primeiro.
+
+Logo, também não haverá output aqui:
+`
+for i in range(2, 1):
+    print("The value of i is currently", i)
+`
+<hr>
+
+Vamos dar uma olhada num programa curto, cuja tarefa é escrever algumas das primeiras potências de dois:
+```
+power = 1
+for expo in range(16):
+    print("2 to the power of", expo, "is", power)
+    power *= 2
+```
+
+A variável `expo` é usada como uma variável de controle para o loop, e indica o valor atual do expoente. A exponenciação em si é substituída pela multiplicação por dois. Uma vez que 2<sup>0</sup> é igual a 1, então 2 x; 1 é igual a 2<sup>1</sup>, 2 x; 2<sup>1</sup> é igual a 2<sup>2</sup>, e assim por diante. Qual é o maior expoente para o qual o nosso programa ainda imprime o resultado?
+
+Execute o código e verifique se o output corresponde às suas expetativas.
+
+```
+power = 1
+for expo in range(16):
+    print("2 to the power of", expo, "is", power)
+    power *= 2
+
+2 to the power of 0 is 1
+2 to the power of 1 is 2
+2 to the power of 2 is 4
+2 to the power of 3 is 8
+2 to the power of 4 is 16
+2 to the power of 5 is 32
+2 to the power of 6 is 64
+2 to the power of 7 is 128
+2 to the power of 8 is 256
+2 to the power of 9 is 512
+2 to the power of 10 is 1024
+2 to the power of 11 is 2048
+2 to the power of 12 is 4096
+2 to the power of 13 is 8192
+2 to the power of 14 is 16384
+2 to the power of 15 is 327686
+```
+
+## 3.2.1.6 LAB: Essenciais do loop for - contar mississippily
+## 3.2.1.7 controlo do Loop em Python | break e continue
+## Os loops break e declarações continue .
+
+Até agora, temos tratado o corpo do loop como uma sequência indivisível e inseparável de instruções que são executadas completamente a cada volta do loop. No entanto, como programador, poderá ser confrontado com as seguintes escolhas:
+
+* parece que é desnecessário continuar o loop como um todo; deve abster-se de continuar a execução do corpo do loop e continuar;
+* parece que é necessário iniciar a próxima volta do loop sem completar a execução da volta atual.
+
+O Python fornece duas instruções especiais para a execução de ambas estas tarefas. Digamos, por uma questão de precisão, que a sua existência na linguagem não é necessária - um programador experiente é capaz de codificar qualquer algoritmo sem estas instruções. Tais adições, que não melhoram o poder expressivo da linguagem, mas apenas simplificam o trabalho do programador, são por vezes chamadas de `doces sintéticos`, ou `açúcar sintético`.
+
+Estas duas instruções são:
+
+* `break` - sai imediatamente do loop, e termina incondicionalmente a operação do loop; o programa começa a executar a instrução mais próxima após o corpo do loop;
+* `continue` - comporta-se como se o programa tivesse subitamente chegado ao fim do corpo; inicia-se a volta seguinte e a expressão da condição é testada imediatamente.
+
+Ambas as palavras são **keywords**.
+
+Agora vamos mostrar-lhe dois exemplos simples para ilustrar como as duas instruções funcionam. Veja o código no editor. Execute o programa e analise o output. Modifique o código e experimente.
+
+![break e continue](Imagens/BreakContinue.jpg)
+```
+# break - example
+
+print("The break instruction:")
+for i in range(1, 6):
+    if i == 3:
+        break
+    print("Inside the loop.", i)
+print("Outside the loop.")
+
+
+# continue - example
+
+print("\nThe continue instruction:")
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print("Inside the loop.", i)
+print("Outside the loop.")
+
+CONSOLE>>
+
+The break instruction:
+Inside the loop. 1
+Inside the loop. 2
+Outside the loop.
+
+The continue instruction:
+Inside the loop. 1
+Inside the loop. 2
+Inside the loop. 4
+Inside the loop. 5
+Outside the loop.
+```
+
+## 3.2.1.8 controlo do Loop em Python | break e continue
+## Os loops break e declarações continue : mais exemplos
+
+Voltemos ao nosso programa que reconhece o maior entre os números introduzidos. Iremos convertê-lo duas vezes, utilizando as instruções `break` e `continue` .
+
+Analise o código, e julgue se e como utilizaria qualquer um deles.
+
+A variante `break` vai aqui:
+```
+largest_number = -99999999
+counter = 0
+
+while True:
+    number = int(input("Enter a number or type -1 to end program: "))
+    if number == -1:
+        break
+    counter += 1
+    if number > largest_number:
+        largest_number = number
+
+if counter != 0:
+    print("The largest number is", largest_number)
+else:
+    print("You haven't entered any number.")
+```
+
+Execute-a, teste-a e experimente com ela.
+<hr>
+
+E agora a variante `continue` :
+```
+largest_number = -99999999
+counter = 0
+
+number = int(input("Enter a number or type -1 to end program: "))
+
+while number != -1:
+    if number == -1:
+        continue
+    counter += 1
+
+    if number > largest_number:
+        largest_number = number
+    number = int(input("Enter a number or type -1 to end program: "))
+
+if counter:
+    print("The largest number is", largest_number)
+else:
+    print("You haven't entered any number.")
+
+```
+Olhe cuidadosamente, o utilizador introduz o primeiro número **antes** de o programa entrar no loop `while` . O número subsequente é inserido quando o programa **já está em loop**.
+
+Novamente - execute o programa, teste-o e experimente com ele.
+
+## 3.2.1.9 LAB: A declaração break - Preso num loop
