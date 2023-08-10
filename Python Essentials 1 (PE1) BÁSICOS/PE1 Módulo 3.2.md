@@ -434,3 +434,5 @@ Olhe cuidadosamente, o utilizador introduz o primeiro número **antes** de o pro
 Novamente - execute o programa, teste-o e experimente com ele.
 
 ## 3.2.1.9 LAB: A declaração break - Preso num loop
+## 3.2.1.10 LAB: A declaração continue - o Ugly Vowel Eater
+## 3.2.1.11 LAB: A declaração continue - o Pretty Vowel Eater
