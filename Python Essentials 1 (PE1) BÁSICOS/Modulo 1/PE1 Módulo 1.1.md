@@ -283,7 +283,7 @@ Todas as amostras de código que irá encontrar durante o curso foram testadas c
 
 Para além do Python 2 e Python 3, existe mais de uma versão de cada uma. 
 
-![Python](Imagens/Python.jpg) 
+![Python](../Imagens/Python.jpg) 
 
 Logotipo Python Software FoundationEm primeiro lugar, existem os Pythons que são mantidos pelas pessoas reunidas em torno da PSF ([Python Software Foundation](https://www.python.org/psf-landing/)), uma comunidade que visa desenvolver, melhorar, expandir e popularizar o Python e o seu ambiente. O presidente da PSF é o próprio Guido von Rossum, e por esta razão, estes Pythons são chamados de **canónicos**. São também considerados **Pythons de referência**, pois qualquer outra implementação da linguagem deve seguir todas as normas estabelecidas pelo PSF.
 
@@ -295,7 +295,7 @@ Guido van Rossum utilizou a linguagem de programação "C" para implementar a pr
 
 Outro membro da família Python é o **Cython**.
 
-![Cython](Imagens/Cython.jpg)
+![Cython](../Imagens/Cython.jpg)
 
 Logotipo CythonO Cython é uma das várias soluções possíveis para a mais dolorosa das características de Python - a falta de eficiência. Grandes e complexos cálculos matemáticos podem ser facilmente codificados em Python (muito mais facilmente do que em "C" ou qualquer outra linguagem tradicional), mas a execução do código resultante pode ser extremamente demorada.
 
@@ -314,13 +314,13 @@ Jython pode comunicar com a infra-estrutura Java existente de forma mais eficaz.
 
 Nota: a atual implementação do Jython segue as normas do Python 2. Até ao momento, não há Jython em conformidade com Python 3
 
-![Jython](Imagens/Jython.jpg)
+![Jython](../Imagens/Jython.jpg)
 
 ## PyPy e RPython
 
 Dê uma vista de olhos ao logotipo em baixo. É um rébus. Consegue resolvê-lo?
 
-![Pypy](Imagens/Pypy.jpg)
+![Pypy](../Imagens/Pypy.jpg)
 
 É um logótipo do **PyPy** - um Python dentro de um Python. Por outras palavras, representa um ambiente Python escrito em linguagem Python, chamado *RPython* (Restricted Python). Na verdade, é um subconjunto de Python.
 
