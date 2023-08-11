@@ -177,7 +177,7 @@ Uma das características espantosas de Python é o facto de ser realmente o trab
 
 Não há muitas linguagens cujos autores sejam conhecidos pelo nome. O Python foi criado por **Guido van Rossum**, nascido em 1956 em Haarlem, Holanda. É claro que Guido van Rossum não desenvolveu e evoluiu ele próprio todos os componentes de Python.
 
-![Guido Von Rossum](Imagens/GuidoVanRossum.jpg) 
+![Guido Von Rossum](../Imagens/GuidoVanRossum.jpg)
 
 A rapidez com que o Python se espalhou pelo mundo é o resultado do trabalho contínuo de milhares (muitas vezes anónimos) de programadores, testadores, utilizadores (muitos deles não são especialistas em IT) e entusiastas, mas deve dizer-se que a primeira ideia (a semente da qual o Python brotou) chegou a uma cabeça - a de Guido.
 

@@ -482,3 +482,52 @@ else:
 4
 else: 5
 ```
+
+## 3.2.1.13 Loops Python | else
+## Os loops for e o ramo else .
+
+`for` os loops comportam-se de forma um pouco diferente - observe o snippet no editor e execute-o.
+
+O output pode ser um pouco surpreendente.
+```
+for i in range(5):
+    print(i)
+else:
+    print("else:", i)
+
+```
+A variável `i` retém o seu último valor.
+```
+0
+1
+2
+3
+4
+else: 4
+```
+Modifique um pouco o código para levar a cabo mais uma experiência.
+```
+i = 111
+for i in range(2, 1):
+    print(i)
+else:
+    print("else:", i)
+```
+
+Consegue adivinhar o output?
+
+`else: 111`
+
+O corpo do loop não será executado aqui. Nota: atribuímos a variável `i` antes do loop.
+
+Execute o programa e verifique o seu output.
+
+Quando o corpo do loop não é executado, a variável de controlo retém o valor que tinha antes do loop.
+
+Nota: **se a variável de controle não existir antes do início do loop, não existirá quando a execução atingir o ramo** `else` .
+
+O que acha desta variante de `else`?
+
+Agora vamos falar-lhe de alguns outros tipos de variáveis. As nossas variáveis atuais só podem **armazenar um valor de cada vez**, mas há variáveis que podem fazer muito mais - podem **armazenar tantos valores quantos você quiser**.
+
+## 3.2.1.14 LAB: Essenciais do loop while
