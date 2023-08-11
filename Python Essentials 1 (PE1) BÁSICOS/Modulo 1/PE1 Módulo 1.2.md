@@ -32,7 +32,7 @@ Se o Python 3 estiver ausente, consulte a sua documentação do Linux para saber
 
 Todos os utilizadores que não sejam Linux podem descarregar uma cópia em [https://www.python.org/downloads/](https://www.python.org/downloads/).
 
-![Terminal](Imagens/Terminal.jpg)
+![Terminal](../Imagens/Terminal.jpg)
 
 ## 1.2.1.2 Comece a sua viagem em Python | Descarregar e instalar o Python
 ## Baixar e instalar o Python
@@ -49,7 +49,7 @@ Isto tornará as coisas mais fáceis.
 
 Se for um **utilizador MacOS**, uma versão do Python 2 pode já ter sido pré-instalada no seu computador, mas como vamos trabalhar com o Python 3, ainda assim terá de descarregar e instalar o ficheiro .pkg relevante a partir do site Python.
 
-![Pagina Python](Imagens/PaginaPython.jpg)
+![Pagina Python](../Imagens/PaginaPython.jpg)
 
 ## 1.2.1.3 Comece a sua viagem em Python
 ## Iniciar o seu trabalho com Python
@@ -71,7 +71,7 @@ Para além dos seus muitos componentes úteis, a instalação padrão de Python 
 
 Navegue pelos menus do seu sistema operativo, encontre o IDLE algures sob Python 3.x e inicie-o. Isto é o que deve ver:
 
-![Console Idle](Imagens/Console_Idle.jpg)
+![Console Idle](../Imagens/Console_Idle.jpg)
 
 ## 1.2.1.4 Comece a sua viagem em Python
 ## Como escrever e executar o seu primeiro programa
@@ -80,7 +80,7 @@ Navegue pelos menus do seu sistema operativo, encontre o IDLE algures sob Python
 
 O primeiro passo é criar um novo source file e preenchê-lo com código. Clique em File no menu do IDLE e escolha New file.
 
-![nova janela Idle](Imagens/NovaJanelaIdle.jpg)
+![nova janela Idle](../Imagens/NovaJanelaIdle.jpg)
 
 Como pode ver, o IDLE abre uma nova janela para si. Pode utilizá-la para escrever e alterar o seu código.
 
@@ -109,7 +109,7 @@ Não vamos explicar o significado do programa neste momento. Encontrará uma dis
 
 Veja mais de perto as aspas. Estas são as formas mais simples de aspas (neutras, retas, mudas, etc.) tipicamente utilizadas nos source files. Não tente usar aspas tipográficas (curvas, curvilíneas, inteligentes, etc.), utilizadas por processadores de texto avançados, uma vez que o Python não as aceita.
 
-![Função Print](Imagens/FuncaoPrint.jpg)
+![Função Print](../Imagens/FuncaoPrint.jpg)
 
 Se tudo correr bem e não houver erros no código, a janela da consola irá mostrar-lhe os efeitos causados pela execução do programa.
 
@@ -159,7 +159,7 @@ Uma nova janela – diz que o intérprete encontrou um EOF (end-of-file) embora 
 
 A janela do editor mostra claramente onde isto aconteceu.
 
-![Janela com erro](Imagens/JanelaErro.jpg)
+![Janela com erro](../Imagens/JanelaErro.jpg)
 
 Corrija o código agora. Deve ficar assim:
 
@@ -176,7 +176,7 @@ Vamos estragar o código mais uma vez. Remova uma letra da palavra print. Execut
 
 Deve ter notado que a mensagem de erro gerada para o erro anterior é bastante diferente da primeira.
 
-![Janela de erro 2](Imagens/JanelaErro2.jpg)
+![Janela de erro 2](../Imagens/JanelaErro2.jpg)
 
 Isto acontece porque a natureza do erro é **diferente** e o erro é descoberto numa **fase diferente** de interpretação.
 
