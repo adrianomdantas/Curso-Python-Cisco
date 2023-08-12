@@ -4,7 +4,7 @@
 ## 2.2.1.1 Literais Python
 ## Literais - os dados em si
 
-Agora que tem um pouco de conhecimento de algumas das poderosas características oferecidas pela função ```print()``` , é hora de aprender sobre algumas novas questões, e um novo termo importante - o **literal**.
+Agora que tem um pouco de conhecimento de algumas das poderosas características oferecidas pela função `print()` , é hora de aprender sobre algumas novas questões, e um novo termo importante - o **literal**.
 
 **Um literal são dados cujos valores são determinados pelo próprio literal.**
 
@@ -38,7 +38,7 @@ A primeira linha parece familiar. A segunda parece estar errada devido à visív
 
 Tente executá-lo.
 
-![Literais 1](Imagens/Literais1.jpg)
+![Literais 1](../Imagens/Literais1.jpg)
 
 Se tudo correu bem, deverá agora ver duas linhas idênticas.
 
@@ -103,7 +103,7 @@ A classe `print()` faz a conversão automaticamente. Experimente isto:
 
 `print(0o123)`
 
-![octal](Imagens/Octal.jpg)
+![octal](../Imagens/Octal.jpg)
 
 A segunda convenção permite-nos utilizar números hexadecimais. Estes números devem ser precedidos pelo prefixo `0x` ou `0X` (zero-x).
 
@@ -111,7 +111,7 @@ A segunda convenção permite-nos utilizar números hexadecimais. Estes números
 
 `print(0x123)`
 
-![hexadecimal](Imagens/Hexadecimal.jpg)
+![hexadecimal](../Imagens/Hexadecimal.jpg)
 
 ## 2.2.1.5 Literais Python
 ## Floats

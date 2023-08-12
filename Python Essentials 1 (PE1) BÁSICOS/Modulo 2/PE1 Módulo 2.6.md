@@ -34,7 +34,7 @@ Nota:
 então, utilizamos a função print() para fazer output dos dados que obtemos, com algumas observações adicionais.
 * Tente executar o código e deixe que a função demonstre o que pode fazer por si.
 
-![input](Imagens/input.jpg)
+![input](../Imagens/input.jpg)
 
 ## 2.6.1.2 Como falar com um computador
 ## A função input() com um argumento
@@ -122,7 +122,7 @@ Tente executar o código modificado. Não se esqueça de introduzir um **número
 
 Verifique alguns valores diferentes, pequenos e grandes, negativos e positivos. Zero é também um bom input.
 
-![Float INput](Imagens/FloatInput.jpg)
+![Float INput](../Imagens/FloatInput.jpg)
 
 ## 2.6.1.5 Como falar com um computador
 ## Mais sobre input() e type casting

@@ -44,7 +44,7 @@ A matemática clássica prefere a notação com sobrescrito, tal como esta: 2<su
 
 Dê uma vista de olhos aos nossos exemplos na janela do editor.
 
-![Exponenciacao](Imagens/Exponenciacao.jpg)
+![Exponenciacao](../Imagens/Exponenciacao.jpg)
 
 Nota: rodeamos os asteriscos duplos com espaços nos nossos exemplos. Não é obrigatório, mas melhora a **legibilidade** do código.
 
@@ -74,7 +74,7 @@ print(2. * 3)
 print(2. * 3.)
 ```
 
-![Multiplicação](Imagens/Multiplicacao.jpg)
+![Multiplicação](../Imagens/Multiplicacao.jpg)
 
 ## 2.3.1.4 Operadores - ferramentas de manipulação de dados
 ## Operadores aritméticos: divisão
@@ -92,7 +92,7 @@ print(6. / 3)
 print(6. / 3.)
 ```
 
-![Divisão](Imagens/Divisao.jpg)
+![Divisão](../Imagens/Divisao.jpg)
 
 Deve ver que existe uma exceção à regra.
 
@@ -120,7 +120,7 @@ print(6. // 3.)
 
 Como se pode ver, a divisão inteiro por inteiro dá um resultado inteiro. Todos os outros casos produzem floats.
 
-![Divisão Inteira](Imagens/DivisaoInteira.jpg)
+![Divisão Inteira](../Imagens/DivisaoInteira.jpg)
 
 Vamos fazer alguns testes mais avançados.
 
@@ -131,7 +131,7 @@ print(6 // 4)
 print(6. // 4)
 ```
 
-![Divisão Inteira 2](Imagens/Divisaointeira2.jpg)
+![Divisão Inteira 2](../Imagens/Divisaointeira2.jpg)
 
 Imagine que usámos `/` em vez de `//` - consegue prever os resultados?
 
@@ -141,7 +141,7 @@ Mas que resultados devemos esperar com `//` divisão?
 
 Execute o código e veja por si mesmo.
 
-![Divisão2](Imagens/Divisao2.jpg)
+![Divisão2](../Imagens/Divisao2.jpg)
 
 O que obtemos são dois uns - um inteiro e um float.
 
@@ -156,7 +156,7 @@ print(-6 // 4)
 print(6. // -4)
 ```
 
-![Divisão Inteira 3](Imagens/DivisaoInteira3.jpg)
+![Divisão Inteira 3](../Imagens/DivisaoInteira3.jpg)
 
 Nota: alguns dos valores são negativos. Isto irá obviamente afetar o resultado. Mas como?
 
@@ -185,7 +185,7 @@ Dê uma vista de olhos no snippet - tente prever o seu resultado e, em seguida, 
 
 `print(14 % 4)`
 
-![Remainder](Imagens/Remainder.jpg)
+![Remainder](../Imagens/Remainder.jpg)
 
 Como pode ver, o resultado é dois. Esta é a razão:
 
@@ -233,7 +233,7 @@ print(-4. + 8)
 
 O resultado não deve ser nada surpreendente. Execute o código para o verificar.
 
-![Soma](Imagens/Soma.jpg)
+![Soma](../Imagens/Soma.jpg)
 
 ## O operador de subtração, operadores unários e binários
 
@@ -301,7 +301,7 @@ da direita para a esquerda: primeiro `6 % 2` dá `0` e, em seguida, `9 % 0` caus
 
 Execute o exemplo e veja o que obtém.
 
-![Divisão3](Imagens/Divisao3.jpg)
+![Divisão3](../Imagens/Divisao3.jpg)
 
 O resultado deve ser `1`. Este operador tem **ligação do lado esquerdo**. Mas há uma exceção interessante.
 
@@ -323,7 +323,7 @@ Os dois resultados possíveis são:
 
 Execute o código. O que vê?
 
-![Exponenciação2](Imagens/Exponenciacao2.jpg)
+![Exponenciação2](../Imagens/Exponenciacao2.jpg)
 
 O resultado mostra claramente que **o operador de exponenciação utiliza a ligação do lado direito**.
 
@@ -368,7 +368,7 @@ Um exemplo de uma expressão com vários parêntesis é este:
 
 Tente calcular o valor que é impresso para a consola. Qual é o resultado da função `print()` ?
 
-![Parênteses](Imagens/Parenteses.jpg)
+![Parênteses](../Imagens/Parenteses.jpg)
 
 ## 2.3.1.10 RESUMO DA SECÇÃO
 ## Key takeaways

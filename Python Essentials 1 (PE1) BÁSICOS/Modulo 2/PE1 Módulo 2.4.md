@@ -241,13 +241,13 @@ print("c =", c)
 
 Nota: precisamos de fazer uso do operador `**` para avaliar a raiz quadrada como:
 
-![Pitágoras](Imagens/Pitagoras.jpg)
+![Pitágoras](../Imagens/Pitagoras.jpg)
 
 Consegue adivinhar o output do código?
 
 Verifique abaixo e execute o código no editor para confirmar as suas previsões.
 
-![Pitágoras no Console](Imagens/PitagorasConsole.jpg)
+![Pitágoras no Console](../Imagens/PitagorasConsole.jpg)
 
 Verifique
 `c = 5.0`
