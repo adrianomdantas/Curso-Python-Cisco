@@ -352,7 +352,7 @@ Tente trabalhar com a seguinte expressão:
 Ambos os operadores (`*` e `%`) têm a mesma prioridade, pelo que o resultado só pode ser adivinhado quando se conhece a direção de ligação. Como pensa? Qual é o resultado?
 
 Verifique
-![Prioridade Operadores 1](Imagens/PrioridadeOperadores1.jpg)
+![Prioridade Operadores 1](../Imagens/PrioridadeOperadores1.jpg)
 
 ## Operadores e parêntesis
 

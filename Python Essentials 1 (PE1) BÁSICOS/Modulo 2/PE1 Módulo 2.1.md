@@ -270,7 +270,7 @@ enquanto esta não o fará:
 
 Experimente o seu código no editor, execute-o e veja o que acontece.
 
-![Barra Escape](Imagens/BarraEcape.jpg)
+![Barra Escape](../Imagens/BarraEcape.jpg)
 
 ## 2.1.1.12 O seu primeiro programa
 ## A função print() - utilizar múltiplos argumentos

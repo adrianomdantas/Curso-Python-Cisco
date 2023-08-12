@@ -101,7 +101,7 @@ print(var == 0)
 
 Execute o código e verifique se estava certo.
 
-![True False](Imagens/TrueFalse.jpg)
+![True False](../Imagens/TrueFalse.jpg)
 
 ## Desigualdade: o operador não igual a (!=)
 
@@ -118,7 +118,7 @@ print(var != 0)
 
 Execute o código e verifique se estava certo.
 
-![False True](Imagens/FalseTrue.jpg)
+![False True](../Imagens/FalseTrue.jpg)
 
 ## 3.1.1.3 Tomar decisões em Python
 ## Operadores de comparação: maior que
