@@ -342,7 +342,7 @@ Ambas as palavras são **keywords**.
 
 Agora vamos mostrar-lhe dois exemplos simples para ilustrar como as duas instruções funcionam. Veja o código no editor. Execute o programa e analise o output. Modifique o código e experimente.
 
-![break e continue](Imagens/BreakContinue.jpg)
+![break e continue](../Imagens/BreakContinue.jpg)
 ```
 # break - example
 
@@ -531,3 +531,226 @@ O que acha desta variante de `else`?
 Agora vamos falar-lhe de alguns outros tipos de variáveis. As nossas variáveis atuais só podem **armazenar um valor de cada vez**, mas há variáveis que podem fazer muito mais - podem **armazenar tantos valores quantos você quiser**.
 
 ## 3.2.1.14 LAB: Essenciais do loop while
+## 3.2.1.15 LAB: A hipótese de Collatz
+## 3.2.1.16 RESUMO DA SECÇÃO (1/2)
+
+## Key takeaways
+
+1. Existem dois tipos de loops em Python: `while` e `for`:
+
+* o loop `while` executa uma declaração ou um conjunto de declarações, desde que uma condição booleana especificada seja verdadeira, por exemplo:
+```
+# Example 1
+while True:
+    print("Stuck in an infinite loop.")
+
+# Example 2
+counter = 5
+while counter > 2:
+    print(counter)
+    counter -= 1
+```
+
+* o loop `for` executa um conjunto de declarações várias vezes; é usado para iterar sobre uma sequência (por exemplo, uma lista, um dicionário, um tuple, ou um conjunto - aprenderá sobre eles em breve) ou outros objetos que são iteráveis (por exemplo, strings). Pode utilizar o loop `for` para iterar sobre uma sequência de números usando a função `range` . Veja os exemplos em baixo:
+```
+# Example 1
+word = "Python"
+for letter in word:
+    print(letter, end="*")
+
+# Example 2
+for i in range(1, 10):
+    if i % 2 == 0:
+        print(i)
+```
+
+2. Pode utilizar as declarações `break` e `continue` para alterar o fluxo de um loop:
+
+* Utilize `break` para sair de um loop, por exemplo:
+```
+text = "OpenEDG Python Institute"
+for letter in text:
+    if letter == "P":
+        break
+    print(letter, end="")
+```
+
+* Utilize `continue` para ignorar a iteração atual e continuar com a próxima iteração, por exemplo:
+```
+text = "pyxpyxpyx"
+for letter in text:
+    if letter == "x":
+        continue
+    print(letter, end="")
+```
+
+3. Os loops `while` e `for` também podem ter uma cláusula `else` em Python. A cláusula `else` executa-se após o loop terminar a sua execução, desde que não tenha sido terminado por `break`, por exemplo.:
+```
+n = 0
+
+while n != 3:
+    print(n)
+    n += 1
+else:
+    print(n, "else")
+
+print()
+
+for i in range(0, 3):
+    print(i)
+else:
+    print(i, "else")
+```
+
+4. O objeto da exceção `range()` gera uma sequência de números. Aceita números inteiros e devolve objetos de range. A sintaxe de `range()` parece como se segue: `range(start, stop, step)`, onde:
+
+* `start` é um parâmetro opcional que especifica o número inicial da sequência (0 por padrão)
+* `stop` é um parâmetro opcional que especifica o fim da sequência gerada (não está incluído),
+* e `step` é um parâmetro opcional que especifica a diferença entre os números na sequência (1 por padrão.)
+Código de exemplo:
+```
+for i in range(3):
+    print(i, end=" ")  # Outputs: 0 1 2
+
+for i in range(6, 1, -2):
+    print(i, end=" ")  # Outputs: 6, 4, 2 
+```
+
+## 3.2.1.17 RESUMO DA SECÇÃO (2/2)
+
+## Principais takeaways: continuação
+
+**Exercício 1**
+
+Crie um `loop` for que conta de 0 a 10, e imprime os números ímpares no ecrã. Use o esqueleto abaixo:
+```
+for i in range(1, 11):
+    # Line of code.
+        # Line of code.
+```
+
+**Verifique**
+Solução de amostra:
+```
+for i in range(0, 11):
+    if i % 2 != 0:
+        print(i)
+```
+
+**Exercício 2**
+
+Crie um loop `while` que conta de 0 a 10, e imprime os números ímpares no ecrã. Use o esqueleto abaixo:
+```
+x = 1
+while x < 11:
+    # Line of code.
+        # Line of code.
+    # Line of code.
+```
+
+**Verifique**
+Solução de amostra:
+```
+x = 1
+while x < 11:
+    if x % 2 != 0:
+        print(x)
+    x += 1
+```
+
+**Exercício 3**
+
+Crie um programa com um loop `for` e uma declaração `break` . O programa deve iterar sobre os caracteres de um endereço de e-mail, sair do loop quando chegar ao símbolo `@` , e imprimir a parte antes de @ numa linha. Use o esqueleto abaixo:
+```
+for ch in "john.smith@pythoninstitute.org":
+    if ch == "@":
+        # Line of code.
+    # Line of code.
+```
+
+**Verifique**
+Solução de amostra:
+```
+for ch in "john.smith@pythoninstitute.org":
+    if ch == "@":
+        break
+    print(ch, end="")
+```
+
+**Exercício 4**
+
+Crie um programa com um loop `for` e uma declaração `continue` . O programa deve iterar sobre uma string de dígitos, substituir cada `0` com `x` e imprimir a string modificada no ecrã. Use o esqueleto abaixo:
+```
+for digit in "0165031806510":
+    if digit == "0":
+        # Line of code.
+        # Line of code.
+    # Line of code.
+```
+
+**Verifique**
+Solução de amostra:
+```
+for digit in "0165031806510":
+    if digit == "0":
+        print("x", end="")
+        continue
+    print(digit, end="")
+```
+
+**Exercício 5**
+
+Qual é o output do seguinte código?
+```
+n = 3
+
+while n > 0:
+    print(n + 1)
+    n -= 1
+else:
+    print(n)
+```
+
+**Verifique**
+```
+4
+3
+2
+0
+```
+
+**Exercício 6**
+
+Qual é o output do seguinte código?
+```
+n = range(4)
+
+for num in n:
+    print(num - 1)
+else:
+    print(num)
+```
+
+**Verifique**
+```
+-1
+0
+1
+2
+3
+```
+
+**Exercício 7**
+
+Qual é o output do seguinte código?
+```
+for i in range(0, 6, 3):
+    print(i)
+```
+
+**Verifique**
+```
+0
+3
+```
+
