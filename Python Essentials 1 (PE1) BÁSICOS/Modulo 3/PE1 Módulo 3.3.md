@@ -113,7 +113,6 @@ Aqui estão todos eles:
 * `^` (acento circunflexo) - bitwise exclusive ou (xor).
 
 ## Operações bitwise (`&`, `|`, e `^`)
-
 | Argumento A	| Argumento B	| A & B	 | `A | B`	| A ^ B| 
 |---|---|---|---|---| 
 |0	|0	|0	|0	|0|
