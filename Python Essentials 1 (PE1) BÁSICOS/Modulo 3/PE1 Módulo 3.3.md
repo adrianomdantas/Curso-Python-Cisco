@@ -114,8 +114,8 @@ Aqui estão todos eles:
 
 ## Operações bitwise (`&`, `|`, e `^`)
 
-|Argumento `A`	|Argumento `B`	|`A & B`	 |`A | B`	|`A ^ B`|
-|---|---|---|---|---|
+|Argumento `A`	|Argumento `B`	|`A & B`	 |`A | B`	|`A ^ B`| 
+|---|---|---|---|---| 
 |0	|0	|0	|0	|0|
 |0	|1	|0	|1	|1|
 |1	|0	|0	|1	|1|
