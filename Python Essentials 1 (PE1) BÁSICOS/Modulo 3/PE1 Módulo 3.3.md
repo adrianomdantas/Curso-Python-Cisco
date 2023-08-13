@@ -228,7 +228,7 @@ Se aplicar a `&` operação à `flag_register` variável juntamente com a seguin
   
 Tal sequência de zeros e uns, cuja tarefa é agarrar o valor ou alterar os bits selecionados, é chamada de **bit mask**.
 
-Vamos criar uma bit mask para detetar o estado do seu bit. Deve apontar para o **terceiro bit**. Esse bit tem o peso de `2<sup>3</sup> = 8`. Uma mask adequada poderia ser criada através da seguinte declaração:
+Vamos criar uma bit mask para detetar o estado do seu bit. Deve apontar para o **terceiro bit**. Esse bit tem o peso de 2<sup>3</sup> = 8. Uma mask adequada poderia ser criada através da seguinte declaração:
 
 `the_mask = 8`
 
@@ -308,6 +308,12 @@ A prioridade destes operadores é muito alta. Vê-los-á na tabela de prioridade
 <hr>
 
 Dê uma vista de olhos nas mudanças na janela do editor.
+```
+var = 17
+var_right = var >> 1
+var_left = var << 2
+print(var, var_left, var_right)
+```
 
 A invocação `print()` final produz o seguinte output:
 
