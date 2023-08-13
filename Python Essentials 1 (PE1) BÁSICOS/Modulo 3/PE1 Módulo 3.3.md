@@ -113,7 +113,7 @@ Aqui estão todos eles:
 * `^` (acento circunflexo) - bitwise exclusive ou (xor).
 
 ## Operações bitwise (`&`, `|`, e `^`)
-| Argumento A	| Argumento B	| A & B	 | `A \| B`	| A ^ B| 
+| Argumento `A`	| Argumento `B`	| `A & B`	 | `A \| B`	| `A ^ B`| 
 |---|---|---|---|---| 
 |0	|0	|0	|0	|0|
 |0	|1	|0	|1	|1|
@@ -141,3 +141,196 @@ A diferença no funcionamento dos operadores lógicos e de bit é importante: **
 Os operadores bitwise são mais rigorosos: lidam com **cada bit separadamente**. Se assumirmos que a variável inteira ocupa 64 bits (o que é comum nos sistemas informáticos modernos), podemos imaginar a operação bitwise como uma avaliação de 64 vezes do operador lógico para cada par de bits dos argumentos. Esta analogia é obviamente imperfeita, pois no mundo real todas estas 64 operações são realizadas ao mesmo tempo (simultaneamente).
 
 ## 3.3.1.3 Operações de lógica e bit em Python
+## Operações lógicas versus bit: continuação
+
+Vamos agora mostrar-lhe um exemplo da diferença de funcionamento entre as operações lógicas e as operações de bit. Vamos assumir que as seguintes atribuições foram realizadas:
+```
+i = 15
+j = 22
+```
+
+Se assumirmos que os números inteiros são armazenados com 32 bits, a imagem bitwise das duas variáveis será a seguinte:
+```
+i: 00000000000000000000000000001111
+j: 00000000000000000000000000010110
+```
+A atribuição é dada:
+
+`log = i and j`
+
+Estamos a lidar aqui com uma conjunção lógica. Vamos traçar o curso dos cálculos. Ambas as variáveis `i` e `j` não são zeros, por isso serão consideradas para representar `True`. Consultando a tabela da verdade para o operador `and` , podemos ver que o resultado será `True`. Nenhuma outra operação é realizada.
+
+`log: True`
+
+Agora a operação bitwise - aqui está ela:
+
+`bit = i & j`
+
+O operador `&` operará com cada par de bits correspondentes separadamente, produzindo os valores dos bits relevantes do resultado. Portanto, o resultado será o seguinte:
+
+|`i`	|`00000000000000000000000000001111`|
+|---|---|
+|`j`	|`00000000000000000000000000010110`|
+|`bit = i & j`	|`00000000000000000000000000000110`|
+
+Estes bits correspondem ao valor inteiro de seis.
+
+Vejamos agora os operadores de negação. Primeiro, o lógico:
+
+`logneg = not i`
+
+A variável `logneg` será definida como `False` - nada mais precisa de ser feito.
+
+A negação bitwise é assim:
+
+`bitneg = ~i`
+
+Pode ser um pouco surpreendente: o valor da variável `bitneg` é `-16`. Isto pode parecer estranho, mas não é de todo. Se desejar saber mais, deve verificar o sistema de numeração binária e as regras que regem os números complementares de dois.
+
+|`i`	|`00000000000000000000000000001111`|
+|---|---|
+|`bitneg = ~i`	|`11111111111111111111111111110000`|
+
+Cada um destes operadores de dois argumentos pode ser utilizado de **forma abreviada**. Estes são os exemplos das suas notações equivalentes:
+
+|`x = x & y`	|`x &= y`|
+|---|---|
+|`x = x | y`	|`x \|= y`|
+|`x = x ^ y`	|`x ^= y`|
+
+## 3.3.1.4 Operações de lógica e de bit em Python | Operadores bitwise
+## Como lidamos com bits individuais?
+
+Vamos agora mostrar-lhe aquilo para que pode utilizar os operadores bitwise. Imagine que é um programador obrigado a escrever uma parte importante de um sistema operativo. Foi informado de que tem permissão para usar uma variável atribuída da seguinte maneira:
+
+`flag_register = 0x1234`
+
+A variável armazena as informações sobre vários aspectos da operação do sistema. **Cada bit da variável armazena um valor yes/no**. Também lhe foi dito que apenas um destes bits é seu - o terceiro (lembre-se que os bits são numerados a partir do zero, e o bit número zero é o mais baixo, enquanto o mais alto é o número 31). Os bits restantes não podem ser alterados, porque se destinam a armazenar outros dados. Aqui está o seu bit marcado pela letra `x`:
+
+`flag_register = 0000000000000000000000000000x000`
+
+Pode ser confrontado com as seguintes tarefas:
+
+1. **Verifique o estado do seu bit** - quer descobrir o valor do seu bit; comparar a variável inteira com zero não fará nada, porque os bits restantes podem ter valores completamente imprevisíveis, mas pode usar a seguinte propriedade de conjunção:
+```
+x & 1 = x
+x & 0 = 0
+```
+
+Se aplicar a `&` operação à `flag_register` variável juntamente com a seguinte imagem de bit:
+
+`00000000000000000000000000001000`
+
+(observe o `1` na posição do seu bit) como resultado, obtém uma das seguintes strings de bit:
+
+* `00000000000000000000000000001000` se o seu bit foi definido para `1`
+* `00000000000000000000000000000000` se o seu bit foi redefinido para `0`
+  
+Tal sequência de zeros e uns, cuja tarefa é agarrar o valor ou alterar os bits selecionados, é chamada de **bit mask**.
+
+Vamos criar uma bit mask para detetar o estado do seu bit. Deve apontar para o **terceiro bit**. Esse bit tem o peso de `2<sup>3</sup> = 8`. Uma mask adequada poderia ser criada através da seguinte declaração:
+
+`the_mask = 8`
+
+Também pode fazer uma sequência de instruções dependendo do estado do seu bit i aqui está:
+```
+if flag_register & the_mask:
+    # My bit is set.
+else:
+    # My bit is reset.
+```
+
+1. **Redefina o seu bit** - atribua um zero ao bit enquanto todos os outros bits devem permanecer inalterados; utilizemos a mesma propriedade de conjunção como antes, mas utilizemos uma mask ligeiramente diferente - exatamente como em baixo:
+
+`11111111111111111111111111110111`
+
+Observe que a mask foi criada como resultado da negação de todos os bits de `the_mask` variável. Redefinir o bit é simples, e parece-se com isto (escolha o que mais gostar):
+```
+flag_register = flag_register & ~the_mask
+flag_register &= ~the_mask
+```
+
+3. **Defina o seu bit** - atribua um `1` ao seu bit, enquanto todos os bits restantes devem permanecer inalterados; use a seguinte propriedade de disjunção:
+```
+x | 1 = 1
+x | 0 = x
+```
+
+Agora está pronto para definir o seu bit com uma das seguintes instruções:
+```
+flag_register = flag_register | the_mask
+flag_register |= the_mask
+```
+
+4. **Negue o seu bit** - substitua um 1 com um 0 e um 0 com um 1. Pode utilizar uma propriedade interessante do xor operador:
+```
+x ^ 1 = ~x
+x ^ 0 = x
+```
+
+e negue o seu bit com as seguintes instruções:
+```
+flag_register = flag_register ^ the_mask
+flag_register ^= the_mask
+```
+## 3.3.1.5 Operações de lógica e de bit em Python | Bit shifting
+## Shifting binário à esquerda e shifting binário à direita
+
+O Python oferece mais uma operação relacionada a bits individuais: **shifting** (deslocamento). Isto é aplicado apenas a valores **inteiros**, e não se deve utilizar floats como argumentos.
+
+Você já aplica esta operação com alguma frequência, e bastante inconscientemente. De que forma multiplica qualquer número por dez? Dê uma vista de olhos:
+
+12345 × 10 = 123450
+
+
+Como se pode ver, **multiplicar por dez é, de facto, um shifting** de todos os dígitos para a esquerda, preenchendo a lacuna resultante com zero.
+
+Divisão por dez? Dê uma vista de olhos:
+
+`12340 ÷ 10 = 1234`
+
+Dividir por dez não é mais do que um shifting dos dígitos para a direita
+<hr>
+
+O mesmo tipo de operação é realizado pelo computador, mas com uma diferença: como dois é a base para números binários (não 10), **o shifting de um valor um bit para a esquerda corresponde assim a multiplicá-lo por dois**; respetivamente, **o shifting um bit para a direita é o mesmo que dividí-lo por dois** (repare que o bit mais à direita é perdido).
+
+Os **operadores shift** em Python são um par de **dígrafos**: `<<` e `>>`, sugerindo claramente em que direção a mudança irá ocorrer.
+```
+value << bits
+value >> bits
+```
+
+**O argumento à esquerda destes operadores é um valor inteiro cujos bits são deslocados. O argumento à direita determina o tamanho do shifting.**
+
+Isto demonstra que esta operação não é certamente comutativa.
+
+A prioridade destes operadores é muito alta. Vê-los-á na tabela de prioridades atualizada, que lhe mostraremos no final desta secção.
+<hr>
+
+Dê uma vista de olhos nas mudanças na janela do editor.
+
+A invocação `print()` final produz o seguinte output:
+
+`17 68 8`
+
+Nota:
+
+* `17 >> 1` → `17 // 2` (**17** divido por baixo por **2 à potência de 1**) → `8` (shifting para a direita por um bit é o mesmo que a divisão inteira por dois)
+* `17 << 2` → `17 * 4` (**17** multiplicado por **2 à potência de 2**) → `68` (shifting para a esquerda por dois bits é o mesmo que a multiplicação de inteiros por quatro)
+<hr>
+
+E aqui está a tabela de prioridades atualizada, contendo todos os operadores introduzidos até agora:
+
+|Prioridade	|Operador|
+|---|---|	
+|1	|~, +, -	|unário|
+|2	|**	||
+|3	|*, /, //, %||	
+|4	|+, -	|binário|
+|5	|<<, >>	||
+|6	|<, <=, >, >=||	
+|7	|==, !=	||
+|8	|&	||
+|9	|\|	||
+|10	|=, +=, -=, *=, /=, %=, &=, ^=, \|=, >>=, <<=||	
+
