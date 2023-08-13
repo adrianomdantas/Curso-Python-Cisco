@@ -321,8 +321,8 @@ Nota:
 
 E aqui está a tabela de prioridades atualizada, contendo todos os operadores introduzidos até agora:
 
-|Prioridade	|Operador|
-|---|---|	
+|Prioridade	|Operador||
+|---|---|---|
 |1	|~, +, -	|unário|
 |2	|**	||
 |3	|*, /, //, %||	
