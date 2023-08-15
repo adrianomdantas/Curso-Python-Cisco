@@ -319,7 +319,7 @@ Agora vamos discutir dois casos especiais da declaração condicional.
 
 Primeiro, considere o caso em que a **instrução colocada após a** `if` **é outra** `if`.
 
-Leia o que temos planeado para este domingo. Se o tempo estiver bom, vamos dar uma volta. Se encontrarmos um bom restaurante, almoçaremos lá. Caso contrário, comemos uma sandes. Se o tempo estiver mau, vamos ao teatro. Se não houver bilhetes, iremos às compras no centro comercial mais próximo.
+Leia o que temos planejado para este domingo. Se o tempo estiver bom, vamos dar uma volta. Se encontrarmos um bom restaurante, almoçaremos lá. Caso contrário, comemos um sanduiche. Se o tempo estiver mau, vamos ao teatro. Se não houver bilhetes, iremos às compras no centro comercial mais próximo.
 
 Vamos escrever o mesmo em Python. Considere cuidadosamente o código aqui:
 ```
@@ -429,7 +429,7 @@ Não há outras diferenças no código.
 
 **Exemplo 3**:
 
-É altura de complicar o código - vamos encontrar o maior de três números. Será que vai ampliar o código? Um pouco.
+É hora de complicar o código - vamos encontrar o maior de três números. Será que vai ampliar o código? Um pouco.
 
 Assumimos que o primeiro valor é o maior. Em seguida, verificamos essa hipótese com os dois valores restantes.
 
@@ -466,11 +466,11 @@ Este método é significativamente mais simples do que tentar encontrar o maior 
 
 Deverá agora ser capaz de escrever um programa que encontre o maior de quatro, cinco, seis, ou mesmo dez números.
 
-Já conhece o esquema, pelo que alargar a dimensão do problema não será particularmente complexo.
+Já conhece o esquema, parece que aumentar a dimensão do problema não será particularmente complexo.
 
 Mas o que acontece se lhe pedirmos para escrever um programa que encontre o maior de duzentos números? Consegue imaginar o código?
 
-Vai precisar de duzentas variáveis. Se duzentas variáveis não for suficientemente mau, tente imaginar a procura do maior de um milhão de números.
+Vai precisar de duzentas variáveis. Se duzentas variáveis não for suficientemente mau, tente imaginar procurar o maior dentro de um milhão de números.
 
 Imagine um código que contém 199 declarações condicionais e duzentas invocações da função `input()` . Felizmente, não precisa de lidar com isso. Há uma abordagem mais simples.
 
@@ -549,7 +549,7 @@ Vamos falar sobre estas (e muitas outras) funções em breve. Por enquanto, o no
 
 1. Quando quiser executar algum código apenas se uma determinada condição for cumprida, pode usar uma **declaração condicional**:
 
-* uma única `if` declaração, por exemplo:
+* uma única declaração `if`, por exemplo:
 ```
 x = 10
 
@@ -557,7 +557,7 @@ if x == 10: # condition
     print("x is equal to 10")  # Executed if the condition is True.
 ```
 
-* uma série de `if` declarações, por exemplo:
+* uma série de declarações `if`, por exemplo:
 ```
 x = 10
 
@@ -571,9 +571,9 @@ if x == 10: # condition three
     print("x is equal to 10")  # Executed if condition three is True.
 ```  
 
-Cada `if` declaração é testada separadamente.
+Cada declaração `if` é testada separadamente.
  
-* uma `if-else` declaração, por exemplo:
+* uma declaração `if-else`, por exemplo:
 ```
 x = 10
 
@@ -659,7 +659,6 @@ Verifique
 ```
 False
 True
-output
 ```
 
 **Exercício 2**
@@ -676,7 +675,6 @@ Verifique
 ```
 False
 True
-output
 ```
 
 **Exercício 3**
@@ -694,7 +692,6 @@ Verifique
 ```
 True
 False
-output
 ```
 
 **Exercício 4**
@@ -718,7 +715,6 @@ Verifique
 True
 True
 else
-output
 ```
 
 **Exercício 5**
@@ -746,7 +742,6 @@ Verifique
 ```
 four
 five
-output
 ```
 
 **Exercício 6**
