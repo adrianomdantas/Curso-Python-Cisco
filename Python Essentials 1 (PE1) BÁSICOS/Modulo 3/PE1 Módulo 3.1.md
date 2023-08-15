@@ -40,7 +40,7 @@ Para fazer esta pergunta, utiliza o operador `==` (igual igual).
 Não se esqueça desta importante distinção:
 
 * `=` é um **operador de atribuição**, por exemplo, `a = b` atribui `a` com o valor de `b`;
-* `==` é a questão são estes valores iguais?; `a == b` **compara** `a` e `b`.
+* `==` é a questão, são estes valores iguais?; `a == b` **compara** `a` e `b`.
   
 É um **operador binário com ligação do lado esquerdo**. Precisa de dois argumentos e **verifica se são iguais.**
 
@@ -49,23 +49,29 @@ Agora vamos fazer algumas perguntas. Tente adivinhar as respostas.
 
 Pergunta #1: Qual é o resultado da seguinte comparação?
 
-`2 == 2`    Verifique
+`2 == 2`    
+
+Verifique
 
 `True` - claro, 2 é igual a 2. O Python responderá `True` (lembre-se deste par de literais predefinidos, `True` e `False` - são também keywords de Python).
 
 Pergunta #2: Qual é o resultado da seguinte comparação?
 
-2 == 2.    Verifique
+`2 == 2.`    
+
+Verifique
 
 Esta questão não é tão fácil quanto a primeira. Felizmente, o Python é capaz de converter o valor inteiro no seu verdadeiro equivalente, e consequentemente, a resposta é `True`.
 
 Pergunta #3: Qual é o resultado da seguinte comparação?
 
-`1 == 2`    Verifique
+`1 == 2`    
+
+Verifique
 
 Esta deve ser fácil. A resposta será (ou melhor, será sempre) `False`.
 
-## 3.1.1.2 Fazer decisões em Python
+## 3.1.1.2 Tomar decisões em Python
 ## Igualdade: o operador igual a (==)
 
 A função `==` (igual a) compara os valores de dois operandos. Se forem iguais, o resultado da comparação é `True`. Se eles não forem iguais, o resultado da comparação é `False`.
@@ -76,9 +82,9 @@ Veja a comparação de igualdade abaixo - qual é o resultado desta operação?
 
 Note que não podemos encontrar a resposta se não soubermos qual o valor atualmente armazenado na variável `var`.
 
-Se a variável tiver sido alterada muitas vezes durante a execução do seu programa, ou o seu valor inicial for inserido a partir da consola, a resposta a esta pergunta pode ser dada apenas pelo Python, e apenas em runtime.
+Se a variável tiver sido alterada muitas vezes durante a execução do seu programa, ou o seu valor inicial for inserido a partir do console, a resposta a esta pergunta pode ser dada apenas pelo Python, e apenas em runtime.
 
-Agora imagine um programador que sofre de insónias, e que tem de contar ovelhas pretas e brancas separadamente enquanto houver exatamente o dobro das ovelhas pretas do que das brancas.
+Agora imagine um programador que sofre de insônia, e que tem de contar ovelhas pretas e brancas separadamente enquanto houver exatamente o dobro das ovelhas pretas do que das brancas.
 
 A questão será a seguinte:
 
@@ -89,6 +95,7 @@ Devido à baixa prioridade do operador `==` , a questão deve ser tratada como e
 `black_sheep == (2 * white_sheep)`
 
 <hr>
+
 Então, vamos praticar a sua compreensão do operador `==` - consegue adivinhar o output do código abaixo?
 
 ```
@@ -107,7 +114,7 @@ Execute o código e verifique se estava certo.
 
 A função `!=` (não igual) também compara os valores de dois operandos. Aqui está a diferença: se eles forem iguais, o resultado da comparação é `False`. Se eles não forem iguais, o resultado da comparação é `True`.
 
-Agora dê uma vista de olhos na comparação de desigualdade em baixo - consegue adivinhar o resultado desta operação?
+Agora dê uma olhada na comparação de desigualdade abaixo - consegue adivinhar o resultado desta operação?
 ```
 var = 0  # Assigning 0 to var
 print(var != 0)
@@ -133,7 +140,7 @@ Se quiser saber se há mais ovelhas pretas do que brancas, pode escrevê-lo da s
 
 ## Operadores de comparação: maior que ou igual a
 
-O operador maior que tem outra variante especial, **não estrita**, mas é denotada de forma diferente da notação aritmética clássica: `>=` (maior que ou igual a)
+O operador **maior que** tem outra variante especial, **não estrita**, mas é denotada de forma diferente da notação aritmética clássica: `>=` (maior que ou igual a)
 
 Existem dois sinais subsequentes, não um.
 
@@ -186,7 +193,7 @@ Agora precisamos de atualizar a nossa **tabela de prioridades** e colocar todos 
 
 Já sabe como fazer perguntas ao Python, mas ainda não sabe como fazer um uso razoável das respostas. Tem de ter um mecanismo que lhe permita fazer algo **se uma condição for cumprida, e não o fazer se não o for**.
 
-É como na vida real: faz-se ou não certas coisas quando uma condição específica é cumprida ou não, por exemplo, vai-se passear se o tempo estiver bom, ou fica-se em casa se estiver a chover e a fazer frio.
+É como na vida real: faz-se ou não certas coisas quando uma condição específica é cumprida ou não, por exemplo, vai-se passear se o tempo estiver bom, ou fica-se em casa se estiver chovendo e fazendo frio.
 
 Para tomar tais decisões, o Python oferece uma instrução especial. Devido à sua natureza e à sua aplicação, chama-se **instrução condicional** (ou declaração condicional).
 
@@ -240,7 +247,7 @@ Pode lê-lo como: se `sheep_counter` é maior que ou igual a `120`, então, ador
 
 Dissemos que `as declarações executadas condicionalmente têm de ser indentadas`. Isto cria uma estrutura muito legível, demonstrando claramente todos os caminhos de execução possíveis no código.
 
-Dê uma vista de olhos no seguinte código:
+Dê uma olhada no seguinte código:
 ```
 if sheep_counter >= 120:
     make_a_bed()
@@ -256,9 +263,9 @@ Alimentar os cães de ovelha, no entanto, é **sempre feito** (ou seja, a funç�
 Agora, vamos discutir outra variante da declaração condicional, que também lhe permite executar uma ação adicional quando a condição não for cumprida.
 
 ## Execução condicional: a declaração if-else .
-Começámos com uma frase simples, que diz: Se o tempo estiver bom, vamos dar um passeio.
+Começamos com uma frase simples, que diz: Se o tempo estiver bom, vamos dar um passeio.
 
-Nota - não há uma palavra sobre o que irá acontecer se o tempo estiver mau. Nós apenas sabemos que não vamos para o exterior, mas o que poderíamos fazer em vez disso não é conhecido. Podemos querer planear algo em caso de mau tempo, também.
+Nota - não há uma palavra sobre o que irá acontecer se o tempo estiver ruim. Nós apenas sabemos que não vamos sair, mas o que poderíamos fazer em vez disso não é conhecido. Podemos querer planejar algo em caso de mau tempo, também.
 
 Podemos dizer, por exemplo: Se o tempo estiver bom, vamos dar uma caminhada, caso contrário, vamos a um teatro.
 
