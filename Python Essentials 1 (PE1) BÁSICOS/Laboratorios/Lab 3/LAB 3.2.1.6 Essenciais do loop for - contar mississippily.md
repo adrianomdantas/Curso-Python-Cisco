@@ -39,7 +39,7 @@ import time
 
 Observe que o código no editor contém dois elementos que podem não estar totalmente claros para si neste momento: a declaração `import time` , e o método `sleep()` . Vamos falar sobre eles em breve.
 
-Por enquanto, gostaríamos apenas que soubesse que importamos o módulo `time` e usámos o método `sleep()` para suspender a execução de cada função `print()` subsequente dentro do loop `for` por um segundo, para que a mensagem enviada para a consola se assemelhe a uma contagem real. Não se preocupe - em breve aprenderá mais sobre módulos e métodos.
+Por enquanto, gostaríamos apenas que soubesse que importamos o módulo `time` e usámos o método `sleep()` para suspender a execução de cada função `print()` subsequente dentro do loop `for` por um segundo, para que a mensagem enviada para o console se assemelhe a uma contagem real. Não se preocupe - em breve aprenderá mais sobre módulos e métodos.
 
 Output esperado
 ```

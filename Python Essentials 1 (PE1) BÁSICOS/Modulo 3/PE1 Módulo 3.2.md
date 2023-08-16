@@ -7,7 +7,7 @@ while there is something to do
     do it
 ```
 
-Note-se que este registo também declara que se não houver nada a fazer, nada acontecerá.
+Note que este registo também declara que se não houver nada a fazer, nada acontecerá.
 
 Em geral, em Python, um loop pode ser representado da seguinte forma:
 ```
@@ -15,7 +15,7 @@ while conditional_expression:
     instruction
 ```
 
-Se notar algumas semelhanças com a instrução if, não há problema. De facto, a diferença sintática é apenas uma: usa-se a palavra `while` em vez da palavra `if`.
+Se notar algumas semelhanças com a instrução if, não há problema. De fato, a diferença sintática é apenas uma: usa-se a palavra `while` em vez da palavra `if`.
 
 A diferença semântica é mais importante: quando a condição é cumprida, if executa as suas declarações **apenas uma vez**; `while` **repete a execução enquanto a condição se avalie a** `True`.
 
@@ -39,7 +39,7 @@ Agora é importante lembrar que:
 * se a condição é `False` (igual a zero) logo que é testada pela primeira vez, o corpo não é executado nem uma vez (note-se a analogia de não ter de fazer nada se não houver nada a fazer);
 * o corpo deve ser capaz de alterar o valor da condição, porque se a condição estiver `True` no início, o corpo pode correr continuamente até ao infinito (repare que fazer uma coisa normalmente diminui o número de coisas a fazer).
 
-## m loop infinito
+## Um loop infinito
 
 Um loop infinito, também chamado **endless loop**, é uma sequência de instruções num programa que se repete indefinidamente (loop interminável).
 
@@ -53,10 +53,10 @@ Este loop será infinitamente imprimido `"I'm stuck inside a loop."` no ecrã.
 
 **NOTA**
 
-Se quiser obter a melhor experiência de aprendizagem ao ver como se comporta um loop infinito, lance o IDLE, crie um New File, copie-cole o código acima, guarde o seu ficheiro, e execute o programa. O que irá ver é a sequência interminável de strings `"I'm stuck inside a loop."` impressas na janela do console do Python. Para terminar o seu programa, basta premir Ctrl-C (ou Ctrl-Break em alguns computadores). Isto causará a chamada exceção **KeyboardInterrupt** e deixa o seu programa sair do loop. Falaremos sobre isso mais tarde no curso.
+Se quiser obter a melhor experiência de aprendizagem ao ver como se comporta um loop infinito, lance o IDLE, crie um New File, copie-cole o código acima, guarde o seu ficheiro, e execute o programa. O que irá ver é a sequência interminável de strings `"I'm stuck inside a loop."` impressas na janela do console do Python. Para terminar o seu programa, basta pressionar Ctrl-C (ou Ctrl-Break em alguns computadores). Isto causará a chamada exceção **KeyboardInterrupt** e deixa o seu programa sair do loop. Falaremos sobre isso mais tarde no curso.
 <hr>
 
-Voltemos ao esboço do algoritmo que lhe mostrámos recentemente. Vamos mostrar-lhe como utilizar este loop recentemente aprendido para encontrar o maior número a partir de um grande conjunto de dados introduzidos.
+Voltemos ao esboço do algoritmo que lhe mostramos recentemente. Vamos mostrar-lhe como utilizar este loop recentemente aprendido para encontrar o maior número a partir de um grande conjunto de dados introduzidos.
 
 Analise o programa com cuidado. Veja onde o loop começa (linha 8). Localize o corpo do loop e descubra **como é que o corpo sai**:
 ```
@@ -175,7 +175,7 @@ Claro que é - há um loop especial para estes tipos de tarefas, e é chamado `f
 Na verdade, o loop `for` foi concebido para realizar tarefas mais complicadas - **pode "navegar" por grandes coleções de dados item por item**. Mostraremos como fazê-lo em breve, mas neste momento vamos apresentar uma variante mais simples da sua aplicação.
 <hr>
 
-Dê uma vista de olhos no snippet:
+Dê uma olhada no snippet:
 ```
 for i in range(100):
     # do_something()
@@ -185,10 +185,10 @@ for i in range(100):
 Existem alguns novos elementos. Deixe-nos falar sobre eles:
 
 * a keyword for abre o loop `for` ; nota - não há nenhuma condição depois; não é preciso pensar nas condições, uma vez que são verificadas internamente, sem qualquer intervenção;
-* qualquer variável após a keyword for é a **variável de controle** do loop; conta as voltas do loop, e fá-lo automaticamente;
-* a keyword `in` introduz um elemento de sintaxe que descreve a gama de valores possíveis que estão a ser atribuídos à variável de controle;
+* qualquer variável após a keyword for é a **variável de controle** do loop; conta as voltas do loop, e faz automaticamente;
+* a keyword `in` introduz um elemento de sintaxe que descreve a gama de valores possíveis que estão sendo atribuídos à variável de controle;
 * a função `range()` (esta é uma função muito especial) é responsável por gerar todos os valores desejados da variável de controle; no nosso exemplo, a função irá criar (podemos mesmo dizer que irá **alimentar** o loop com) valores subsequentes a partir do conjunto seguinte: 0, 1, 2 .. 97, 98, 99; nota: neste caso, a função `range()` começa o seu trabalho a partir do 0 e termina um passo (um número inteiro) antes do valor do seu argumento;
-* note a keyword pass dentro do corpo do loop - não faz nada; é uma **instrução vazia** - colocamo-la aqui porque a `for` sintaxe do laço exige pelo menos uma instrução dentro do corpo (a propósito - `if`, `elif`, `else` e `while` expressam a mesma coisa)
+* note a keyword pass dentro do corpo do loop - não faz nada; é uma **instrução vazia** - colocamos aqui porque a `for` sintaxe do laço exige pelo menos uma instrução dentro do corpo (a propósito - `if`, `elif`, `else` e `while` expressam a mesma coisa)
 Os nossos próximos exemplos serão um pouco mais modestos no número de repetições do loop.
 
 Veja o snippet abaixo. Consegue prever o seu output?
@@ -230,7 +230,7 @@ for i in range(2, 8):
 
 Neste caso, o primeiro argumento determina o (primeiro) valor inicial da variável de controle.
 
-O último argumento mostra o primeiro valor que a variável de controlo não será atribuída.
+O último argumento mostra o primeiro valor que a variável de controle não será atribuída.
 
 Nota: a função `range()` **aceita apenas inteiros como seus argumentos**, e gera sequências de inteiros.
 
@@ -241,21 +241,20 @@ O primeiro valor mostrado é `2` (retirado do primeiro argumento `range()`.)
 O último é `7` (embora o `range()` segundo argumento seja `8`).
 
 ## 3.2.1.5 Loops em Python | for
-
 # Mais sobre o loop for e a range() função com três argumentos
 
 A função `range()` também pode aceitar **três argumentos** - dê uma olhada no código no editor.
+
+O terceiro argumento é um **incremento** - é um valor acrescentado para controlar a variável em cada volta do loop (como se pode suspeitar, **o valor por defeito do incremento é 1**).
+
+Consegue dizer-nos quantas linhas irão aparecer na console, e que valores irão conter?
+
+Execute o programa para saber se estava certo.
+
 ```
 for i in range(2, 8, 3):
     print("The value of i is currently", i)
 ```
-
-O terceiro argumento é um **incremento** - é um valor acrescentado para controlar a variável em cada volta do loop (como se pode suspeitar, **o valor por defeito do incremento é 1**).
-
-Consegue dizer-nos quantas linhas irão aparecer na consola, e que valores irão conter?
-
-Execute o programa para saber se estava certo.
-
 
 Deve ser capaz de ver as seguintes linhas na janela da consola:
 ```
@@ -263,7 +262,7 @@ The value of i is currently 2
 The value of i is currently 5
 ```
 
-Sabe porquê? O primeiro argumento passado para a função `range()` diz-nos qual o **número inicial da sequência (logo, `2` no output). O segundo argumento informa à função onde parar a sequência (a função gera números até ao número indicado pelo segundo argumento, mas não o inclui). Finalmente, o terceiro argumento indica a etapa, que na realidade significa a diferença entre cada número na sequência de números gerados pela função.**
+Sabe porquê? O primeiro argumento passado para a função `range()` nos diz qual o **número inicial da sequência (logo, `2` no output). O segundo argumento informa à função onde parar a sequência (a função gera números até ao número indicado pelo segundo argumento, mas não o inclui). Finalmente, o terceiro argumento indica a etapa, que na realidade significa a diferença entre cada número na sequência de números gerados pela função.**
 
 `2` (número inicial) → `5` (`2` incremento de `3` é igual a `5` - o número está dentro do intervalo de 2 a 8) → `8` (`5` incremento de 3 é igual a 8 - o número não está dentro do intervalo de 2 a 8, porque o parâmetro stop não está incluído na sequência de números gerados pela função.)
 <hr>
@@ -378,7 +377,7 @@ Inside the loop. 5
 Outside the loop.
 ```
 
-## 3.2.1.8 controlo do Loop em Python | break e continue
+## 3.2.1.8 controle do Loop em Python | break e continue
 ## Os loops break e declarações continue : mais exemplos
 
 Voltemos ao nosso programa que reconhece o maior entre os números introduzidos. Iremos convertê-lo duas vezes, utilizando as instruções `break` e `continue` .
@@ -463,7 +462,7 @@ else:
     print("else:", i)
 ```
 
-A condição whileé False no início - consegue vê-la?
+A condição while é False no início - consegue vê-la?
 
 Execute e teste o programa, e verifique se o ramo else foi executado ou não.
 
@@ -522,7 +521,7 @@ O corpo do loop não será executado aqui. Nota: atribuímos a variável `i` ant
 
 Execute o programa e verifique o seu output.
 
-Quando o corpo do loop não é executado, a variável de controlo retém o valor que tinha antes do loop.
+Quando o corpo do loop não é executado, a variável de controle retém o valor que tinha antes do loop.
 
 Nota: **se a variável de controle não existir antes do início do loop, não existirá quando a execução atingir o ramo** `else` .
 
@@ -551,7 +550,7 @@ while counter > 2:
     counter -= 1
 ```
 
-* o loop `for` executa um conjunto de declarações várias vezes; é usado para iterar sobre uma sequência (por exemplo, uma lista, um dicionário, um tuple, ou um conjunto - aprenderá sobre eles em breve) ou outros objetos que são iteráveis (por exemplo, strings). Pode utilizar o loop `for` para iterar sobre uma sequência de números usando a função `range` . Veja os exemplos em baixo:
+* o loop `for` executa um conjunto de declarações várias vezes; é usado para iterar sobre uma sequência (por exemplo, uma lista, um dicionário, uma tupla, ou um conjunto - aprenderá sobre eles em breve) ou outros objetos que são iteráveis (por exemplo, strings). Pode utilizar o loop `for` para iterar sobre uma sequência de números usando a função `range` . Veja os exemplos em baixo:
 ```
 # Example 1
 word = "Python"
