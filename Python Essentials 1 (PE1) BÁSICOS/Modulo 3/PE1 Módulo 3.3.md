@@ -167,7 +167,7 @@ Agora a operação bitwise - aqui está ela:
 
 O operador `&` operará com cada par de bits correspondentes separadamente, produzindo os valores dos bits relevantes do resultado. Portanto, o resultado será o seguinte:
 
-|||
+
 |---|---|
 |`i`	|`00000000000000000000000000001111`|
 |`j`	|`00000000000000000000000000010110`|
