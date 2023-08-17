@@ -2,14 +2,13 @@
 
 ## Lógica de computador
 
-Já reparou que as condições que utilizámos até agora têm sido muito simples, para não dizer bastante primitivas? As condições que utilizamos na vida real são muito mais complexas. Vejamos esta frase:
+Já reparou que as condições que utilizamos até agora têm sido muito simples, para não dizer bastante primitivas? As condições que utilizamos na vida real são muito mais complexas. Vejamos esta frase:
 
 Se tivermos algum tempo livre, e o tempo estiver bom, vamos dar um passeio.
 
+Utilizamos a conjunção `and`, o que significa que ir dar um passeio depende do cumprimento simultâneo destas duas condições. Na linguagem da lógica, tal ligação de condições é chamada uma **conjunção**. E agora outro exemplo:
 
-Utilizámos a conjunção `and`, o que significa que ir dar um passeio depende do cumprimento simultâneo destas duas condições. Na linguagem da lógica, tal ligação de condições é chamada uma `conjunção`. E agora outro exemplo:
-
-Se estiveres no centro comercial ou eu estiver no centro comercial, um de nós vai comprar um presente para a mãe.
+Se estiver no centro comercial ou eu estiver no centro comercial, um de nós vai comprar um presente para a mãe.
 
 A aparência da palavra `or` significa que a compra depende de pelo menos uma destas condições. Em lógica, tal composto é chamado uma **disjunção**.
 
@@ -60,7 +59,7 @@ Este operador é escrito como a palavra `not`, e a sua **prioridade é muito alt
 ## 3.3.1.2 Operações de lógica e bit em Python | and, or, not
 
 ## Expressões lógicas
-Vamos criar uma variável chamada var e atribuir 1 a ela. As seguintes condições são equivalentes em pares:
+Vamos criar uma variável chamada `var` e atribuir `1` a ela. As seguintes condições são equivalentes em pares:
 ```
 # Example 1:
 print(var > 0)
@@ -85,7 +84,7 @@ not (p and q) == (not p) or (not q)
 not (p or q) == (not p) and (not q)
 ```
 
-Note-se como os parêntesis foram utilizados para codificar as expressões - colocámo-los lá para melhorar a legibilidade.
+Note como os parêntesis foram utilizados para codificar as expressões - colocamos lá para melhorar a legibilidade.
 
 Devemos acrescentar que nenhum destes operadores de dois argumentos pode ser utilizado sob a forma abreviada conhecida como op=. Vale a pena recordar esta exceção.
 
@@ -103,7 +102,7 @@ j = not not i
 
 No entanto, existem quatro operadores que lhe permitem **manipular bits únicos de dados**. São chamados **operadores bitwise**.
 
-Abrangem todas as operações que mencionámos anteriormente no contexto lógico, e um operador adicional. Este é o operador `xor` (como em **exclusivo ou**), e é denotado como `^` (acento circunflexo).
+Abrangem todas as operações que mencionamos anteriormente no contexto lógico, e um operador adicional. Este é o operador `xor` (como em **exclusivo ou**), e é denotado como `^` (acento circunflexo).
 
 Aqui estão todos eles:
 
@@ -168,8 +167,9 @@ Agora a operação bitwise - aqui está ela:
 
 O operador `&` operará com cada par de bits correspondentes separadamente, produzindo os valores dos bits relevantes do resultado. Portanto, o resultado será o seguinte:
 
-|`i`	|`00000000000000000000000000001111`|
+|||
 |---|---|
+|`i`	|`00000000000000000000000000001111`|
 |`j`	|`00000000000000000000000000010110`|
 |`bit = i & j`	|`00000000000000000000000000000110`|
 
