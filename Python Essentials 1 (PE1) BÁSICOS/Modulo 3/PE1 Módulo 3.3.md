@@ -217,7 +217,7 @@ x & 1 = x
 x & 0 = 0
 ```
 
-Se aplicar a `&` operação à `flag_register` variável juntamente com a seguinte imagem de bit:
+Se aplicar a `&` operação à variável `flag_register` juntamente com a seguinte imagem de bit:
 
 `00000000000000000000000000001000`
 
@@ -228,7 +228,7 @@ Se aplicar a `&` operação à `flag_register` variável juntamente com a seguin
   
 Tal sequência de zeros e uns, cuja tarefa é agarrar o valor ou alterar os bits selecionados, é chamada de **bit mask**.
 
-Vamos criar uma bit mask para detetar o estado do seu bit. Deve apontar para o **terceiro bit**. Esse bit tem o peso de 2<sup>3</sup> = 8. Uma mask adequada poderia ser criada através da seguinte declaração:
+Vamos criar uma bit mask para detectar o estado do seu bit. Deve apontar para o **terceiro bit**. Esse bit tem o peso de 2<sup>3</sup> = 8. Uma mask adequada poderia ser criada através da seguinte declaração:
 
 `the_mask = 8`
 
@@ -278,12 +278,11 @@ flag_register ^= the_mask
 
 O Python oferece mais uma operação relacionada a bits individuais: **shifting** (deslocamento). Isto é aplicado apenas a valores **inteiros**, e não se deve utilizar floats como argumentos.
 
-Você já aplica esta operação com alguma frequência, e bastante inconscientemente. De que forma multiplica qualquer número por dez? Dê uma vista de olhos:
+Você já aplica esta operação com alguma frequência, e bastante inconscientemente. De que forma multiplica qualquer número por dez? Observe:
 
 12345 × 10 = 123450
 
-
-Como se pode ver, **multiplicar por dez é, de facto, um shifting** de todos os dígitos para a esquerda, preenchendo a lacuna resultante com zero.
+Como se pode ver, **multiplicar por dez é, de fato, um shifting** de todos os dígitos para a esquerda, preenchendo a lacuna resultante com zero.
 
 Divisão por dez? Dê uma vista de olhos:
 
@@ -292,7 +291,7 @@ Divisão por dez? Dê uma vista de olhos:
 Dividir por dez não é mais do que um shifting dos dígitos para a direita
 <hr>
 
-O mesmo tipo de operação é realizado pelo computador, mas com uma diferença: como dois é a base para números binários (não 10), **o shifting de um valor um bit para a esquerda corresponde assim a multiplicá-lo por dois**; respetivamente, **o shifting um bit para a direita é o mesmo que dividí-lo por dois** (repare que o bit mais à direita é perdido).
+O mesmo tipo de operação é realizado pelo computador, mas com uma diferença: como dois é a base para números binários (não 10), **o shifting de um valor um bit para a esquerda corresponde assim ao multiplicá-lo por dois**; respetivamente, **o shifting um bit para a direita é o mesmo que dividí-lo por dois** (repare que o bit mais à direita é perdido).
 
 Os **operadores shift** em Python são um par de **dígrafos**: `<<` e `>>`, sugerindo claramente em que direção a mudança irá ocorrer.
 ```
@@ -307,12 +306,22 @@ Isto demonstra que esta operação não é certamente comutativa.
 A prioridade destes operadores é muito alta. Vê-los-á na tabela de prioridades atualizada, que lhe mostraremos no final desta secção.
 <hr>
 
-Dê uma vista de olhos nas mudanças na janela do editor.
+Observe as mudanças na janela do editor.
 ```
 var = 17
 var_right = var >> 1
 var_left = var << 2
 print(var, var_left, var_right)
+
+output
+>>>
+17 68 8
+```
+```
+128	64	32	16	8	4	2	1
+0	0	0	1	0	0	0	1	=	17
+0	1	0	0	0	1	0	0	=	68
+0	0	0	0	1	0	0	0	=	8 
 ```
 
 A invocação `print()` final produz o seguinte output:
