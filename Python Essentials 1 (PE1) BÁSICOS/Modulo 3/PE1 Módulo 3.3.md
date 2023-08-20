@@ -349,7 +349,7 @@ E aqui está a tabela de prioridades atualizada, contendo todos os operadores in
 |9	|`\|`	||
 |10	|`=`, `+=`, `-=`, `*=`, `/=`, `%=`, `&=`, `^=`, `\|=`, `>>=`, `<<=`||	
 
-## 3.3.1.6 RESUMO DA SECÇÃO
+## 3.3.1.6 RESUMO DA SEÇÃO
 
 ## Key takeaways
 
