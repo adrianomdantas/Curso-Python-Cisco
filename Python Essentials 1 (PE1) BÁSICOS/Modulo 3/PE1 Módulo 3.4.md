@@ -187,4 +187,297 @@ print("\nNew list content:", numbers)  # Printing current list content.
 ###
 ```
 
+## 3.4.1.5 Listas - coleções de dados | Operações em listas
+## Índices negativos são legais
 
+Pode parecer estranho, mas os índices negativos são legais, e podem ser muito úteis.
+
+Um elemento com um index igual a `-1` é **o último na lista**.
+
+`print(numbers[-1])`
+
+O snippet de exemplo terá como output 1. Execute o programa e verifique.
+```
+numbers = [111, 7, 2, 1]
+print(numbers[-1])
+print(numbers[-2])
+
+output
+1
+2
+```
+
+Da mesma forma, o elemento com um index igual a `-2` é **o penúltimo na lista**.
+
+`print(numbers[-2])`
+
+O snippet de exemplo terá como output 2.
+
+O último elemento acessível da nossa lista é numbers[-4] (o primeiro) - não tente ir mais longe!
+
+## 3.4.1.6 LAB: Noções básicas de listas
+## 3.4.1.7 Listas - coleções de dados | Funções e métodos
+
+## Funções vs. métodos
+
+Um **método é um tipo específico de função** - comporta-se como uma função e parece uma função, mas difere na forma como atua, e no seu estilo de invocação.
+
+Uma **função não pertence a nenhum dado** - recebe dados, pode criar novos dados e (geralmente) produz um resultado.
+
+Um método faz todas estas coisas, mas também é capaz de **alterar o estado de uma entidade selecionada**.
+
+**Um método é propriedade dos dados para os quais trabalha, enquanto uma função é propriedade de todo o código**.
+
+
+Isto também significa que a invocação de um método requer alguma especificação dos dados a partir dos quais o método é invocado.
+
+Pode parecer intrigante aqui, mas lidaremos com isso em profundidade quando nos aprofundarmos na programação orientada ao objeto.
+
+Em geral, uma invocação de função típica pode parecer-se com isto:
+
+`result = function(arg)`
+
+A função toma um argumento, faz algo, e devolve um resultado.
+
+
+Um método típico de invocação é geralmente semelhante a este:
+
+`result = data.method(arg)`
+
+Nota: o nome do método é precedido do nome dos dados que possuem o método. Em seguida, adiciona-se um **ponto**, seguido do **nome do método**, e um par de **parêntesis que encerra os argumentos**.
+
+O método comportar-se-á como uma função, mas pode fazer algo mais - **pode alterar o estado interno dos dados** a partir dos quais foi invocado.
+<hr>
+
+Pode perguntar: porque estamos falando de métodos e não de listas?
+
+Esta é uma questão essencial neste momento, pois vamos mostrar-lhe como adicionar novos elementos a uma lista existente. Isto pode ser feito com métodos pertencentes a todas as listas, e não por funções.
+
+## 3.4.1.8 Listas - coleções de dados | métodos de lista
+## Adicionar elementos a uma lista: append() e insert()
+
+Um novo elemento pode ser colado no fim da lista existente:
+
+`list.append(value)`
+
+Tal operação é realizada por um método chamado `append()`. Toma o valor do seu argumento e coloca-o **no final da lista** que possui o método.
+
+O comprimento da lista aumenta então em um.
+<hr>
+
+O método `insert()` é um pouco mais inteligente - pode acrescentar um novo elemento em **qualquer lugar da lista**, e não apenas no final.
+
+`list.insert(location, value)`
+
+São necessários dois argumentos:
+
+* o primeiro mostra a localização necessária do elemento a ser inserido; nota: todos os elementos existentes que ocupam locais à direita do novo elemento (incluindo o que se encontra na posição indicada) são deslocados para a direita, a fim de criar espaço para o novo elemento;
+* o segundo é o elemento a ser inserido.
+
+Veja o código no editor. Veja como utilizamos os `append()` e `insert()` métodos. Preste atenção ao que acontece após a utilização `insert()`: o primeiro elemento é agora o segundo, o segundo o terceiro, e assim por diante.
+<hr>
+
+Adicione o seguinte snippet após a última linha de código no editor:
+
+`numbers.insert(1, 333)`
+
+
+Imprima o conteúdo da lista final para o ecrã e veja o que acontece. O snippet acima do snippet insere 333 na lista, tornando-o no segundo elemento. O anterior segundo elemento torna-se o terceiro, o terceiro o quarto, e assim por diante.
+
+```
+numbers = [111, 7, 2, 1]
+print(len(numbers))
+print(numbers)
+
+###
+
+numbers.append(4)
+
+print(len(numbers))
+print(numbers)
+
+###
+
+numbers.insert(0, 222)
+print(len(numbers))
+print(numbers)
+
+#
+
+numbers.insert(1, 333)
+print(len(numbers))
+print(numbers)
+
+output
+4
+[111, 7, 2, 1]
+5
+[111, 7, 2, 1, 4]
+6
+[222, 111, 7, 2, 1, 4]
+7
+[222, 333, 111, 7, 2, 1, 4]
+```
+
+## 3.4.1.9 Listas - coleções de dados | métodos de lista
+## Adicionar elementos a uma lista: continuação
+
+Pode **iniciar a vida de uma lista tornando-a vazia** (isto é feito com um par de parêntesis retos vazio) e depois adicionando-lhe novos elementos conforme necessário.
+
+Veja o snippet no editor. Tente adivinhar o seu output após a execução do loop `for` . Execute o programa para verificar se estava certo.
+```
+my_list = []  # Creating an empty list.
+
+for i in range(5):
+    my_list.append(i + 1)
+
+print(my_list)
+
+output
+[1, 2, 3, 4, 5]
+```
+Será uma sequência de números inteiros consecutivos a partir de 1 (depois adiciona-se um a todos os valores anexados) até 5.
+
+
+Modificámos um pouco o snippet:
+```
+my_list = []  # Creating an empty list.
+
+for i in range(5):
+    my_list.insert(0, i + 1)
+
+print(my_list)
+
+output
+[5, 4, 3, 2, 1]
+```
+
+O que acontecerá agora? Execute o programa e verifique se desta vez também estava certo.
+
+Deve obter a mesma sequência, mas em **ordem inversa** (este é o mérito de usar o método `insert()` ).
+
+## 3.4.1.10 Listas - coleções de dados | listas e loops
+
+## Utilização de listas
+
+O loop `for` tem uma variante muito especial que pode `processar listas` muito eficazmente - vejamos isso.
+
+Vamos supor que deseja **calcular a soma de todos os valores armazenados na lista** `my_list` .
+
+É necessária uma variável cuja soma será armazenada e à qual será inicialmente atribuído um valor de `0` - o seu nome será total. (Nota: não vamos nomeá-la sum visto o Python usar o mesmo nome para uma das suas funções internas - `sum()`. **Utilizar o mesmo nome seria geralmente considerado uma má prática**). Em seguida, acrescenta-lhe todos os elementos da lista utilizando o loop `for` . Veja o snippet no editor.
+
+Vamos comentar este exemplo:
+
+* à lista é atribuída uma sequência de cinco valores inteiros;
+* a variável `i` toma os valores `0`, `1`, `2`, `3`, e `4`, e depois indexa a lista, selecionando os elementos seguintes: o primeiro, o segundo, o terceiro, o quarto e o quinto;
+* cada um destes elementos é adicionado em conjunto pelo operador `+=` à variável `total` , dando o resultado final no fim do loop;
+* observe a forma como a função `len()` foi utilizada - torna o código independente de quaisquer possíveis alterações no conteúdo da lista.
+
+## A segunda face do loop for .
+
+Mas o loop `for` pode fazer muito mais. Pode ocultar todas as ações ligadas à indexação da lista, e entregar todos os elementos da lista de uma forma prática.
+
+Este snippet modificado mostra como isto funciona:
+```
+my_list = [10, 1, 8, 3, 5]
+total = 0
+
+for i in my_list:
+    total += i
+
+print(total)
+```
+
+O que acontece aqui?
+
+* a instrução `for` especifica a variável usada para navegar na lista (`i` aqui) seguida pela keyword `in` e pelo nome da lista que está a ser processada (`my_list` aqui)
+* à variável i são atribuídos os valores de todos os elementos da lista subsequente, e o processo ocorre tantas vezes quantos os elementos da lista;
+* isto significa que se utiliza a variável `i` como uma cópia dos valores dos elementos, e não se precisa de utilizar índices;
+* a função `len()` também não é necessária aqui.
+
+## 3.4.1.11 Listas - coleções de dados | listas e loops
+
+## Listas em ação
+
+Deixemos as listas de lado por um breve momento e vejamos uma questão intrigante.
+
+Imagine que precisa de reorganizar os elementos de uma lista, ou seja, inverter a ordem dos elementos: o primeiro e o quinto, bem como o segundo e o quarto elementos serão trocados. O terceiro permanecerá intocado.
+
+
+Pergunta: como se pode trocar os valores de duas variáveis?
+
+Veja o snippet:
+```
+variable_1 = 1
+variable_2 = 2
+
+variable_2 = variable_1
+variable_1 = variable_2
+```
+
+Se fizer algo como isto, **perderá o valor previamente armazenado** em `variable_2`. Alterar a ordem das atribuições não ajudará. É necessária uma **terceira variável que sirva como armazenamento auxiliar**.
+
+É assim que se pode fazer:
+```
+variable_1 = 1
+variable_2 = 2
+
+auxiliary = variable_1
+variable_1 = variable_2
+variable_2 = auxiliary
+```
+
+O Python oferece uma forma mais conveniente de fazer a troca - veja:
+```
+variable_1 = 1
+variable_2 = 2
+
+variable_1, variable_2 = variable_2, variable_1
+```
+
+Claro, eficaz e elegante - não é?
+
+## 3.4.1.12 Listas - coleções de dados | listas e loops
+
+## Listas em ação
+
+Agora pode facilmente **trocar** os elementos da lista para **inverter a sua ordem**:
+```
+my_list = [10, 1, 8, 3, 5]
+
+my_list[0], my_list[4] = my_list[4], my_list[0]
+my_list[1], my_list[3] = my_list[3], my_list[1]
+
+print(my_list)
+```
+
+Execute o snippet. O seu output deve ter este aspeto:
+```
+output
+[5, 3, 8, 1, 10]
+```
+
+Fica bem com cinco elementos.
+
+Será ainda aceitável com uma lista contendo 100 elementos? Não, não será.
+
+Pode utilizar o loop `for` para fazer a mesma coisa automaticamente, independentemente do comprimento da lista? Sim, pode.
+<hr>
+
+Foi assim que o fizemos:
+```
+my_list = [10, 1, 8, 3, 5]
+length = len(my_list)
+
+for i in range(length // 2):
+    my_list[i], my_list[length - i - 1] = my_list[length - i - 1], my_list[i]
+
+print(my_list)
+```
+
+Nota:
+
+* nós atribuímos a variável `length` com o comprimento da lista atual (isto torna o nosso código um pouco mais claro e mais curto)
+* lançamos o loop `for` para correr através do seu corpo `length // 2` vezes (isto funciona bem para listas com comprimentos pares e ímpares, porque quando a lista contém um número ímpar de elementos, o do meio permanece intocado)
+* trocamos o i<sup>-ésimo</sup> elemento (desde o início da lista) com o que tem um index igual a `(length - i - 1)` (do final da lista); no nosso exemplo, para `i` igual a `0` o ramo `(lenght - i - 1)` dá `4`; para `i` igual a `1`, dá `3` - Isto é exatamente o que precisavamos.
+As listas são extremamente úteis, e irá encontrá-las com muita frequência.
