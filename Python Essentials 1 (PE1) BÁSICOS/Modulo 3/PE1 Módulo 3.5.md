@@ -68,3 +68,152 @@ Como pode ver, a essência deste algoritmo é simples: **comparamos os elementos
 
 Vamos codificar em Python todas as ações realizadas durante uma única passagem através da lista, e depois vamos considerar quantas passagens realmente precisamos para a realizar. Ainda não explicamos isto até agora, e faremos isso um pouco mais tarde.
 
+## 3.5.1.2 Ordenar listas simples - o algoritmo bubble sort
+
+## Classificar uma lista
+Quantas passagens precisamos para ordenar a lista completa?
+
+Resolvemos esta questão da seguinte forma: in**troduzimos outra variável**; a sua tarefa é observar se foi feita alguma troca durante a passagem ou não; se não houver troca, então a lista já está ordenada, e nada mais tem de ser feito. Criamos uma variável chamada `swapped`, e atribuímos-lhe um valor de `False` , para indicar que não há trocas. Caso contrário, será atribuído `True`.
+```
+my_list = [8, 10, 6, 2, 4]  # list to sort
+
+for i in range(len(my_list) - 1):  # we need (5 - 1) comparisons
+    if my_list[i] > my_list[i + 1]:  # compare adjacent elements
+        my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]  # If we end up here, we have to swap the elements.
+```
+
+Deverá ser capaz de ler e compreender este programa sem quaisquer problemas:
+```
+my_list = [8, 10, 6, 2, 4]  # list to sort
+swapped = True  # It's a little fake, we need it to enter the while loop.
+
+while swapped:
+    swapped = False  # no swaps so far
+    for i in range(len(my_list) - 1):
+        if my_list[i] > my_list[i + 1]:
+            swapped = True  # a swap occurred!
+            my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
+
+print(my_list)
+```
+
+Execute o programa e teste-o.
+
+## 3.5.1.3 Ordenar listas simples - o algoritmo bubble sort
+
+## O bubble sort - versão interativa
+
+No editor pode ver um programa completo, enriquecido por uma conversa com o utilizador, e que permite ao utilizador introduzir e imprimir elementos da lista: **O bubble sort - versão interativa final**.
+```
+my_list = []
+swapped = True
+num = int(input("How many elements do you want to sort: "))
+
+for i in range(num):
+    val = float(input("Enter a list element: "))
+    my_list.append(val)
+
+while swapped:
+    swapped = False
+    for i in range(len(my_list) - 1):
+        if my_list[i] > my_list[i + 1]:
+            swapped = True
+            my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
+
+print("\nSorted:")
+print(my_list)
+
+```
+
+O Python, contudo, tem os seus próprios mecanismos de ordenação. Ninguém precisa de escrever a sua própria ordenação, uma vez que existe um número suficiente de **ferramentas prontas a usar**.
+
+Explicamos-lhe este sistema de ordenação porque é importante aprender a processar o conteúdo de uma lista, e mostrar-lhe como a ordenação real pode funcionar.
+
+Se quiser que o Python ordene a sua lista, pode fazê-lo desta forma:
+```
+my_list = [8, 10, 6, 2, 4]
+my_list.sort()
+print(my_list)
+```
+
+É tão simples quanto isso.
+
+O output do snippet é o seguinte:
+
+output
+`[2, 4, 6, 8, 10]`
+
+Como pode ver, todas as listas têm um método chamado sort(), que as classifica o mais rapidamente possível. Já aprendeu alguns dos métodos de lista antes, e vai aprender mais sobre outros muito em breve.
+
+## 3.5.1.4 RESUMO DA SECÇÃO
+
+## Key takeaways
+
+1. Pode utilizar a keyword `sort()` para ordenar elementos de uma lista, por exemplo:
+```
+lst = [5, 3, 1, 2, 4]
+print(lst)
+
+lst.sort()
+print(lst)  # outputs: [1, 2, 3, 4, 5]
+```
+
+2. Há também um método de lista chamado `reverse()`, que pode utilizar para inverter a lista, por exemplo
+```
+lst = [5, 3, 1, 2, 4]
+print(lst)
+
+lst.reverse()
+print(lst)  # outputs: [4, 2, 1, 3, 5]
+```
+
+
+
+**Exercício 1**
+
+Qual é o output do seguinte snippet?
+```
+lst = ["D", "F", "A", "Z"]
+lst.sort()
+
+print(lst)
+```
+
+Verifique
+`['A', 'D', 'F', 'Z']`
+
+**Exercício 2**
+
+Qual é o output do seguinte snippet?
+```
+a = 3
+b = 1
+c = 2
+
+lst = [a, c, b]
+lst.sort()
+
+print(lst)
+```
+
+Verifique
+`[1, 2, 3]`
+
+**Exercício 3**
+
+Qual é o output do seguinte snippet?
+```
+a = "A"
+b = "B"
+c = "C"
+d = " "
+
+lst = [a, b, c, d]
+lst.reverse()
+
+print(lst)
+```
+
+Verifique
+`[' ', 'C', 'B', 'A']`
+
