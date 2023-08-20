@@ -1,7 +1,7 @@
 ## 3.4.1.1 Listas - coleções de dados
 
 ## Porque precisamos de listas?
-Pode acontecer que tenha de ler, armazenar, processar e, finalmente, imprimir dezenas, talvez centenas, talvez até milhares de números. E então, o quê? É necessário criar uma variável em separado para cada valor? É necessário passar várias horas a escrever declarações como as abaixo?
+Pode acontecer que tenha de ler, armazenar, processar e, finalmente, imprimir dezenas, talvez centenas, talvez até milhares de números. E então, é necessário criar uma variável em separado para cada valor? É necessário passar várias horas escrevendo declarações como as abaixo?
 ```
 var1 = int(input())
 var2 = int(input())
@@ -13,14 +13,14 @@ var6 = int(input())
 :
 ```
 
-Se pensa que esta não é uma tarefa complicada, então pegue num pedaço de papel e escreva um programa que:
+Se pensar que esta não é uma tarefa complicada, então pegue num pedaço de papel e escreva um programa que:
 
 * leia cinco números,
-* que os imprima por ordem do mais pequeno ao maior (este tipo de processamento chama-se triagem).
+* que os imprima por ordem do mmenor para o maior (este tipo de processamento chama-se triagem).
 
 Deve chegar à conclusão de que não tem sequer papel suficiente para completar a tarefa.
 
-Até agora, aprendeu a declarar variáveis que são capazes de armazenar exatamente um determinado valor de cada vez. Tais variáveis são por vezes chamadas **escalares**, por analogia com a matemática. Todas as variáveis que utilizou até agora são, na verdade, escalares.
+Até agora, aprendeu a declarar variáveis que são capazes de armazenar exatamente um determinado valor de cada vez. Tais variáveis são por vezes chamadas **escalares**, por analogia com a matemática. Todas as variáveis que utilizou até agora são na verdade, escalares.
 
 Pense no quão conveniente seria declarar uma variável que pudesse **armazenar mais do que um valor**. Por exemplo, cem, ou mil, ou até dez mil. Seria ainda uma e a mesma variável, mas muito ampla e espaçosa. Parece apelativa? Talvez, mas como lidaria com um recipiente cheio de valores diferentes? Como escolheria apenas aquele de que necessita?
 
@@ -49,7 +49,7 @@ Antes de avançarmos na nossa discussão, temos de referir o seguinte: a nossa *
 
 Como se altera o valor de um elemento escolhido na lista?
 
-Vamos **atribuir um novo valor de** `111` **ao primeiro elemento** na lista. Fazemo-lo assim:
+Vamos **atribuir um novo valor de** `111` **ao primeiro elemento** na lista. Fazemos assim:
 ```
 numbers = [10, 5, 7, 2, 1]
 print("Original list content:", numbers)  # Printing original list content.
@@ -90,7 +90,7 @@ Cada um dos elementos da lista pode ser acedido separadamente. Por exemplo, pode
 
 `print(numbers[0]) # Accessing the list's first element.`
 
-Assumindo que todas as operações anteriores tenham sido concluídas com sucesso, o snippet enviará `111` para a consola.
+Assumindo que todas as operações anteriores tenham sido concluídas com sucesso, o snippet enviará `111` para o console.
 
 Como pode ver no editor, a lista também pode ser impressa como um todo - tal como aqui:
 
@@ -121,6 +121,14 @@ numbers[1] = numbers[4]  # Copying value of the fifth element to the second.
 print("Previous list content:", numbers)  # Printing previous list content.
 
 print("\nList length:", len(numbers))  # Printing the list's length.
+
+Output
+Original list content: [10, 5, 7, 2, 1]
+
+Previous list content: [111, 5, 7, 2, 1]
+Previous list content: [111, 1, 7, 2, 1]
+
+List length: 5
 ```
 
 ## 3.4.1.4 Listas - coleções de dados | Operações em listas
@@ -143,9 +151,21 @@ print(numbers)
 ```
 print(numbers[4])
 numbers[4] = 1
+
 ```
 
 Adicione o snippet acima após a última linha de código no editor, execute o programa e verifique o que acontece.
+
+```
+output
+List length: 4
+Traceback (most recent call last):
+  File "main.py", line 18, in <module>
+    print(numbers[4])
+IndexError: list index out of range
+```
+
+Nota: retirámos um dos elementos da lista - agora só há quatro elementos na lista. Isto significa que o elemento número quatro não existe.
 ```
 numbers = [10, 5, 7, 2, 1]
 print("Original list content:", numbers)  # Printing original list content.
@@ -167,4 +187,4 @@ print("\nNew list content:", numbers)  # Printing current list content.
 ###
 ```
 
-Nota: retirámos um dos elementos da lista - agora só há quatro elementos na lista. Isto significa que o elemento número quatro não existe.
+
