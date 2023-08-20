@@ -12,12 +12,12 @@ Digamos que uma lista pode ser ordenada de duas maneiras:
 Nas secções seguintes, ordenaremos a lista por ordem crescente, de modo a que os números sejam ordenados do mais pequeno para o maior.
 
 Aqui está a lista:
-<dl>
-<li>8</li>
-<li>10</li>
-<li>6</li>
-<li>2</li>
-<li>4</li>
+<dl >
+<dd>8</dd>
+<dd>10</dd>
+<dd>6</dd>
+<dd>2</dd>
+<dd>4</dd>
 </dl>
 8
 10
