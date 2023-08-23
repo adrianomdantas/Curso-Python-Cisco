@@ -27,7 +27,7 @@ Agora aprenderá a escrever as suas próprias funções, e como utilizá-las. Es
 
 Acontece frequentemente que uma determinada peça de código é **repetida muitas vezes no seu programa**. Repete-se literalmente, ou com apenas algumas pequenas modificações, consistindo na utilização de outras variáveis no mesmo algoritmo. Acontece também que um programador não resiste a simplificar o trabalho, e começa a clonar tais peças de código utilizando as operações de clipboard e de copiar-colar.
 
-Pode acabar por ser tão frustrante quando de repente se descobre que houve um erro no código clonado. O programador terá muito trabalho para encontrar todos os sítios que necessitam de correções. Há também um risco elevado de as correções causarem erros.
+Pode acabar por ser tão frustrante quando de repente se descobre que houve um erro no código clonado. O programador terá muito trabalho para encontrar todos os sítes que necessitam de correções. Há também um risco elevado de as correções causarem erros.
 
 Podemos agora definir a primeira condição que pode ajudá-lo a decidir quando começar a escrever as suas próprias funções: **se um determinado fragmento do código começar a aparecer em mais do que um lugar, considerar a possibilidade de o isolar sob a forma de uma função** invocada a partir dos pontos onde o código original foi colocado anteriormente.
 
@@ -65,8 +65,8 @@ Isto leva-nos diretamente à terceira condição: se vai dividir o trabalho entr
 
 Em geral, as funções vêm de pelo menos três lugares:
 
-* do próprio Python - inúmeras funções (como `print()`) são **parte integrante do Python**, e estão sempre disponíveis sem qualquer esforço adicional em nome do programador; chamamos a estas funções **funções integradas**;
-* dos **módulos pré-instalados** de Python - muitas funções, muito úteis, mas utilizadas com menos frequência do que as integradas, estão disponíveis em vários módulos instalados juntamente com o Python; a utilização destas funções requer alguns passos adicionais do programador para as tornar totalmente acessíveis (falaremos sobre isto dentro de algum tempo);
+* do próprio Python - inúmeras funções (como `print()`) são **parte integrante do Python**, e estão sempre disponíveis sem qualquer esforço adicional em nome do programador; chamamos estas funções de **funções integradas**;
+* dos **módulos pré-instalados** de Python - muitas funções, muito úteis, mas utilizadas com menos frequência do que as integradas, estão disponíveis em vários módulos instalados juntamente com o Python; a utilização destas funções requer alguns passos adicionais do programador para as tornar totalmente acessíveis (falaremos sobre isto em breve);
 * **diretamente do seu código** - pode escrever as suas próprias funções, colocá-las dentro do seu código, e utilizá-las livremente;
 * existe uma outra possibilidade, mas está ligada às classes, por isso vamos omiti-la por agora.
 
@@ -90,7 +90,7 @@ c = int(input())
 
 As mensagens enviadas para o console pela função `print()` são sempre as mesmas. Claro que não há nada de muito mau num código destes, mas tente imaginar o que teria de fazer se o seu chefe lhe pedisse para alterar a mensagem para a tornar mais educada, por exemplo, para a iniciar com a frase `"Please,"`.
 
-Parece que teria de passar algum tempo a alterar todas as ocorrências da mensagem (utilizaria uma área de transferência, claro, mas isso não facilitaria muito a sua vida). É óbvio que provavelmente cometeria alguns erros durante o processo de emenda, e você (e o seu chefe) ficariam um pouco frustrados.
+Parece que teria de passar algum tempo alterando todas as ocorrências da mensagem (utilizaria uma área de transferência, claro, mas isso não facilitaria muito a sua vida). É óbvio que provavelmente cometeria alguns erros durante o processo de emenda, e você (e o seu chefe) ficariam um pouco frustrados.
 
 
 É possível separar uma parte do código que pode ser repetida, nomeá-la e torná-la reutilizável? Significaria que **uma mudança feita uma vez num só local seria propagada a todos os locais onde é utilizada.**
