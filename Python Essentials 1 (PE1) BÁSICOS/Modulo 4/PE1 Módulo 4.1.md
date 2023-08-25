@@ -3,7 +3,7 @@
 ## Python Essentials 1:
 ## Módulo 4
 
-**Funções, Tuples, Dicionários e Processamento de Dados**
+**Funções, Tuplas, Dicionários e Processamento de Dados**
 
 Este módulo, cobrirá os seguintes tópicos:
 
