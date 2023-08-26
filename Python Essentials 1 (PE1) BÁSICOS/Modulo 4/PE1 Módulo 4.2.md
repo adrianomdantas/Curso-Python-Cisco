@@ -282,8 +282,8 @@ Veja a invocação da função abaixo:
 
 Vamos analisá-la:
 
-* o argumento (3) para o parâmetro a é passado usando a maneira posicional;
-* os argumentos para c e b são especificados como keywords.
+* o argumento (3) para o parâmetro `a` é passado usando a maneira posicional;
+* os argumentos para `c` e `b` são especificados como keywords.
 
 Isto é o que verá no console:
 
@@ -314,7 +314,7 @@ Tudo está correto, mas deixar apenas uma keyword parece um pouco estranho - o q
 
 Acontece por vezes que os valores de um determinado parâmetro são utilizados com mais frequência do que outros. Tais argumentos podem ter os seus **valores padrão (predefinidos)** tomados em consideração quando os seus argumentos correspondentes tiverem sido omitidos.
 
-Dizem que o apelido inglês mais popular é Smith. Vamos tentar ter isto em conta.
+Dizem que o apelido inglês mais popular é *Smith*. Vamos tentar levar isto em conta.
 
 O valor padrão do parâmetro é definido usando uma sintaxe clara e pictórica:
 ```
@@ -329,6 +329,9 @@ Vamos invocar a função como de costume:
 `introduction("James", "Doe")`
 
 Consegue adivinhar o output do programa? Execute-o e verifique se estava certo.
+
+output
+`Hello, my name is James Doe`
 
 Então? Tudo parece igual, mas quando se invoca a função de uma forma que à primeira vista parece um pouco suspeita, como esta:
 
