@@ -2,7 +2,7 @@
 
 ## Efeitos e resultados: a instrução return .
 
-Todas as funções anteriormente apresentadas têm algum tipo de efeito - produzem algum texto e enviam-no para a consola.
+Todas as funções anteriormente apresentadas têm algum tipo de efeito - produzem algum texto e enviam-no para o console.
 
 Claro que as funções - tal como os seus irmãos matemáticos - podem ter resultados.
 
@@ -82,7 +82,7 @@ x = boring_function()
 print("The boring_function has returned its result. It's:", x)
 ```
 
-O snippet grava o seguinte texto na consola:
+O snippet grava o seguinte texto no console:
 
 `The boring_function has returned its result. It's: 123`
 
@@ -97,7 +97,7 @@ O resultado pode ser livremente utilizado aqui, por exemplo, para ser atribuído
 Também pode ser completamente ignorado e perdido sem deixar rasto.
 
 
-Note, não estamos a ser muito educados aqui - a função devolve um valor, e ignoramo-lo (não o utilizamos de forma alguma):
+Note, não estamos sendo muito educados aqui - a função devolve um valor, e ignoramos (não o utilizamos de forma alguma):
 ```
 def boring_function():
     print("'Boredom Mode' ON.")
@@ -142,7 +142,8 @@ Por exemplo, um snippet como este:
 
 causará um erro de runtime, descrito pela seguinte mensagem de diagnóstico:
 
-output
+output  
+
 `TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'`
 
 
@@ -170,6 +171,12 @@ Vamos testá-lo.
 
 Veja o código no editor.
 
+```
+def strange_function(n):
+    if(n % 2 == 0):
+        return True
+```
+
 É óbvio que a função `strangeFunction` devolve `True` quando o seu argumento é par.
 
 O que devolve de outra forma?
@@ -180,14 +187,16 @@ print(strange_function(2))
 print(strange_function(1))
 ```
 
-Isto é o que vemos na consola:
+Isto é o que vemos no console:
+
 output
+
 ```
 True
 None
 ```
 
-Não fique surpreendido da próxima vez que vir `None` como resultado de uma função - pode ser o sintoma de um erro subtil dentro da função.
+Não fique surpreendido da próxima vez que vir `None` como resultado de uma função - pode ser o sintoma de um erro sutil dentro da função.
 
 ## 4.3.1.4 Devolver um resultado de uma função
 
@@ -224,8 +233,184 @@ irá devolver `12` como resultado, mas deve esperar problemas se a invocar desta
 A resposta do Python será inequívoca:
 
 output
+
 `TypeError: 'int' object is not iterable`
 
-Isto é causado pelo facto de que **um único valor inteiro não deve ser iterado pelo loop** `for` .
+Isto é causado pelo fato de que **um único valor inteiro não deve ser iterado pelo loop** `for` .
 
 ## 4.3.1.5 Devolver um resultado de uma função
+
+## Efeitos e resultados: listas e funções - continuação
+
+A segunda questão é: **pode uma lista ser um resultado de uma função?**
+
+Sim, claro! Qualquer entidade reconhecível por Python pode ser um resultado de uma função.
+
+Veja o código no editor. O output do programa será assim:
+```
+def strange_list_fun(n):
+    strange_list = []
+    
+    for i in range(0, n):
+        strange_list.insert(0, i)
+    
+    return strange_list
+
+print(strange_list_fun(5))
+```
+output
+
+`[4, 3, 2, 1, 0]`
+
+
+Agora pode escrever funções com e sem resultados.
+
+Vamos mergulhar um pouco mais fundo nas questões ligadas às variáveis das funções. Isto é essencial para a criação de funções eficazes e seguras.
+
+## 4.3.1.6 LAB: Um ano bissexto: escrever as suas próprias funções
+## 4.3.1.7 LAB: Quantos dias: escrever e usar as suas próprias funções
+## 4.3.1.8 LAB: Dia do ano: escrever e utilizar as suas próprias funções
+## 4.3.1.9 LAB: Números primos - como encontrá-los
+## 4.3.1.10 LAB: Conversão do consumo de combustível
+## 4.3.1.11 RESUMO DA SECÇÃO
+
+## Key takeaways
+
+1. Pode utilizar a keyword `return` para dizer a uma função para devolver algum valor. A declaração `return` sai da função, por exemplo:
+```
+def multiply(a, b):
+    return a * b
+
+print(multiply(3, 4))    # outputs: 12
+
+
+def multiply(a, b):
+    return
+
+print(multiply(3, 4))    # outputs: None
+```
+
+2. O resultado de uma função pode ser facilmente atribuído a uma variável, por exemplo:
+```
+def wishes():
+    return "Happy Birthday!"
+
+w = wishes()
+
+print(w)    # outputs: Happy Birthday!
+```
+Veja a diferença no output dos dois exemplos a seguir:
+```
+# Example 1
+def wishes():
+    print("My Wishes")
+    return "Happy Birthday"
+
+wishes()    # outputs: My Wishes
+
+
+# Example 2
+def wishes():
+    print("My Wishes")
+    return "Happy Birthday"
+
+print(wishes())
+
+# outputs: My Wishes
+#          Happy Birthday
+```
+
+3. Pode utilizar uma lista como argumento de uma função, por exemplo:
+```
+def hi_everybody(my_list):
+    for name in my_list:
+        print("Hi,", name)
+
+hi_everybody(["Adam", "John", "Lucy"])
+```
+
+4. Uma lista também pode ser o resultado de uma função, por exemplo:
+```
+def create_list(n):
+    my_list = []
+    for i in range(n):
+        my_list.append(i)
+    return my_list
+
+print(create_list(5))
+```
+
+
+Exercício 1
+
+Qual é o output do seguinte snippet?
+
+def hi():
+    return
+    print("Hi!")
+
+hi()
+
+
+Verifique
+
+a função devolverá um implícito `None` valor
+
+Exercício 2
+
+Qual é o output do seguinte snippet?
+
+def is_int(data):
+    if type(data) == int:
+        return True
+    elif type(data) == float:
+        return False
+
+print(is_int(5))
+print(is_int(5.0))
+print(is_int("5"))
+
+
+Verifique
+```
+True
+False
+None
+```
+
+Exercício 3
+
+Qual é o output do seguinte snippet?
+
+def even_num_lst(ran):
+    lst = []
+    for num in range(ran):
+        if num % 2 == 0:
+            lst.append(num)
+    return lst
+
+print(even_num_lst(11))
+
+
+Verifique
+
+`[0, 2, 4, 6, 8, 10]`
+
+
+Exercício 4
+
+Qual é o output do seguinte snippet?
+
+def list_updater(lst):
+    upd_list = []
+    for elem in lst:
+        elem **= 2
+        upd_list.append(elem)
+    return upd_list
+
+foo = [1, 2, 3, 4, 5]
+print(list_updater(foo))
+
+Verifique
+
+`[1, 4, 9, 16, 25]`
