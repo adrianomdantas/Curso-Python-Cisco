@@ -161,7 +161,7 @@ Nota: a passagem de parâmetros posicionais é intuitivamente utilizada pelas pe
 A propósito, os húngaros fazem-no pela ordem inversa.
 <hr>
 
-Vamos implementar esse costume social em Python. A seguinte função será responsável pela introdução de alguém:
+Vamos implementar esse costume social em Python. A seguinte função será responsável pela apresentação de alguém:
 ```
 def introduction(first_name, last_name):
     print("Hello, my name is", first_name, last_name)
@@ -179,14 +179,15 @@ Hello, my name is Jesse Quick
 Hello, my name is Clark Kent
 ```
 
-Agora imagine que a mesma função está a ser utilizada na Hungria. Nesse caso, o código ficaria assim:
+Agora imagine que a mesma função está sendo utilizada na Hungria. Nesse caso, o código ficaria assim:
+```
 def introduction(first_name, last_name):
     print("Hello, my name is", first_name, last_name)
 
 introduction("Skywalker", "Luke")
 introduction("Quick", "Jesse")
 introduction("Kent", "Clark")
-
+```
 
 O output terá um aspeto diferente. Consegue adivinhá-lo?
 
