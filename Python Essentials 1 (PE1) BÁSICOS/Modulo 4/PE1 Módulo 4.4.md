@@ -33,7 +33,7 @@ Vamos realizar consigo algumas experiências para lhe mostrar como o Python cons
 
 ## Funções e scopes: continuação
 
-Vamos começar por verificar se uma variável criada fora de qualquer função é ou não visível dentro das funções. Por outras palavras, o nome de uma variável propaga-se no corpo de uma função?
+Vamos começar verificando se uma variável criada fora de qualquer função é ou não visível dentro das funções. Por outras palavras, o nome de uma variável propaga-se no corpo de uma função?
 
 Veja o código no editor. A nossa cobaia está lá.
 ```
@@ -103,7 +103,7 @@ Esperamos que agora tenha chegado à seguinte pergunta: isto significa que uma f
 
 Felizmente, a resposta é não.
 
-Existe um método especial Python que pode **alargar o scope de uma variável de forma a incluir os corpos das funções** (mesmo que se pretenda não só ler os valores, mas também modificá-los).
+Existe um método especial Python que pode **expandir o scope de uma variável de forma a incluir os corpos das funções** (mesmo que se pretenda não só ler os valores, mas também modificá-los).
 
 Tal efeito é causado por uma keyword chamada `global`:
 ```
@@ -223,7 +223,7 @@ my_function(my_list_2)
 print("Print #5:", my_list_2)
 ```
 
-Não alteramos o valor do parâmetro `my_list_1` (we already know it will not affect the argument), but instead modify the list identified by it.
+Não alteramos o valor do parâmetro `my_list_1` (já sabemos que isso não afetará o argumento), mas em vez disso modificará a lista identificada por ele..
 
 O output pode ser surpreendente. Execute o código e verifique:
 ```
@@ -241,7 +241,7 @@ Vamos tentar:
 * se o argumento for uma lista, então alterar o valor do parâmetro correspondente não afeta a lista (lembre-se: as variáveis que contêm listas são armazenadas de uma forma diferente dos escalares),
 * mas se alterar uma lista identificada pelo parâmetro (nota: a lista, não o parâmetro!), a lista irá refletir a alteração.
 
-É tempo de escrever algumas funções de exemplo. Fá-lo-á na próxima secção.
+É tempo de escrever algumas funções de exemplo. Faremos na próxima seção.
 
 ## 4.4.1.5 RESUMO DA SECÇÃO
 
