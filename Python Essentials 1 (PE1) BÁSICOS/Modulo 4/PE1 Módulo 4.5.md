@@ -537,13 +537,13 @@ print(factorial(4)) # 4 * 3 * 2 * 1 = 24
 Exercício 1
 
 O que acontecerá quando se tentar executar o seguinte snippet e porquê?
-
+```
 def factorial(n):
     return n * factorial(n - 1)
 
 
 print(factorial(4))
-``````
+```
 
 Verifique
 
