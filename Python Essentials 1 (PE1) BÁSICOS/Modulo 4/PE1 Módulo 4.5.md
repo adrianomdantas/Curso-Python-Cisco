@@ -547,7 +547,7 @@ print(factorial(4))
 
 Verifique
 
-A função factorial não tem condição de terminação (sem caso base), pelo que o Python irá levantar uma exceção (`RecursionError: maximum recursion depth exceeded`)
+A função fatorial não tem condição de terminação (sem caso base), pelo que o Python irá levantar uma exceção (`RecursionError: maximum recursion depth exceeded`)
 
 Exercício 2
 
