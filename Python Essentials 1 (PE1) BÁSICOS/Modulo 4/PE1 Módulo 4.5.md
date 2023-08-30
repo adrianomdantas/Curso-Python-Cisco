@@ -397,18 +397,18 @@ São uma **sequência de números inteiros** construída usando uma regra muito 
 
 Aqui estão alguns dos primeiros números de Fibonacci:
 
-fib_1 = 1
-fib_2 = 1
-fib_3 = 1 + 1 = 2
-fib_4 = 1 + 2 = 3
-fib_5 = 2 + 3 = 5
-fib_6 = 3 + 5 = 8
-fib_7 = 5 + 8 = 13
+fib_1 = 1  
+fib_2 = 1  
+fib_3 = 1 + 1 = 2  
+fib_4 = 1 + 2 = 3  
+fib_5 = 2 + 3 = 5  
+fib_6 = 3 + 5 = 8  
+fib_7 = 5 + 8 = 13  
 
 O que pensa da **implementação disto como uma função?**
 
 Vamos criar a nossa função `fib` e testá-la. Aqui está:
-
+```
 def fib(n):
     if n < 1:
         return None
@@ -425,7 +425,7 @@ def fib(n):
 
 for n in range(1, 10):  # testing
     print(n, "->", fib(n))
-
+```
 
 Analise o corpo do loop `for` cuidadosamente, e descubra como **movemos as** `elem_1` **e** `elem_2` **variáveis através dos números de Fibonacci subsequentes.**
 
