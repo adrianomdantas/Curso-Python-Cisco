@@ -228,7 +228,7 @@ print(is_a_triangle(1, 1, 1))
 print(is_a_triangle(1, 1, 3))
 ```
 
-Negámos a condição (invertemos os operadores relacionais e substituímos `or` por `and`, recebendo uma expressão **universal para testar triângulos**).
+Negamos a condição (invertemos os operadores relacionais e substituímos `or` por `and`, recebendo uma expressão **universal para testar triângulos**).
 
 Vamos instalar a função num programa maior. Vai pedir ao utilizador três valores e fará uso da função.
 
@@ -342,14 +342,14 @@ Não, não é. Estas são **as especificidades dos cálculos de floating-point**
 
 Outra função que estamos prestes a escrever é a **fatorials**. Lembra-se de como um fatorial é definido?
 
-0! = 1 (sim! é verdade)
-1! = 1
-2! = 1 * 2
-3! = 1 * 2 * 3
-4! = 1 * 2 * 3 * 4
-:
-:
-n! = 1 * 2 ** 3 * 4 * ... * n-1 * n
+0! = 1 (sim! é verdade)  
+1! = 1  
+2! = 1 * 2  
+3! = 1 * 2 * 3  
+4! = 1 * 2 * 3 * 4  
+:  
+:  
+n! = 1 * 2 ** 3 * 4 * ... * n-1 * n  
 
 É marcado com um **ponto de exclamação**, e é igual ao **produto** de todos os números naturais de um até ao seu argumento.
 
