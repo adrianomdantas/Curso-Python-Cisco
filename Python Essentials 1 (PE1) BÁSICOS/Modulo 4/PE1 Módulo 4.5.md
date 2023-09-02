@@ -451,7 +451,7 @@ Este termo pode descrever muitos conceitos diferentes, mas um deles é especialm
 
 Neste campo, a recursividade é uma **técnica em que uma função se invoca a si própria**.
 
-Estes dois casos parecem ser os melhores para ilustrar o fenómeno - os números fatorials e Fibonacci. Especialmente o último.
+Estes dois casos parecem ser os melhores para ilustrar o fenômeno - os números fatorials e Fibonacci. Especialmente o último.
 
 **A definição dos números Fibonacci é um exemplo claro de recursividade.** Já lhe dissemos isso:
 
@@ -462,14 +462,14 @@ A definição do número i-<sup>th</sup> refere-se ao número i-1, e assim por d
 Pode ser usado no código? Sim, pode. Pode também tornar o código mais curto e claro.
 
 A segunda versão da nossa função fib() faz uso direto desta definição:
-
+```
 def fib(n):
     if n < 1:
         return None
     if n < 3:
         return 1
     return fib(n - 1) + fib(n - 2)
-
+```
 
 O código é agora muito mais claro.
 
