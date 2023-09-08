@@ -471,13 +471,14 @@ armv7l
 
 ## Funções selecionadas a partir do módulo platform : continuação
 
-#### As funções `processor` .
+### As funções `processor` .
 
 A função processor() devolve uma string preenchida com o nome do processador real (se possível).
 
 Mais uma vez, executámos o programa de amostra em três plataformas diferentes:
 
 **Intel x86 + Windows Vista (32 bit):**
+
 output
 ```
 x86
@@ -491,6 +492,7 @@ Intel(R) Core(TM) i3-2330M CPU @ 2.20GHz
 ```
 
 **Raspberry PI2+ Linux Raspbian (32 bits):**
+
 output
 ```
 armv7l
