@@ -455,7 +455,7 @@ Estes dois casos parecem ser os melhores para ilustrar o fenômeno - os números
 
 **A definição dos números Fibonacci é um exemplo claro de recursividade.** Já lhe dissemos isso:
 
-**Fib<sub>i</sub> = Fibi-1 + Fibi-2**
+**Fib<sub>i</sub> = Fib<sub>i-1</sub> + Fib<sub>i-2</sub>**
 
 A definição do número i-<sup>th</sup> refere-se ao número i-1, e assim por diante, até se chegar aos dois primeiros.
 
