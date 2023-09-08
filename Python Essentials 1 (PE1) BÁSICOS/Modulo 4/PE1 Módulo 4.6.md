@@ -24,11 +24,11 @@ Imagine que uma lista só pode ser atribuída e lida. Não seria possível anexa
 
 Teria de construir uma lista completamente nova, constituída por todos os elementos da lista já existente, mais o novo elemento.
 
-O tipo de dados de que lhe queremos falar agora é um **tupla. Um tuple é um tipo de sequência imutável**. Pode comportar-se como uma lista, mas não deve ser modificado in situ.
+O tipo de dados de que lhe queremos falar agora é um **tupla. Um tuple é um tipo de sequência imutável**. Pode comportar-se como uma lista, mas não pode ser modificado in situ.
 
 ## O que é um tupla?
 
-A primeira e mais clara distinção entre listas e tuples é a sintaxe utilizada para as criar - as **tuplas preferem usar parêntesis curvos**, enquanto as listas gostam de ver parêntesis retos, embora também seja **possível criar um tuple a partir de um conjunto de valores separados por vírgulas.**
+A primeira e mais clara distinção entre listas e tuples é a sintaxe utilizada para as criar - as **tuplas preferem usar parêntesis curvos**, enquanto as listas gostam de ver parêntesis retos (colchetes), embora também seja **possível criar um tuple a partir de um conjunto de valores separados por vírgulas.**
 
 Veja o exemplo:
 ```
@@ -64,7 +64,7 @@ Nota: **cada elemento tuple pode ser de um tipo diferente** (floating-point, int
 `empty_tuple = ()`
 
 
-Se quiser criar uma **tupla de um elemento**, tem de ter em consideração o facto de que, devido a razões de sintaxe (um tuple tem de ser distinguível de um valor comum e único), tem de terminar o valor com uma vírgula:
+Se quiser criar uma **tupla de um elemento**, tem de levar em consideração o fato de que, devido a razões de sintaxe (um tuple tem de ser distinguível de um valor comum e único), tem de terminar o valor com uma vírgula:
 ```
 one_element_tuple_1 = (1, )
 one_element_tuple_2 = 1.,
@@ -162,9 +162,9 @@ True
 True
 ```
 
-Uma das propriedades mais úteis da tuple é a sua capacidade de **aparecer no lado esquerdo do operador de atribuição**. Viu este fenómeno há algum tempo, quando foi necessário encontrar uma ferramenta elegante para trocar os valores de duas variáveis.
+Uma das propriedades mais úteis da tuple é a sua capacidade de **aparecer no lado esquerdo do operador de atribuição**. Viu este fenômeno há algum tempo, quando foi necessário encontrar uma ferramenta elegante para trocar os valores de duas variáveis.
 
-Dê uma vista de olhos no snippet abaixo:
+Observe o snippet abaixo:
 ```
 var = 123
 
@@ -179,7 +179,7 @@ print(t1, t2, t3)
 
 Mostra três tuples que interagem - com efeito, os valores neles armazenados "circulam" - `t1` torna-se `t2`, `t2` torna-se `t3`, e `t3` torna-se `t1`.
 
-Nota: o exemplo apresenta mais um facto importante: os **elementos de uma tupla podem ser variáveis**, e não apenas literais. Além disso, podem ser expressões se estiverem no lado direito do operador de atribuição.
+Nota: o exemplo apresenta mais um fato importante: os **elementos de uma tupla podem ser variáveis**, e não apenas literais. Além disso, podem ser expressões se estiverem no lado direito do operador de atribuição.
 
 ## 4.6.1.4 Tuples e dicionários
 
@@ -241,7 +241,7 @@ Em primeiro lugar, é uma confirmação de que **os dicionários não são lista
 
 **NOTA**
 
-(*) Em Python 3.6x os dicionários tornaram-se coleções **ordenadas** por defeito. Os seus resultados podem variar dependendo da versão Python que estiver a utilizar.
+(*) Em Python 3.6x os dicionários tornaram-se coleções **ordenadas** por defeito. Os seus resultados podem variar dependendo da versão Python que estiver utilizando.
 
 ## 4.6.1.5 Tuples e dicionários
 
@@ -580,7 +580,7 @@ Andy : 5.333333333333333
 Bob : 6.0
 ```
 
-## 4.6.1.10 RESUMO DA SECÇÃO (1/3)
+## 4.6.1.10 RESUMO DA SEÇÃO (1/3)
 
 ## Key takeaways: tuplas
 
@@ -681,7 +681,7 @@ my_list = list(tup)
 print(type(my_list))    # outputs: <class 'list'>
 ```
 
-## 4.6.1.10 RESUMO DA SECÇÃO (1/3)
+## 4.6.1.10 RESUMO DA SEÇÃO (2/3)
 
 ## Key takeaways: dicionários
 
@@ -817,7 +817,7 @@ pol_eng_dictionary = {
 
 copy_dictionary = pol_eng_dictionary.copy()
 ```
-## 4.6.1.12 RESUMO DA SECÇÃO (3/3)
+## 4.6.1.12 RESUMO DA SEÇÃO (3/3)
 
 ## Key takeaways: tuples e dicionários
 

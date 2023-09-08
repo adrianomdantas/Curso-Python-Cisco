@@ -461,7 +461,7 @@ A definição do número i-<sup>th</sup> refere-se ao número i-1, e assim por d
 
 Pode ser usado no código? Sim, pode. Pode também tornar o código mais curto e claro.
 
-A segunda versão da nossa função fib() faz uso direto desta definição:
+A segunda versão da nossa função `fib(`) faz uso direto desta definição:
 ```
 def fib(n):
     if n < 1:
@@ -475,7 +475,7 @@ O código é agora muito mais claro.
 
 Mas é realmente seguro? Isto implica algum risco?
 
-Sim, há de fato um pequeno risco. **Se se esquecer de considerar as condições que podem parar a cadeia de invocações recursivas, o programa pode entrar num loop infinito.** É preciso ter cuidado.
+Sim, há de fato um pequeno risco. **Caso se esquecer de considerar as condições que podem parar a cadeia de invocações recursivas, o programa pode entrar num loop infinito.** É preciso ter cuidado.
 
 O fatorial tem também um segundo lado **recursivo**. Veja:
 
