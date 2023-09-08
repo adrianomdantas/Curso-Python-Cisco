@@ -27,7 +27,7 @@ Agora aprenderá a escrever as suas próprias funções, e como utilizá-las. Es
 
 Acontece frequentemente que uma determinada peça de código é **repetida muitas vezes no seu programa**. Repete-se literalmente, ou com apenas algumas pequenas modificações, consistindo na utilização de outras variáveis no mesmo algoritmo. Acontece também que um programador não resiste a simplificar o trabalho, e começa a clonar tais peças de código utilizando as operações de clipboard e de copiar-colar.
 
-Pode acabar por ser tão frustrante quando de repente se descobre que houve um erro no código clonado. O programador terá muito trabalho para encontrar todos os sítes que necessitam de correções. Há também um risco elevado de as correções causarem erros.
+Pode acabar sendo muito frustrante quando de repente se descobre que houve um erro no código clonado. O programador terá muito trabalho para encontrar todos os lugares do codigo que necessitam de correções. Há também um risco elevado de as correções causarem erros.
 
 Podemos agora definir a primeira condição que pode ajudá-lo a decidir quando começar a escrever as suas próprias funções: **se um determinado fragmento do código começar a aparecer em mais do que um lugar, considerar a possibilidade de o isolar sob a forma de uma função** invocada a partir dos pontos onde o código original foi colocado anteriormente.
 
@@ -59,7 +59,7 @@ Este tipo de decomposição tem um propósito diferente do descrito anteriorment
 
 Cada um deles escreve um conjunto claramente definido e descrito de funções, que quando **combinado no módulo** (falaremos sobre isto um pouco mais tarde) dará o produto final.
 
-Isto leva-nos diretamente à terceira condição: se vai dividir o trabalho entre vários programadores, **decomponha o problema para permitir que o produto seja implementado como um conjunto de funções escritas em separado, embaladas em diferentes módulos.**
+Isto nos leva diretamente à terceira condição: se vai dividir o trabalho entre vários programadores, **decomponha o problema para permitir que o produto seja implementado como um conjunto de funções escritas em separado, embaladas em diferentes módulos.**
 
 ## De onde vêm as funções?
 
@@ -68,7 +68,7 @@ Em geral, as funções vêm de pelo menos três lugares:
 * do próprio Python - inúmeras funções (como `print()`) são **parte integrante do Python**, e estão sempre disponíveis sem qualquer esforço adicional em nome do programador; chamamos estas funções de **funções integradas**;
 * dos **módulos pré-instalados** de Python - muitas funções, muito úteis, mas utilizadas com menos frequência do que as integradas, estão disponíveis em vários módulos instalados juntamente com o Python; a utilização destas funções requer alguns passos adicionais do programador para as tornar totalmente acessíveis (falaremos sobre isto em breve);
 * **diretamente do seu código** - pode escrever as suas próprias funções, colocá-las dentro do seu código, e utilizá-las livremente;
-* existe uma outra possibilidade, mas está ligada às classes, por isso vamos omiti-la por agora.
+* existe uma outra possibilidade, mas está ligada às classes, por isso vamos omiti-la por enquanto.
 
 ## 4.1.1.3 Escrever funções
 
@@ -107,7 +107,7 @@ Como se faz tal função?
 
 É preciso **defini-la**. A palavra *definir* é significativa aqui.
 
-Este é o aspeto da definição mais simples da função:
+Este é o aspecto da definição mais simples da função:
 ```
 def function_name():
     function_body
@@ -183,11 +183,11 @@ Veja a imagem abaixo:
 
 ![função](../Imagens/funcao.jpg)
 
-## Ela tenta mostrar-lhe todo o processo:
+ Ela tenta mostrar-lhe todo o processo:
 
 * quando se **invoca** uma função, o Python lembra-se do local onde aconteceu e salta para a função invocada;
 * o corpo da função é então **executado**;
-* chegar ao fim da função força o Python a **regressar** ao local diretamente após o ponto de invocação.
+* chega ao fim da função força o Python a **regressar** ao local diretamente após o ponto de invocação.
 
 Há dois, muito importantes, senão. Aqui está o primeiro deles:
 
@@ -247,7 +247,7 @@ print("We end here.")
 
 ```
 
-Pode parecer estranho, mas está completamente correto, e funciona como pretendido.
+Pode parecer estranho, mas está completamente correto, e funciona como esperado.
 
 
 Voltemos ao nosso exemplo principal, e utilizemos a função para o trabalho certo, como aqui:
@@ -294,7 +294,7 @@ def message():    # defining a function
 message()    # calling the function
 ```
 
-Pode definir uma função que também aceita argumentos, tal como a função de um parámetro abaixo:
+Pode definir uma função que também aceita argumentos, tal como a função de um parametro abaixo:
 ```
 def hello(name):    # defining a function
     print("Hello,", name)    # body of the function

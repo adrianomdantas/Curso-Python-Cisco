@@ -215,6 +215,11 @@ O conceito é claro - os valores passados para os parâmetros são precedidos pe
 A posição não importa aqui - o valor de cada argumento conhece o seu destino com base no nome utilizado.
 
 Deverá ser capaz de prever o output. Execute o código para verificar se estava certo.
+```
+Hello, my name is James Bond
+Hello, my name is Luke Skywalker
+```
+
 <hr>
 
 É claro que **não se deve usar um nome de parâmetro inexistente**.
@@ -442,7 +447,7 @@ subtra(5, b=2)    # outputs: 3
 subtra(5, 2)    # outputs: 3
 ```
 
-É importante lembrar que **os argumentos posicionais não devem seguir os argumentos de keyword**. É por isso que se tentar executar o seguinte snippet:
+É importante lembrar que **os argumentos posicionais não devem sobrevir os argumentos de keyword**. É por isso que se tentar executar o seguinte snippet:
 ```
 def subtra(a, b):
     print(a - b)

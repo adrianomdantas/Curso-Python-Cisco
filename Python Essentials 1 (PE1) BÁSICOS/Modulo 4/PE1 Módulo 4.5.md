@@ -111,14 +111,14 @@ Vamos converter seis pés em metros:
 
 `print(ft_and_inch_to_m(6, 0))`
 
-E esta é o output:
+E este é o output:
 
 `1.8288000000000002`
 
 
 É bem possível que por vezes se queira usar apenas os pés sem polegadas. O Python vai ajudá-lo? Claro que vai.
 
-Modificámos um pouco o código:
+Modificamos um pouco o código:
 ```
 def ft_and_inch_to_m(ft, inch = 0.0):
     return ft * 0.3048 + inch * 0.0254
@@ -336,9 +336,9 @@ Tentamos com um triângulo retângulo como metade de um quadrado com um lado igu
 
 Não, não é. Estas são **as especificidades dos cálculos de floating-point**. Em breve, falaremos mais sobre o assunto.
 
-## 4.5.1.6 Criar funções | factorials
+## 4.5.1.6 Criar funções | fatorials
 
-## Algumas funções simples: factorials
+## Algumas funções simples: fatorials
 
 Outra função que estamos prestes a escrever é a **fatorials**. Lembra-se de como um fatorial é definido?
 
@@ -455,7 +455,7 @@ Estes dois casos parecem ser os melhores para ilustrar o fenômeno - os números
 
 **A definição dos números Fibonacci é um exemplo claro de recursividade.** Já lhe dissemos isso:
 
-**Fibi = Fibi-1 + Fibi-2**
+**Fib<sub>i</sub> = Fibi-1 + Fibi-2**
 
 A definição do número i-<sup>th</sup> refere-se ao número i-1, e assim por diante, até se chegar aos dois primeiros.
 

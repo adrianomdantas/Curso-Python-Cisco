@@ -20,7 +20,7 @@ Quando utilizada dentro de uma função, provoca a **terminação imediata da ex
 
 Nota: se uma função não se destina a produzir um resultado, **utilizar a instrução** `return` **não é obrigatório** - será executada implicitamente no final da função.
 
-De qualquer modo, pode utilizá-la para **terminar as atividades de uma função a pedido**, antes de o controlo chegar à última linha da função.
+De qualquer modo, pode utilizá-la para **terminar as atividades de uma função a pedido**, antes de o controle chegar à última linha da função.
 <hr>
 
 Consideremos a seguinte função:
@@ -70,7 +70,7 @@ def function():
 Há duas consequências da sua utilização:
 
 * provoca a **terminação imediata da execução da função** (nada de novo em comparação com a primeira variante)
-* além disso, a função **avaliará o valor da expressão e devolvê-la-á (daí o nome, mais uma vez) como resultado da função.**
+* além disso, a função **avaliará o valor da expressão e devolverá (daí o nome, mais uma vez) como resultado da função.**
 
 Sim, nós já sabemos - este exemplo não é realmente sofisticado:
 ```
@@ -94,7 +94,7 @@ A instrução `return` , enriquecida com a expressão (a expressão é muito sim
 
 O resultado pode ser livremente utilizado aqui, por exemplo, para ser atribuído a uma variável.
 
-Também pode ser completamente ignorado e perdido sem deixar rasto.
+Também pode ser completamente ignorado e perdido sem deixar rastro.
 
 
 Note, não estamos sendo muito educados aqui - a função devolve um valor, e ignoramos (não o utilizamos de forma alguma):
@@ -122,7 +122,7 @@ A única desvantagem é que o resultado foi irremediavelmente perdido.
 
 Não se esqueça:
 
-* é-lhe sempre **permitido ignorar o resultado da função**, e ficar satisfeito com o efeito da função (se a função tiver algum)
+* Sempre é **permitido ignorar o resultado da função**, e ficar satisfeito com o efeito da função (se a função tiver algum)
 * se uma função se destina a devolver um resultado útil, deve conter a segunda variante da instrução `return` .
 
 
@@ -344,20 +344,20 @@ print(create_list(5))
 Exercício 1
 
 Qual é o output do seguinte snippet?
-
+```
 def hi():
     return
     print("Hi!")
 
 hi()
-
+```
 
 Verifique
 
 a função devolverá um implícito `None` valor
 
 Exercício 2
-
+```
 Qual é o output do seguinte snippet?
 
 def is_int(data):
@@ -369,7 +369,7 @@ def is_int(data):
 print(is_int(5))
 print(is_int(5.0))
 print(is_int("5"))
-
+```
 
 Verifique
 ```
@@ -381,7 +381,7 @@ None
 Exercício 3
 
 Qual é o output do seguinte snippet?
-
+```
 def even_num_lst(ran):
     lst = []
     for num in range(ran):
@@ -390,7 +390,7 @@ def even_num_lst(ran):
     return lst
 
 print(even_num_lst(11))
-
+```
 
 Verifique
 
@@ -400,7 +400,7 @@ Verifique
 Exercício 4
 
 Qual é o output do seguinte snippet?
-
+```
 def list_updater(lst):
     upd_list = []
     for elem in lst:
@@ -410,7 +410,7 @@ def list_updater(lst):
 
 foo = [1, 2, 3, 4, 5]
 print(list_updater(foo))
-
+```
 Verifique
 
 `[1, 4, 9, 16, 25]`
