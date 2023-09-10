@@ -477,6 +477,12 @@ A função processor() devolve uma string preenchida com o nome do processador r
 
 Mais uma vez, executámos o programa de amostra em três plataformas diferentes:
 
+```
+from platform import processor
+
+print(processor())
+```
+
 **Intel x86 + Windows Vista (32 bit):**
 
 output
@@ -499,3 +505,201 @@ armv7l
 ```
 
 Teste isto na sua máquina local.
+
+## 1.2.1.13 Módulos úteis | platform
+
+## Funções selecionadas a partir do módulo platform : continuação
+
+### As funções `system` .
+
+Uma função chamada `system()` devolve o nome genérico do SO como uma cadeia.
+
+As nossas plataformas de exemplo apresentaram-se desta forma:
+
+```
+from platform import system
+
+print(system())
+```
+
+**Intel x86 + Windows Vista (32 bit):**
+
+output
+
+`Windows`
+
+
+**Intel x86 + Gentoo Linux (64 bits):**
+
+output
+
+`Linux`
+
+
+**Raspberry PI2+ Linux Raspbian (32 bits):**
+
+output
+
+`Linux`
+
+## 1.2.1.14 Módulos úteis | platform
+
+## Funções selecionadas a partir do módulo platform : continuação
+
+### As funções `version` função
+
+A versão do SO é fornecida como uma string pela `version()` função.
+
+Execute o código e verifique o seu output. Isto é o que obtivemos:
+
+```
+from platform import version
+
+print(version())
+```
+
+**Intel x86 + Windows Vista (32 bit):**
+
+output
+
+`6.0.6002`
+
+
+**Intel x86 + Gentoo Linux (64 bits):**
+
+output
+
+`#1 SMP PREEMPT Fri Jul 21 22:44:37 CEST 2017`
+
+
+**Raspberry PI2+ Linux Raspbian (32 bits):**
+
+output
+
+`#1 SMP Debian 4.4.6-1+rpi14 (2016-05-05)`
+
+## 1.2.1.15 Módulos úteis | platform
+
+## Funções selecionadas a partir do módulo platform : continuação
+
+### As funções `python_implementation` e `python_version_tuple` .
+
+Se precisar de saber qual a versão do Python que está a executar o seu código, pode verificá-la utilizando várias funções dedicadas - aqui estão duas delas:
+
+```
+from platform import python_implementation, python_version_tuple
+
+print(python_implementation())
+
+for atr in python_version_tuple():
+    print(atr)
+```
+
+* `python_implementation()` → devolve uma string denotando a implementação do Python (esperar `CPython` aqui, a menos que decida utilizar qualquer ramo de Python não canónico)
+
+* `python_version_tuple()` → devolve um tuple de três elementos preenchido com:
+    * a parte **principal** da versão do Python
+    * a parte **secundária**;
+    * o número do **patch** level.
+
+O nosso programa de exemplo produziu o seguinte output:
+
+output de amostra
+
+```
+CPython
+3
+7
+7
+```
+
+É muito provável que a sua versão do Python seja diferente.
+
+## 1.2.1.16 Módulos Úteis
+
+## Index do Módulo Python
+
+Apenas cobrimos aqui as noções básicas dos módulos do Python. Os módulos do Python criam o seu próprio universo, no qual o Python é apenas uma galáxia, e ousaríamos dizer que explorar as profundezas destes módulos pode levar significativamente mais tempo do que conhecer o Python "puro".
+
+Além disso, a comunidade Python em todo o mundo cria e mantém centenas de módulos adicionais utilizados em aplicações de nicho como a genética, a psicologia, ou mesmo a astrologia.
+
+Estes módulos não são (nem serão) distribuídos juntamente com o Python, nem através dos canais oficiais, o que torna o universo Python mais amplo - quase infinito.
+
+Pode ler sobre todos os módulos Python padrão aqui: https://docs.python.org/3/py-modindex.html.
+
+Não se preocupe - não vai precisar de todos estes módulos. Muitos deles são muito específicos.
+
+Tudo o que precisa de fazer é encontrar os módulos que deseja, e ensinar-se a usá-los. É fácil.
+
+
+![Python Module Index](../Imagens/pythonModuleIndex.jpg)
+
+Na seção seguinte vamos dar uma vista de olhos a outra coisa. Vamos mostrar-lhe como escrever o seu próprio módulo.
+
+## 1.2.1.17 RESUMO DA SEÇÃO
+
+## Key takeaways
+
+1. Uma função chamada `dir()` pode mostrar-lhe uma lista das entidades contidas dentro de um módulo importado. Por exemplo:
+```
+import os
+dir(os)
+```
+
+imprime a lista de todas as facilidades do módulo `os` que pode utilizar no seu código.
+
+
+2. O método `math` acopla mais de 50 símbolos (funções e constantes) que realizam operações matemáticas (como `sine()`, `pow()`, `factorial()`) ou fornecendo valores importantes (como **π** e o símbolo de Euler **e**).
+
+
+3. Os loops `random` agrupa mais de 60 entidades concebidas para o ajudar a utilizar números pseudo-aleatórios. Não se esqueça do sufixo "aleatório", pois não existe um número verdadeiramente aleatório quando se trata de os gerar utilizando os algoritmos do computador.
+
+
+4. O objeto da exceção `platform` contém cerca de 70 funções que lhe permitem mergulhar nas camadas inferiores do SO e hardware. A sua utilização permite-lhe saber mais sobre o ambiente em que o seu código é executado.
+
+
+5. O **Python Module Index** https://docs.python.org/3/py-modindex.html é uma diretoria de módulos disponíveis no universo Python, dirigido pela comunidade. Se quiser encontrar um módulo adequado às suas necessidades, inicie aí a sua pesquisa.
+
+
+
+**Exercício 1**
+
+Qual é o valor esperado da variável `result` após o seguinte código ter sido executado?
+```
+import math
+result = math.e == math.exp(1)
+```
+
+Verifique
+`True`
+
+**Exercício 2**
+
+(Complete a frase) Definir a seed do gerador com o mesmo valor cada vez que o seu programa é executado garante que...
+
+Verifique
+... os valores pseudo-aleatórios emitidos a partir do módulo `random` sejam exatamente os mesmos.
+
+
+
+**Exercício 3**
+
+Qual das funções do módulo `platform` irá utilizar para determinar o nome da CPU em execução dentro do seu computador?
+
+Verifique
+A função `processor()` .
+
+
+
+**Exercício 4**
+
+Qual é o output do seguinte snippet?
+```
+import platform
+
+print(len(platform.python_version_tuple()))
+```
+
+Verifique
+`3`
+
