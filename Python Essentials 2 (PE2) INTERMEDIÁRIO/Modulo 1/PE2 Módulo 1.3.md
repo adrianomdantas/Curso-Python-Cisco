@@ -398,6 +398,7 @@ De repente, alguém repara que estes módulos formam a sua própria hierarquia, 
 Após alguma discussão, a equipa chega à conclusão de que os módulos têm de ser agrupados. Todos os participantes concordam que a seguinte estrutura em árvore reflete perfeitamente as relações mútuas entre os módulos:
 
 Módulos agrupados
+
 ![group extra](../Imagens/groupextra.jpg)
 
 Vamos rever isto de baixo para cima:
