@@ -20,7 +20,7 @@ O código informático tem uma tendência para crescer. Podemos dizer que o cód
 
 Um código que não seja capaz de responder às necessidades dos utilizadores será rapidamente esquecido, e imediatamente substituído por um código novo, melhor e mais flexível. Esteja preparado para isto, e nunca pense que algum dos seus programas acabe por ser concluído. A conclusão é um estado de transição e normalmente passa rapidamente, após o primeiro relatório de bug. O próprio Python é um bom exemplo de como a regra atua.
 
-Código em crescimento é, de fato, um problema em crescimento. Um código maior significa sempre uma manutenção mais dura. A procura de bugs é sempre mais fácil onde o código é menoro (tal como encontrar uma quebra mecânica é mais simples quando a maquinaria é mais simples e pequena).
+Código em crescimento é, de fato, um problema em crescimento. Um código maior significa sempre uma manutenção mais dura. A procura de bugs é sempre mais fácil onde o código é menor (tal como encontrar uma quebra mecânica é mais simples quando a maquinaria é mais simples e pequena).
 
 Além disso, quando se espera que o código a ser criado seja realmente grande (pode usar um número total de source lines como uma medida útil, mas não muito precisa, do tamanho de um código) pode querer (ou melhor, será forçado a) dividi-lo em muitas partes, implementado em paralelo por alguns, uma dúzia, várias dúzias, ou mesmo várias centenas de programadores individuais.
 
@@ -60,7 +60,7 @@ Em primeiro lugar, um módulo é identificado pelo seu **nome**. Se quiser utili
 
 Todos estes módulos, juntamente com as funções integradas, formam a **Python standard library** - um tipo especial de biblioteca onde os módulos desempenham o papel de livros (podemos mesmo dizer que as pastas desempenham o papel de prateleiras). Se quiser ver a lista completa de todos os “volumes” recolhidos nessa biblioteca, pode encontrá-la aqui: https://docs.python.org/3/library/index.html.
 
-Cada módulo consiste em entidades (como um livro consiste em capítulos). Estas entidades podem ser funções, variáveis, constantes, classes e objetos. Se souber como aceder a um determinado módulo, pode fazer uso de qualquer uma das entidades que ele armazena.
+Cada módulo consiste em entidades (como um livro consiste em capítulos). Estas entidades podem ser funções, variáveis, constantes, classes e objetos. Se souber como acessar a um determinado módulo, pode fazer uso de qualquer uma das entidades que ele armazena.
 
 Vamos começar a discussão com um dos módulos mais usados, chamado `math`. O seu nome fala por si - o módulo contém uma rica coleção de entidades (não apenas funções) que permitem a um programador implementar eficazmente cálculos que exijam o uso de funções matemáticas, como *sin()* ou *log()*.
 
@@ -68,12 +68,12 @@ Vamos começar a discussão com um dos módulos mais usados, chamado `math`. O s
 
 ## Importar um módulo
 
-Para tornar um módulo utilizável, deve **importá-lo** (pense nisto como tirar um livro da prateleira). Importar um módulo é feito por uma instrução chamada `import`. Nota: `import` é também uma keyword (com todas as consequências deste facto).
+Para tornar um módulo utilizável, deve **importá-lo** (pense nisto como tirar um livro da prateleira). Importar um módulo é feito por uma instrução chamada `import`. Nota: `import` é também uma keyword (com todas as consequências deste fato).
 
 Vamos supor que deseja utilizar duas entidades fornecidas pelo módulo `math` :
 
 * um símbolo (constante) representando um valor preciso (o mais preciso possível usando aritmética de duplo floating-point) de π (embora a utilização de uma letra grega para nomear uma variável seja totalmente possível em Python, o símbolo é nomeado **pi** - é uma solução mais conveniente, especialmente para aquela parte do mundo que não tem nem vai usar um teclado grego)
-* uma função chamada `sin()` (o equivalente informático da função *seno* matemática)
+* uma função chamada `sin()` (o equivalente informático da função matemática *seno*)
   
 Ambas as entidades estão disponíveis através do módulo `math` , mas a forma como pode utilizá-los depende fortemente de como a importação foi feita.
 
@@ -234,7 +234,7 @@ print(sin(pi/2))
 
 O output deve ser o mesmo que anteriormente, pois de fato já utilizámos as mesmas entidades de antes: `1.0`. Copie o código, cole-o no editor e execute o programa.
 
-O código parece mais simples? Talvez, mas o aspecto não é o único efeito deste tipo de importação. Vamos mostrar-lho.
+O código parece mais simples? Talvez, mas o aspecto não é o único efeito deste tipo de importação. Vamos mostrar-lhe.
 
 ## 1.1.1.8 Importar um módulo | math
 
