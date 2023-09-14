@@ -488,3 +488,170 @@ Preparámos um ficheiro zip contendo todos os ficheiros do ramo de pacotes. Pode
 Continuará as suas experiências utilizando o main2.py arquivo.
 
 ## 1.3.1.9 Módulos e Pacotes
+
+## O seu primeiro pacote: passo 7
+
+Vamos aceder à função `funI()` do módulo iota a partir do topo do pacote extra . Isto obriga-nos a utilizar nomes de pacotes qualificados (associe isto com a nomeação de pastas e subpastas - as convenções são muito semelhantes).
+
+Esta é a forma de o fazer:
+
+![mains2](../Imagens/main2.jpg)
+
+```
+from sys import path
+path.append('..\\packages')
+
+import extra.iota
+print(extra.iota.funI())
+```
+
+Nota:
+
+* modificámos a variável `path` para a tornar acessível ao Python;
+* o ramo `import` não aponta diretamente para o módulo, mas especifica o caminho totalmente qualificado a partir do topo do pacote;
+
+substituir `import extra.iota` por `import iota` causará um erro.
+
+A seguinte variante também é válida:
+
+![main2.2](../Imagens/main2.2.jpg)
+```
+from sys import path
+path.append('..\\packages')
+
+from extra.iota import funI
+print(funI())
+```
+
+Observe o nome qualificado do módulo iota .
+
+## 1.3.1.10 Módulos e Pacotes
+
+## O seu primeiro pacote: passo 8
+
+Vamos agora chegar até ao fundo da árvore - é assim que se pode ter acesso aos módulos sigma e tau :
+
+![mais2.3](../Imagens/main2.3.jpg)
+```
+from sys import path
+
+path.append('..\\packages')
+
+import extra.good.best.sigma
+from extra.good.best.tau import funT
+
+print(extra.good.best.sigma.funS())
+print(funT())
+```
+
+Pode tornar a sua vida mais fácil através da utilização de aliasing:
+
+![main2.4](../Imagens/maisn2.4.jpg)
+
+```
+from sys import path
+
+path.append('..\\packages')
+
+import extra.good.best.sigma as sig
+import extra.good.alpha as alp
+
+print(sig.funS())
+print(alp.funA())
+```
+
+## O seu primeiro pacote: passo 9
+
+Vamos assumir que zipámos toda a subdiretoria, a partir da pasta extra (incluindo a pasta), e vamos obter um ficheiro com o nome extrapack.zip. A seguir, colocamos o ficheiro dentro da pasta packages .
+
+Agora podemos utilizar o ficheiro zip com o papel de pacotes:
+```
+from sys import path
+
+path.append('..\\packages\\extrapack.zip')
+
+import extra.good.best.sigma as sig
+import extra.good.alpha as alp
+from extra.iota import funI
+from extra.good.beta import funB
+
+print(sig.funS())
+print(alp.funA())
+print(funI())
+print(funB())
+```
+
+Se quiser realizar as suas próprias experiências com o pacote que criamos, pode descarregá-lo em baixo. Encorajamo-lo a fazê-lo.
+
+**DOWNLOAD** [Extrapack ZIP file](https://drive.google.com/file/d/19ycMarZpNCKQIWNzAJXkqzAwyAh9HYEl/view?usp=sharing)
+
+Agora pode criar módulos e combiná-los em pacotes. É tempo de iniciar uma discussão completamente diferente - sobre erros, falhas e crashes.
+
+## 1.3.1.11 RESUMO DA SECÇÃO
+
+## Key takeaways
+
+1. Enquanto um **módulo** é concebido para acoplar algumas entidades relacionadas (funções, variáveis, constantes, etc.), um **pacote** é um recipiente que permite o acoplamento de vários módulos relacionados sob um nome comum. Tal recipiente pode ser distribuído tal como está (como um lote de ficheiros implantado numa sub-árvore de diretoria) ou pode ser embalado dentro de um ficheiro zip.
+
+
+2. Durante a primeira importação do módulo atual, o Python traduz o seu source code para o formato **semi-compilado** armazenado dentro dos ficheiros **pyc**, e implementa estes ficheiros na diretoria `__pycache__` localizada na home directory do módulo.
+
+
+3. Se quiser instruir o utilizador do seu módulo de que uma determinada entidade deve ser tratada como **privada** (ou seja, não deve ser explicitamente utilizada fora do módulo), pode marcar o seu nome com o prefixo `_` ou `__` . Não se esqueça que esta é apenas uma recomendação, não uma ordem.
+
+
+4. Os nomes shabang, shebang, hasbang, poundbange hashpling descrevem o dígrafo escrito como `#!`, utilizado para instruir os SOs do tipo Unix como o source file Python deve ser lançado. Esta convenção não tem efeito no MS Windows.
+
+
+5. Se quiser convencer o Python de que deve ter em conta a diretoria de um pacote não-padrão, o seu nome deve ser inserido/anexado na/à lista de diretorias de importação armazenada na variável `path` contida no módulo `sys` .
+
+
+6. Um ficheiro Python chamado `__init__.py` é implicitamente executado quando um pacote que o contém é sujeito a importação, e é utilizado para inicializar um pacote e/ou os seus sub-pacotes (se existirem). O ficheiro pode estar vazio, mas não deve estar ausente.
+
+
+
+**Exercício 1**
+
+Pretende impedir o utilizador do seu módulo de executar o seu código como um script comum. Como conseguirá tal efeito?
+
+Verifique
+```
+import sys
+
+if __name__ == "__main__":
+    print "Don't do that!"
+    sys.exit()
+
+```
+
+**Exercício 2**
+
+Alguns pacotes adicionais e necessários são armazenados dentro da diretoria `D:\Python\Project\Modules` . Escreva um código assegurando que a diretoria é atravessada pelo Python, a fim de encontrar todos os módulos solicitados.
+
+Verifique
+```
+import sys
+
+# note the double backslashes!
+sys.path.append("D:\\Python\\Project\\Modules")
+
+```
+
+
+**Exercício 3**
+
+A diretoria mencionada no exercício anterior contém uma sub-árvore da seguinte estrutura:
+```
+abc
+ |__ def
+      |__ mymodule.py
+
+```
+Assumindo que D:\Python\Project\Modules foi anexada com sucesso à lista sys.path , escreva uma diretiva de importação permitindo-lhe utilizar todas as mymodule entidades.
+
+Verifique
+
+```
+import abc.def.mymodule
+```
+
