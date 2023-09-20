@@ -570,3 +570,4 @@ Muito bem! Chegou ao fim do Módulo 1 e completou um marco importante na sua edu
 * PIP (Python Package Installer).
 
 Está agora pronto para fazer o quiz do módulo e tentar o desafio final: Teste do Módulo 1, que o ajudará a avaliar o que aprendeu até agora.
+
