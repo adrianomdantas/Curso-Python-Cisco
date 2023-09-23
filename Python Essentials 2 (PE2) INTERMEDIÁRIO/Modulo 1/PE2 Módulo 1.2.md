@@ -2,7 +2,7 @@
 
 ## Trabalhar com módulos padrão
 
-Antes de começarmos a passar por alguns módulos Python padrão, queremos introduzir-lhe a função `dir()` . Não tem nada a ver com o comando `dir` que conhece de consolas Windows e Unix, visto dir() não mostrar o conteúdo de uma diretoria/pasta de disco, mas não há como negar que faz algo realmente semelhante - é capaz de revelar todos os nomes fornecidos através de um determinado módulo.
+Antes de começarmos a passar por alguns módulos Python padrão, queremos introduzir-lhe a função `dir()` . Não tem nada a ver com o comando `dir` que conhece de consoles Windows e Unix, visto dir() não mostrar o conteúdo de um diretorio/pasta de disco, mas não há como negar que tem algo+_+ realmente semelhante - é capaz de revelar todos os nomes fornecidos através de um determinado módulo.
 
 Há uma condição: o módulo tem de ter sido previamente importado como um todo (isto é, utilizar a `import module` instrução - `from module` não é suficiente).
 
@@ -67,7 +67,7 @@ print(sin(ar) / cos(ar) == tan(ar))
 print(asin(sin(ar)) == ar)
 ```
 
-Escolhemo-los arbitrariamente, mas isso não significa que as funções que não mencionamos aqui sejam menos significativas. Mergulhe você mesmo nas profundezas dos módulos - não temos aqui espaço nem tempo para falar de tudo em pormenor.
+Escolhemo arbitrariamente, mas isso não significa que as funções que não mencionamos aqui sejam menos significativas. Mergulhe você mesmo nas profundezas dos módulos - não temos aqui espaço nem tempo para falar de tudo em pormenor.
 
 O primeiro grupo das funções de `math` estão relacionadas com **trigonometria**:
 
@@ -228,7 +228,7 @@ A função `seed()` é capaz de **definir diretamente a seed do gerador**. Vamos
 * `seed()` - define a seed com a hora atual;
 * `seed(int_value)` - define a seed com o valor inteiro `int_value`.
 
-Modificámos o programa anterior - com efeito, removemos qualquer vestígio de aleatoriedade do código:
+Modificamos o programa anterior - com efeito, removemos qualquer vestígio de aleatoriedade do código:
 ```
 from random import random, seed
 
@@ -260,7 +260,7 @@ Nota: os seus valores podem ser ligeiramente diferentes dos nossos se o seu sist
 
 #### As funções `randrange` e `randint` .
 
-Se quiser valores inteiros aleatórios, uma das seguintes funções encaixar-se-ia melhor:
+Se quiser valores inteiros aleatórios, uma das seguintes funções se encaixaria melhor:
 
 * `randrange(end)`
 * `randrange(beg, end)`
@@ -323,7 +323,7 @@ A primeira variante escolhe um elemento "aleatório" a partir da sequência de i
 
 O segundo constrói uma lista (uma amostra; em inglês, uma sample) que consiste no elemento `elements_to_choose` “sorteado” a partir da sequência de input.
 
-Por outras palavras, a função escolhe (em inglês, chooses) alguns dos elementos de input, devolvendo uma lista com a escolha. Os elementos da amostra são colocados em ordem aleatória. Nota: o `elements_to_choose` não deve ser maior do que o comprimento da sequência de input.
+Em outras palavras, a função escolhe (em inglês, chooses) alguns dos elementos de input, devolvendo uma lista com a escolha. Os elementos da amostra são colocados em ordem aleatória. Nota: o `elements_to_choose` não deve ser maior do que o comprimento da sequência de input.
 
 Veja o código abaixo:
 ```
