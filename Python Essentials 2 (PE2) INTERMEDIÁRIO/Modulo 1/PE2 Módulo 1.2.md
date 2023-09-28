@@ -357,17 +357,17 @@ As camadas são:
 
 * o seu código (em execução) está localizado na parte superior;
 * O Python (mais precisamente - o seu ambiente de runtime) encontra-se diretamente abaixo;
-* a camada seguinte da pirâmide é preenchida com o SO - o ambiente Python fornece algumas das suas funcionalidades utilizando os serviços do sistema operativo; o Python, embora muito poderoso, não é omnipotente - é forçado a utilizar muitos ajudantes se for processar ficheiros ou comunicar com dispositivos físicos;
-* a camada mais inferior é o hardware - o processador (ou processadores), interfaces de rede, dispositivos de interface humana (ratos, teclados, etc.) e toda a outra maquinaria necessária para fazer funcionar o computador; o sistema operativo sabe como conduzi-lo, e usa muitos truques para conduzir todas as peças num ritmo consistente.
+* a camada seguinte da pirâmide é preenchida com o SO - o ambiente Python fornece algumas das suas funcionalidades utilizando os serviços do sistema operacional; o Python, embora muito poderoso, não é omnipotente - é forçado a utilizar muitos ajudantes se for processar arquivos ou comunicar com dispositivos físicos;
+* a camada mais inferior é o hardware - o processador (ou processadores), interfaces de rede, dispositivos de interface humana (mouses, teclados, etc.) e toda a outra maquinaria necessária para fazer funcionar o computador; o sistema operacional sabe como conduzi-lo, e usa muitos truques para conduzir todas as peças num ritmo consistente.
 
 Isto significa que algumas das suas ações (ou melhor, do seu programa) têm de percorrer um longo caminho para serem executadas com sucesso - imagine que:
 
-* **o seu código** quer criar um ficheiro, por isso invoca uma das funções de Python;
-* O **Python** aceita a ordem, rearranja-a para cumprir os requisitos do SO local (é como colocar o selo "aprovado" no seu pedido) e envia-a (isto pode lembrá-lo de uma cadeia de comando)
-* o **SO** verifica se o pedido é razoável e válido (por exemplo, se o nome do ficheiro está em conformidade com algumas regras de sintaxe) e tenta criar o ficheiro; tal operação, aparentemente muito simples, não é atómica - consiste em muitos pequenos passos dados pelo...
+* **o seu código** quer criar um arquivo, por isso invoca uma das funções de Python;
+* O **Python** aceita a ordem, rearranja-a para cumprir os requisitos do SO local (é como colocar o selo "aprovado" no seu pedido) e a envia (isto pode lembrá-lo de uma cadeia de comando)
+* o **SO** verifica se o pedido é razoável e válido (por exemplo, se o nome do arquivo está em conformidade com algumas regras de sintaxe) e tenta criar o arquivo; tal operação, aparentemente muito simples, não é atômica - consiste em muitos pequenos passos dados pelo...
 * **hardware**, que é responsável pela ativação de dispositivos de armazenamento (disco rígido, dispositivos de estado sólido, etc.) para satisfazer as necessidades do SO.
 
-Normalmente, não está ciente de todo este alarido - quer que o ficheiro seja criado e pronto.
+Normalmente, não está ciente de todo este processo - quer que o arquivo seja criado e pronto.
 
 Mas por vezes deseja-se saber mais - por exemplo, o nome do SO que hospeda o Python, e algumas características que descrevem o hardware que hospeda o SO.
 
@@ -379,9 +379,9 @@ Existe um módulo que fornece alguns meios que lhe permitem saber onde está e q
 
 #### A função `platform` .
 
-A função `platform` permite-lhe aceder aos dados da plataforma subjacente, ou seja, hardware, sistema operativo, e informação da versão do intérprete.
+A função `platform` permite-lhe aceder aos dados da plataforma subjacente, ou seja, hardware, sistema operacional, e informação da versão do intérprete.
 
-Existe uma função que lhe pode mostrar todas as camadas subjacentes num só relance, denominada `platform`, também. Apenas devolve uma string descrevendo o ambiente; assim, o seu output é mais dirigido ao ser humano do que ao processamento automatizado (vê-lo-á em breve).
+Existe uma função que pode lhe mostrar todas as camadas subjacentes num só relance, denominada `platform`, também. Apenas devolve uma string descrevendo o ambiente; assim, o seu output é mais dirigido ao ser humano do que ao processamento automatizado (veremos em breve).
 
 É assim que pode invocá-la:
 ```
