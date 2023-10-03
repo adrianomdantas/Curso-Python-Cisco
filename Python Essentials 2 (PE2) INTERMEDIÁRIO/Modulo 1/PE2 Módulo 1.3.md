@@ -4,7 +4,7 @@
 
 Escrever os seus próprios módulos não difere muito da escrita de guiões normais.
 
-Há alguns aspetos específicos de que deve estar ciente, mas definitivamente não é ciência de foguetões. Verá isto em breve.
+Há alguns aspectos específicos de que deve estar ciente, mas definitivamente não é ciência de foguetões. Verá isto em breve.
 
 ![packageModuleFunction](../Imagens/packageModuleFunction.jpg)
 
@@ -13,13 +13,13 @@ Vamos resumir algumas questões importantes:
 * um **módulo é uma espécie de recipiente cheio de funções** - pode embalar tantas funções quantas quiser num único módulo e distribuí-lo pelo mundo inteiro;
 * claro, é geralmente uma boa ideia não misturar funções com diferentes áreas de aplicação dentro de um módulo (tal como numa biblioteca - ninguém espera que as obras científicas sejam colocadas entre os livros de banda desenhada), por isso, agrupe as suas funções cuidadosamente e nomeie o módulo que as contém de uma forma clara e intuitiva (por exemplo, não dê o nome `arcade_games` a um módulo contendo funções destinadas a particionar e formatar discos rígidos)
 * fazer muitos módulos pode causar uma pequena confusão - mais cedo ou mais tarde vai querer **agrupar os seus módulos** exatamente da mesma forma que anteriormente agrupou funções - existe um recipiente mais geral do que um módulo?
-* sim, existe - é um **pacote**; no mundo dos módulos, um pacote desempenha um papel semelhante a uma pasta/diretoria no mundo dos ficheiros.
+* sim, existe - é um **pacote**; no mundo dos módulos, um pacote desempenha um papel semelhante a uma pasta/diretorio no mundo dos arquivos.
 
 ## 1.3.1.2 Módulos e Pacotes
 
 ## O seu primeiro módulo: passo 1
 
-Nesta seção vai trabalhar localmente na sua máquina. Vamos começar do zero. Crie um ficheiro vazio, tal como este:
+Nesta seção vai trabalhar localmente na sua máquina. Vamos começar do zero. Crie um arquivo vazio, tal como este:
 
 ![modulo py](../Imagens/modulopy.jpg)
 
@@ -30,38 +30,38 @@ Nomeamos o arquivo `module.py`. Não é muito criativo, mas é simples e claro.
 
 ## O seu primeiro módulo: passo 2
 
-O segundo ficheiro contém o código utilizando o novo módulo. O seu nome é main.py. O seu conteúdo é muito breve até agora:
+O segundo arquivo contém o código utilizando o novo módulo. O seu nome é main.py. O seu conteúdo é muito breve até agora:
 
-Criação de um ficheiro main.py contendo a instrução import module
+Criação de um arquivo main.py contendo a instrução import module
 
 ![impor modulo](../Imagens/importmodulo.jpg)
 
 
-Nota: **ambos os arquivos têm de estar localizados na mesma pasta**. Encorajamo-lo vivamente a criar uma pasta nova, e vazia, para ambos os ficheiros. Algumas coisas serão então mais fáceis.
+Nota: **ambos os arquivos têm de estar localizados na mesma pasta**. Recomendamos fortemente a criar uma pasta nova, e vazia, para ambos os arquivos. Algumas coisas serão então mais fáceis.
 
 Inicie o IDLE (ou qualquer outro IDE que prefira) e execute o main.py . O que vê?
 
 Não deveria ver nada. Isto significa que o Python importou com sucesso o conteúdo do module.py .
 
-Não importa que o módulo esteja vazio por agora. O primeiro passo já foi dado, mas antes de dar o passo seguinte, queremos que dê uma vista de olhos à pasta na qual ambos os ficheiros existem.
+Não importa que o módulo esteja vazio por agora. O primeiro passo já foi dado, mas antes de dar o passo seguinte, queremos que observe a pasta na qual ambos os arquivos existem.
 
 Repara em algo interessante?
 
-Apareceu uma nova subpasta - consegue vê-la? O seu nome é` __pycache__`. Dê uma vista de olhos no interior. O que vê?
+Apareceu uma nova subpasta - consegue vê-la? O seu nome é` __pycache__`. Dê uma olhava no interior. O que vê?
 
 Há um arquivo com o nome (mais ou menos) `module.cpython-xy.pyc` onde `x` e `y` são dígitos derivados da sua versão de Python (por exemplo, eles serão 3 e 8 se utilizar o Python 3.8).
 
-O nome do ficheiro é o mesmo que o nome do seu módulo (módulo aqui). A parte após o primeiro ponto diz qual a implementação Python que criou o ficheiro (CPython aqui) e o seu número de versão. A última parte (pyc) vem das palavras Python e compiled.
+O nome do arquivo é o mesmo que o nome do seu módulo (módulo aqui). A parte após o primeiro ponto diz qual a implementação Python que criou o arquivo (CPython aqui) e o seu número de versão. A última parte (pyc) vem das palavras Python e compiled.
 
-Pode ver o interior do ficheiro - o conteúdo é completamente ilegível para os seres humanos. Tem de ser assim, uma vez que o ficheiro se destina apenas à utilização do Python.
+Pode ver o interior do arquivo - o conteúdo é completamente ilegível para os seres humanos. Tem de ser assim, uma vez que o arquivo se destina apenas à utilização do Python.
 
 Quando o Python importa um módulo pela primeira vez, ele **traduz o seu conteúdo numa forma algo compilada**.
 
-O ficheiro não contém machine code - é código interno Python **semi-compilado**, pronto para ser executado pelo intérprete Python. Como tal, um ficheiro não requer muitas das verificações necessárias para um source file puro, a execução começa mais rapidamente, e corre também mais rapidamente.
+O arquivo não contém machine code - é código interno Python **semi-compilado**, pronto para ser executado pelo intérprete Python. Como tal, um arquivo não requer muitas das verificações necessárias para um source file puro, a execução começa mais rapidamente, e corre também mais rapidamente.
 
 Graças a isso, cada importação subsequente será mais rápida do que a interpretação do source text a partir do zero.
 
-Python é capaz de verificar se o source file do módulo foi modificado (neste caso, o ficheiro pyc será reconstruído) ou não (quando o ficheiro pyc pode ser executado de uma só vez). Como este processo é totalmente automático e transparente, não precisa de o ter em mente.
+Python é capaz de verificar se o source file do módulo foi modificado (neste caso, o arquivo pyc será reconstruído) ou não (quando o arquivo pyc pode ser executado de uma só vez). Como este processo é totalmente automático e transparente, não precisa de o ter em mente.
 
 ## 1.3.1.3 Módulos e Pacotes
 
@@ -76,9 +76,9 @@ Agora colocamos algo no arquivo do módulo:
 
 Consegue notar alguma diferença entre um módulo e um script comum? Não há nenhuma até agora.
 
-É possível executar este ficheiro como qualquer outro script. Experimente você mesmo.
+É possível executar este arquivo como qualquer outro script. Experimente você mesmo.
 
-O que acontece? Deverá ver a seguinte linha dentro da sua consola:
+O que acontece? Deverá ver a seguinte linha dentro o seu console:
 
 output
 
@@ -88,7 +88,7 @@ output
 
 Vamos voltar ao arquivo `main.py` modificado.
 
-O ficheiro main.py contendo a instrução import module
+O arquivo main.py contendo a instrução import module
 
 ![moduloarquivo](../Imagens/moduloarquivo.jpg)
 
@@ -102,7 +102,7 @@ output
 
 O que significa realmente?
 
-Quando um módulo é importado, o seu conteúdo é **implicitamente executado pelo Python**. Dá ao módulo a oportunidade de inicializar alguns dos seus aspetos internos (por exemplo, pode atribuir algumas variáveis com valores úteis).
+Quando um módulo é importado, o seu conteúdo é **implicitamente executado pelo Python**. Dá ao módulo a oportunidade de inicializar alguns dos seus aspectos internos (por exemplo, pode atribuir algumas variáveis com valores úteis).
 
 Nota: **a inicialização ocorre apenas uma vez**, quando ocorre a primeira importação, pelo que as atribuições feitas pelo módulo não são repetidas desnecessariamente.
 
@@ -110,7 +110,7 @@ Imagine o seguinte contexto:
 
 * há um módulo chamado mod1;
 * há um módulo chamado mod2 que contém a instrução `import mod1` ;
-* há um ficheiro principal contendo as instruções `import mod1` e `import mod2` .
+* há um arquivo principal contendo as instruções `import mod1` e `import mod2` .
 
 À primeira vista, pode pensar que o mod1 será importado duas vezes - felizmente, **apenas a primeira importação ocorre**. O Python lembra-se dos módulos importados e silenciosamente omite todas as importações subsequentes.
 
@@ -141,7 +141,7 @@ I like to be a module
 __main__
 ```
 
-Agora execute o ficheiro main.py . E? Vê o mesmo que nós?
+Agora execute o arquivo main.py . E? Vê o mesmo que nós?
 
 output
 
@@ -152,12 +152,12 @@ module
 
 Podemos dizer que:
 
-* quando se executa diretamente um ficheiro, a sua variável `__name__` é definida como `__main__`;
-* quando um ficheiro é importado como um módulo, a sua variável `__name__` é definida como o nome do ficheiro (excluindo .py)
+* quando se executa diretamente um arquivo, a sua variável `__name__` é definida como `__main__`;
+* quando um arquivo é importado como um módulo, a sua variável `__name__` é definida como o nome do arquivo (excluindo .py)
 
 ## O seu primeiro módulo: passo 6
 
-É assim que pode fazer uso da variável `__main__` para detetar o contexto em que o seu código foi ativado:
+É assim que pode fazer uso da variável `__main__` para detectar o contexto em que o seu código foi ativado:
 
 ![atualizar modulo](../Imagens/atualizarmodulo.jpg)
 
@@ -176,7 +176,7 @@ Cada vez que modificar qualquer uma destas funções, pode simplesmente executar
 
 ## O seu primeiro módulo: passo 7
 
-Este módulo conterá duas funções simples, e se quiser saber quantas vezes as funções foram invocadas, precisa de um contador inicializado a zero quando o módulo estiver a ser importado.
+Este módulo conterá duas funções simples, e se quiser saber quantas vezes as funções foram invocadas, precisa de um contador inicializado a zero quando o módulo estiver sendo importado.
 
 Pode fazê-lo desta maneira:
 
@@ -196,7 +196,7 @@ else:
 
 A introdução de tal variável é absolutamente correta, mas pode causar **efeitos secundários** importantes de que deve estar ciente.
 
-Dê uma vista de olhos ao ficheiro main.py modificado.
+Dê uma vista de olhos ao arquivo main.py modificado.
 
 ![importmodulo2](../Imagens/importmodulo2.jpg)
 ```
@@ -204,7 +204,7 @@ import module
 print(module.counter)
 ```
 
-Como se pode ver, o ficheiro principal tenta aceder à variável counter do módulo. Isto é legal? Sim, é. É utilizável? Pode ser muito utilizável. É seguro?
+Como se pode ver, o arquivo principal tenta aceder à variável counter do módulo. Isto é legal? Sim, é. É utilizável? Pode ser muito utilizável. É seguro?
 
 Depende - se confiar nos utilizadores do seu módulo, não há problema; no entanto, pode não querer que o resto do mundo veja a sua variável **pessoal/privada**.
 
@@ -220,7 +220,7 @@ Além disso, vamos acrescentar alguns ornamentos e remover quaisquer restos sup�
 
 ## O seu primeiro módulo: passo 9
 
-Muito bem. Vamos escrever um código novinho em folha no nosso ficheiro module.py . O módulo atualizado está pronto aqui:
+Muito bem. Vamos escrever um código novinho em folha no nosso arquivo module.py . O módulo atualizado está pronto aqui:
 ```
 #!/usr/bin/env python3 
 
@@ -260,7 +260,7 @@ Alguns elementos precisam de alguma explicação, pensamos nós:
 * a linha começando com `#!` tem muitos nomes - pode ser chamada shabang, shebang, hashbang, poundbang ou até mesmo hashpling (não nos pergunte porquê). O nome em si não significa nada aqui - o seu papel é mais importante. Do ponto de vista do Python, é apenas um **comentário** visto começar com `#`. Para Unix e Unix-like SOs (incluindo MacOS) tal linha **instrui o SO a como executar o conteúdo do arquivo** (por outras palavras, que programa precisa de ser lançado para interpretar o texto). Em alguns ambientes (especialmente aqueles ligados a servidores web) a ausência dessa linha causará problemas;
 * uma string (talvez uma multilinha) colocada antes de qualquer instrução de módulo (incluindo importações) é chamada a **doc-string**, e deve explicar brevemente a finalidade e o conteúdo do módulo;
 * as funções definidas dentro do módulo (`suml()` e `prodl()`) estão disponíveis para importação;
-* utilizámos a variável `__name__` para detetar quando o ficheiro é executado de forma autónoma, e aproveitou esta oportunidade para realizar alguns testes simples.
+* utilizamos a variável `__name__` para detectar quando o arquivo é executado de forma autônoma, e aproveitou esta oportunidade para realizar alguns testes simples.
 
 ## O seu primeiro módulo: passo 10
 
@@ -281,11 +281,11 @@ print(prodl(ones))
 
 ## O seu primeiro módulo: passo 11
 
-É altura de tornar o nosso exemplo mais complicado - até agora assumimos que o ficheiro Python principal está localizado na mesma pasta/diretoria que o módulo a ser importado.
+É hora de tornar o nosso exemplo mais complicado - até agora assumimos que o arquivo Python principal está localizado na mesma pasta/diretorio que o módulo a ser importado.
 
 Vamos desistir desta suposição e realizar a seguinte experiência de pensamento:
 
-* estamos a utilizar Windows ® OS (esta suposição é importante, pois a forma do nome do ficheiro depende disso)
+* estamos utilizando o Windows ® OS (esta suposição é importante, pois a forma do nome do arquivo depende disso)
 * o script Python principal está em `C:\Users\user\py\progs` e é chamado `main.py`
 * o módulo a ser importado está localizado em `C:\Users\user\py\modules`
 
@@ -293,9 +293,9 @@ Vamos desistir desta suposição e realizar a seguinte experiência de pensament
 
 Como lidar com isto?
 
-Para responder a esta pergunta, temos de falar sobre a forma como o Python procura módulos. Há uma variável especial (na realidade uma lista) que armazena todos os locais (pastas/diretorias) que são pesquisados a fim de encontrar um módulo que tenha sido solicitado pela instrução de importação.
+Para responder a esta pergunta, temos de falar sobre a forma como o Python procura módulos. Há uma variável especial (na realidade uma lista) que armazena todos os locais (pastas/diretorios) que são pesquisados a fim de encontrar um módulo que tenha sido solicitado pela instrução de importação.
 
-O Python navega por estas pastas pela ordem em que estão listadas na lista - se o módulo não puder ser encontrado em nenhuma destas diretorias, a importação falha.
+O Python navega por estas pastas pela ordem em que estão listadas na lista - se o módulo não puder ser encontrado em nenhum destes diretorios, a importação falha.
 
 Caso contrário, a primeira pasta contendo um módulo com o nome desejado será tomada em consideração (se alguma das restantes pastas contiver um módulo com esse nome, será ignorada).
 
@@ -322,7 +322,7 @@ C:\Users\user\AppData\Local\Programs\Python\Python36-32\lib\site-packages
 
 Nota: a pasta em que a execução começa é listada no **elemento do primeiro caminho**.
 
-Nota mais uma vez: há um ficheiro zip listado como um dos elementos do caminho - não é um erro. O Python é capaz de tratar ficheiros zip como pastas normais - isto pode poupar muito armazenamento.
+Nota mais uma vez: há um arquivo zip listado como um dos elementos do caminho - não é um erro. O Python é capaz de tratar arquivos zip como pastas normais - isto pode poupar muito armazenamento.
 
 Consegue descobrir como podemos resolver o nosso problema agora? Podemos adicionar uma pasta contendo o módulo à variável path (é totalmente modificável).
 
@@ -330,7 +330,7 @@ Consegue descobrir como podemos resolver o nosso problema agora? Podemos adicion
 
 Uma das várias soluções possíveis parece-se com esta:
 
-Atualizar o ficheiro main.py com path.append('..\\modules')
+Atualizar o arquivo main.py com path.append('..\\modules')
 
 ![mpdulocaminho](../Imagens/modulocaminho.jpg)
 ```
@@ -351,16 +351,16 @@ Nota:
 
 * duplicamos o `\` nome da pasta interna - sabe porquê?
 
-Verifique
-Porque uma barra invertida é usada para escapar a outros carateres - se quiser obter apenas uma barra invertida, tem de a escapar.
+Verifique  
+    Porque uma barra invertida é usada para escapar a outros carateres - se quiser obter apenas uma barra invertida, tem de a escapar.
 
 
-* usamos o nome relativo da pasta - isto funcionará se iniciar o ficheiro main.py diretamente da sua home folder, e não funcionará se a diretoria atual não se ajustar ao caminho relativo; pode sempre usar um caminho absoluto, como este:
+* usamos o nome relativo da pasta - isto funcionará se iniciar o arquivo main.py diretamente da sua home folder, e não funcionará se a diretorio atual não se ajustar ao caminho relativo; pode sempre usar um caminho absoluto, como este:
 ```
 path.append('C:\\Users\\user\\py\\modules')
 ```
 
-* utilizámos o método `append()` - com efeito, o novo caminho ocupará o último elemento da lista de caminhos; se não gostar da ideia, pode usar `insert()` em vez disso.
+* utilizamos o método `append()` - com efeito, o novo caminho ocupará o último elemento da lista de caminhos; se não gostar da ideia, pode usar `insert()` em vez disso.
 
 ## 1.3.1.6 Módulos e Pacotes
 
@@ -389,13 +389,13 @@ if __name__ == "__main__":
 
 ```
 
-Nota: apresentámos todo o conteúdo apenas para o módulo alpha.py - assumir que todos os módulos são semelhantes (eles contêm uma função chamada `funX`, onde X é a primeira letra do nome do módulo).
+Nota: apresentamos todo o conteúdo apenas para o módulo alpha.py - assumir que todos os módulos são semelhantes (eles contêm uma função chamada `funX`, onde X é a primeira letra do nome do módulo).
 
 ## O seu primeiro pacote: passo 2
 
 De repente, alguém repara que estes módulos formam a sua própria hierarquia, pelo que colocá-los todos numa estrutura plana não será uma boa ideia.
 
-Após alguma discussão, a equipa chega à conclusão de que os módulos têm de ser agrupados. Todos os participantes concordam que a seguinte estrutura em árvore reflete perfeitamente as relações mútuas entre os módulos:
+Após alguma discussão, a equipe chega à conclusão de que os módulos têm de ser agrupados. Todos os participantes concordam que a seguinte estrutura em árvore reflete perfeitamente as relações mútuas entre os módulos:
 
 Módulos agrupados
 
@@ -408,9 +408,9 @@ Vamos rever isto de baixo para cima:
 * o grupo good contém dois módulos (alfa e beta) e um subgrupo (best)
 * o grupo extra contém dois subgrupos (good e bad) e um módulo (iota)
 
-Tem mau aspecto? De modo algum - analise cuidadosamente a estrutura. Assemelha-se a algo, não é?
+Tem um aspecto estranho? De modo algum - analise cuidadosamente a estrutura. Assemelha-se a algo, não é?
 
-Parece ser uma **estrutura de diretoria**.
+Parece ser uma **estrutura de diretorio**.
 
 Vamos construir uma árvore refletindo as dependências projetadas entre os módulos.
 
@@ -447,43 +447,43 @@ vem do módulo psi a ser armazenado no ugly subpacote do pacote extra .
 Há duas perguntas a responder:
 
 * **como** transforma tal árvore (na realidade, uma subárvore) num **pacote** Python real (por outras palavras, como convencer o Python de que tal árvore não é apenas um monte de junk files, mas um conjunto de módulos)?
-* **onde** coloca a subárvore para a tornar acessível ao Python?
+* **onde** colocar a sub-árvore para torna-la acessível ao Python?
 
 A primeira pergunta tem uma resposta surpreendente: **os pacotes, como os módulos, podem precisar de inicialização.**
 
-A inicialização de um módulo é feita por um código unbound (não vinculado) (não faz parte de nenhuma função) localizado dentro do ficheiro do módulo. Como um pacote não é um ficheiro, esta técnica é inútil para inicializar pacotes.
+A inicialização de um módulo é feita por um código unbound (não vinculado) (não faz parte de nenhuma função) localizado dentro do arquivo do módulo. Como um pacote não é um arquivo, esta técnica é inútil para inicializar pacotes.
 
-Em vez disso, é preciso usar um truque diferente - o Python espera que haja um ficheiro com um nome muito único dentro da pasta do pacote: `__init__.py`.
+Em vez disso, é preciso usar um truque diferente - o Python espera que haja um arquivo com um nome muito único dentro da pasta do pacote: `__init__.py`.
 
-O conteúdo do ficheiro é executado quando qualquer um dos módulos do pacote é **importado**. Se não quiser inicializações especiais, pode deixar o ficheiro vazio, mas não o deve omitir.
+O conteúdo do arquivo é executado quando qualquer um dos módulos do pacote é **importado**. Se não quiser inicializações especiais, pode deixar o arquivo vazio, mas não o deve omitir.
 
 ## 1.3.1.8 Módulos e Pacotes
 
 ## O seu primeiro pacote: passo 5
 
-Lembre-se: **a presença do ficheiro** `__init.py__` **finalmente compõe o pacote**.
+Lembre-se: **a presença do arquivo** `__init.py__` **finalmente compõe o pacote**.
 
-A relação entre módulos e a presença do ficheiro `__init__.py` - estrutura em árvore
+A relação entre módulos e a presença do arquivo `__init__.py` - estrutura em árvore
 
 ![arvore2](../Imagens/arvore2.jpg)
 
-Nota: não é apenas a root file que pode conter o ficheiro `__init.py__` - também pode colocá-lo dentro de qualquer uma das suas subpastas (subpacotes). Pode ser útil se alguns dos subpacotes requerem tratamento individual e tipos especiais de inicialização.
+Nota: não é apenas a root file que pode conter o arquivo `__init.py__` - também pode colocá-lo dentro de qualquer uma das suas subpastas (subpacotes). Pode ser útil se alguns dos subpacotes requerem tratamento individual e tipos especiais de inicialização.
 
-Agora está na altura de responder à segunda pergunta - a resposta é simples: **em qualquer lugar**. Só precisa de garantir que o Python esteja ciente da localização do pacote. Já sabe como fazê-lo.
+Agora está na hora de responder a segunda pergunta - a resposta é simples: **em qualquer lugar**. Só precisa de garantir que o Python esteja ciente da localização do pacote. Já sabe como fazê-lo.
 
 Está pronto para fazer uso do seu primeiro pacote.
 
 ## O seu primeiro pacote: passo 6
 
-Vamos supor que o ambiente de trabalho tem o seguinte aspeto:
+Vamos supor que o ambiente de trabalho tem o seguinte aspecto:
 
-A relação entre módulos, a presença do ficheiro `__init__.py`, e o caminho de acesso - o ambiente de trabalho
+A relação entre módulos, a presença do arquivo `__init__.py`, e o caminho de acesso - o ambiente de trabalho
 
 ![arvore 3](../Imagens/arvore3.jpg)
 
-Preparámos um ficheiro zip contendo todos os ficheiros do ramo de pacotes. Pode descarregá-lo e usá-lo nas suas próprias experiências, mas lembre-se de descompactá-lo na pasta apresentada no esquema, caso contrário ele não estará acessível ao código a partir do main file.
+Preparamos um arquivo zip contendo todos os arquivos do ramo de pacotes. Pode descarregá-lo e usá-lo nas suas próprias experiências, mas lembre-se de descompactá-lo na pasta apresentada no esquema, caso contrário ele não estará acessível ao código a partir do main file.
 
-**DOWNLOAD** [Modules and Packages ZIP file](https://drive.google.com/file/d/1q9aZyMEh33J-AaSufjJIorLactvsIyQs/view?usp=sharing)
+**DOWNLOAD** [Modules and Packages ZIP file](https://drive.google.com/file/d/1i5anVc5-CaC5HmtfLOCruYtptdm9VUrQ/view?usp=sharing)
 
 Continuará as suas experiências utilizando o main2.py arquivo.
 
@@ -502,7 +502,7 @@ from sys import path
 path.append('..\\packages')
 
 import extra.iota
-print(extra.iota.funI())
+print(extra.iota.FunI())
 ```
 
 Nota:
@@ -562,9 +562,9 @@ print(alp.funA())
 
 ## O seu primeiro pacote: passo 9
 
-Vamos assumir que zipámos toda a subdiretoria, a partir da pasta extra (incluindo a pasta), e vamos obter um ficheiro com o nome extrapack.zip. A seguir, colocamos o ficheiro dentro da pasta packages .
+Vamos assumir que zipámos toda a subdiretorio, a partir da pasta extra (incluindo a pasta), e vamos obter um arquivo com o nome extrapack.zip. A seguir, colocamos o arquivo dentro da pasta packages .
 
-Agora podemos utilizar o ficheiro zip com o papel de pacotes:
+Agora podemos utilizar o arquivo zip com o papel de pacotes:
 ```
 from sys import path
 
@@ -591,10 +591,10 @@ Agora pode criar módulos e combiná-los em pacotes. É tempo de iniciar uma dis
 
 ## Key takeaways
 
-1. Enquanto um **módulo** é concebido para acoplar algumas entidades relacionadas (funções, variáveis, constantes, etc.), um **pacote** é um recipiente que permite o acoplamento de vários módulos relacionados sob um nome comum. Tal recipiente pode ser distribuído tal como está (como um lote de ficheiros implantado numa sub-árvore de diretoria) ou pode ser embalado dentro de um ficheiro zip.
+1. Enquanto um **módulo** é concebido para acoplar algumas entidades relacionadas (funções, variáveis, constantes, etc.), um **pacote** é um recipiente que permite o acoplamento de vários módulos relacionados sob um nome comum. Tal recipiente pode ser distribuído tal como está (como um lote de arquivos implantado numa sub-árvore de diretorio) ou pode ser embalado dentro de um arquivo zip.
 
 
-2. Durante a primeira importação do módulo atual, o Python traduz o seu source code para o formato **semi-compilado** armazenado dentro dos ficheiros **pyc**, e implementa estes ficheiros na diretoria `__pycache__` localizada na home directory do módulo.
+2. Durante a primeira importação do módulo atual, o Python traduz o seu source code para o formato **semi-compilado** armazenado dentro dos arquivos **pyc**, e implementa estes arquivos na diretorio `__pycache__` localizada na home directory do módulo.
 
 
 3. Se quiser instruir o utilizador do seu módulo de que uma determinada entidade deve ser tratada como **privada** (ou seja, não deve ser explicitamente utilizada fora do módulo), pode marcar o seu nome com o prefixo `_` ou `__` . Não se esqueça que esta é apenas uma recomendação, não uma ordem.
@@ -603,10 +603,10 @@ Agora pode criar módulos e combiná-los em pacotes. É tempo de iniciar uma dis
 4. Os nomes shabang, shebang, hasbang, poundbange hashpling descrevem o dígrafo escrito como `#!`, utilizado para instruir os SOs do tipo Unix como o source file Python deve ser lançado. Esta convenção não tem efeito no MS Windows.
 
 
-5. Se quiser convencer o Python de que deve ter em conta a diretoria de um pacote não-padrão, o seu nome deve ser inserido/anexado na/à lista de diretorias de importação armazenada na variável `path` contida no módulo `sys` .
+5. Se quiser convencer o Python de que deve ter em conta a diretorio de um pacote não-padrão, o seu nome deve ser inserido/anexado na/à lista de diretorios de importação armazenada na variável `path` contida no módulo `sys` .
 
 
-6. Um ficheiro Python chamado `__init__.py` é implicitamente executado quando um pacote que o contém é sujeito a importação, e é utilizado para inicializar um pacote e/ou os seus sub-pacotes (se existirem). O ficheiro pode estar vazio, mas não deve estar ausente.
+6. Um arquivo Python chamado `__init__.py` é implicitamente executado quando um pacote que o contém é sujeito a importação, e é utilizado para inicializar um pacote e/ou os seus sub-pacotes (se existirem). O arquivo pode estar vazio, mas não deve estar ausente.
 
 
 
@@ -626,7 +626,7 @@ if __name__ == "__main__":
 
 **Exercício 2**
 
-Alguns pacotes adicionais e necessários são armazenados dentro da diretoria `D:\Python\Project\Modules` . Escreva um código assegurando que a diretoria é atravessada pelo Python, a fim de encontrar todos os módulos solicitados.
+Alguns pacotes adicionais e necessários são armazenados dentro da diretorio `D:\Python\Project\Modules` . Escreva um código assegurando que a diretorio é atravessada pelo Python, a fim de encontrar todos os módulos solicitados.
 
 Verifique
 ```
@@ -640,7 +640,7 @@ sys.path.append("D:\\Python\\Project\\Modules")
 
 **Exercício 3**
 
-A diretoria mencionada no exercício anterior contém uma sub-árvore da seguinte estrutura:
+A diretorio mencionada no exercício anterior contém uma sub-árvore da seguinte estrutura:
 ```
 abc
  |__ def

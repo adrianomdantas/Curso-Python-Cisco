@@ -436,7 +436,7 @@ Também pode executar o programa de amostra em IDLE na sua máquina local para v
 
 #### As funções machine .
 
-Por vezes, pode apenas querer saber o nome genérico do processador que executa o seu SO juntamente com o Python e o seu código - uma função chamada `machine()` dir-lhe-á isso. Como anteriormente, a função devolve uma string.
+Por vezes, pode apenas querer saber o nome genérico do processador que executa o seu SO juntamente com o Python e o seu código - uma função chamada `machine()` lhe dirá isso. Como anteriormente, a função devolve uma string.
 
 Mais uma vez, executamos o programa de amostra em três plataformas diferentes:
 
@@ -584,7 +584,7 @@ output
 
 ### As funções `python_implementation` e `python_version_tuple` .
 
-Se precisar de saber qual a versão do Python que está a executar o seu código, pode verificá-la utilizando várias funções dedicadas - aqui estão duas delas:
+Se precisar de saber qual a versão do Python que está executando o seu código, pode verificá-la utilizando várias funções dedicadas - aqui estão duas delas:
 
 ```
 from platform import python_implementation, python_version_tuple
@@ -634,7 +634,7 @@ Tudo o que precisa de fazer é encontrar os módulos que deseja, e ensinar-se a 
 
 ![Python Module Index](../Imagens/pythonModuleIndex.jpg)
 
-Na seção seguinte vamos dar uma vista de olhos a outra coisa. Vamos mostrar-lhe como escrever o seu próprio módulo.
+Na seção seguinte vamos dar uma olhada em outra coisa. Vamos mostrar-lhe como escrever o seu próprio módulo.
 
 ## 1.2.1.17 RESUMO DA SEÇÃO
 
