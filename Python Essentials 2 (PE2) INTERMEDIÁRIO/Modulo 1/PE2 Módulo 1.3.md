@@ -507,7 +507,7 @@ print(extra.iota.FunI())
 
 Nota:
 
-* modificámos a variável `path` para a tornar acessível ao Python;
+* modificamos a variável `path` para a tornar acessível ao Python;
 * o ramo `import` não aponta diretamente para o módulo, mas especifica o caminho totalmente qualificado a partir do topo do pacote;
 
 substituir `import extra.iota` por `import iota` causará um erro.
