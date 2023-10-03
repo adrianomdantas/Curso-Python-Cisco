@@ -640,7 +640,7 @@ sys.path.append("D:\\Python\\Project\\Modules")
 
 **Exercício 3**
 
-A diretorio mencionada no exercício anterior contém uma sub-árvore da seguinte estrutura:
+O diretorio mencionada no exercício anterior contém uma sub-árvore da seguinte estrutura:
 ```
 abc
  |__ def
