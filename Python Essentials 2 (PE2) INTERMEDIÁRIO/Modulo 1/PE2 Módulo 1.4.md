@@ -14,7 +14,7 @@ Como sabe, o Python foi criado como um software de open-source, e isto também f
 
 Estas mesmas ferramentas devem ajudar os utilizadores a fazer uso do código, tanto o código já existente, como também o novo código que aparece todos os dias. Graças a isto, escrever um novo código para novos desafios não é como construir uma nova casa, começando pelas fundações.
 
-Além disso, o programador é livre de modificar o código de outra pessoa, a fim de adaptá-lo às suas próprias necessidades, e na verdade construir um produto completamente novo que possa ser utilizado por outro programador. O processo parece não ter fim. Felizmente.
+Além disso, o programador é livre para modificar o código de outra pessoa, a fim de adaptá-lo às suas próprias necessidades, e na verdade construir um produto completamente novo que possa ser utilizado por outro programador. O processo parece não ter fim. Felizmente.
 
 Para fazer girar este mundo, duas entidades básicas têm de ser estabelecidas e mantidas em movimento: **um repositório centralizado** de todos os pacotes de software disponíveis; e uma ferramenta que permite aos utilizadores **aceder ao repositório**. Ambas as entidades já existem e podem ser usadas a qualquer momento.
 
@@ -22,7 +22,7 @@ Para fazer girar este mundo, duas entidades básicas têm de ser estabelecidas e
 
 ## Ecossistema de empacotamento Python e como utilizá-lo: continuação
 
-O repositório (ou repo para abreviar) que mencionámos anteriormente chama-se **PyPI** (abreviação para Python Package Index) e é mantido por um grupo de trabalho chamado Packaging Working Group, uma parte da Python Software Foundation, cuja principal tarefa é apoiar programadores de Python na disseminação eficiente de código.
+O repositório (ou repo para abreviar) que mencionamos anteriormente chama-se **PyPI** (abreviação para Python Package Index) e é mantido por um grupo de trabalho chamado Packaging Working Group, uma parte da Python Software Foundation, cuja principal tarefa é apoiar programadores de Python na disseminação eficiente de código.
 
 É possível aceder ao seu website através deste link:
 https://wiki.python.org/psf/PackagingWG.
@@ -32,12 +32,11 @@ O website do PyPI (administrado pelo PWG) está localizado neste endereço:
 https://pypi.org/.
 
 
-Quando lá fomos por um bocado no início de junho de 2020, descobrimos que o PyPI albergava 237.515 projetos, constituídos por 2.877.545 ficheiros geridos por 427.487 utilizador.
+Quando lá fomos por um bocado no início de junho de 2020, descobrimos que o PyPI albergava 237.515 projetos, constituídos por 2.877.545 arquivos geridos por 427.487 utilizadores.
 
 Estes três números por si só mostram claramente a potência da comunidade Python, e a importância da cooperação entre programadores.
 
-PyPI, ficheiro, repositório
-
+PyPI, arquivo, repositório
 
 Devemos salientar que o PyPI não é o único repositório de Python existente. Pelo contrário, existem muitos deles, criados para projetos e liderados por muitas comunidades de Python, grandes e pequenas. É provável que um dia você e os seus colegas queiram **criar os seus próprios repos.**
 
@@ -57,9 +56,9 @@ O PyPI é completamente gratuito, e pode simplesmente escolher um código e usá
 
 "OK", diz você, "a loja está esclarecida agora, mas o que tem o queijo a ver com o Python"?
 
-The Cheese Shop é um dos mais famosos sketches dos Monty Python. Descreve a aventura surrealista de um inglês a tentar comprar queijo. Infelizmente, a loja que ele visita (imodestamente chamada Ye National Cheese Emporium) não tem nenhum queijo em stock.
+The Cheese Shop é um dos mais famosos sketches dos Monty Python. Descreve a aventura surrealista de um inglês tentando comprar queijo. Infelizmente, a loja que ele visita (imodestamente chamada Ye National Cheese Emporium) não tem nenhum queijo em stock.
 
-Naturalmente, é para ser irónico. Como já sabe, o PyPI tem muito software em stock e está disponível 24/7. Tem todo o direito de se identificar como o *Ye International Python Software Emporium.*
+Naturalmente, é para ser irônico. Como já sabe, o PyPI tem muito software em stock e está disponível 24/7. Tem todo o direito de se identificar como o *Ye International Python Software Emporium.*
 
 ## 1.4.1.4 Python Package Installer (PIP)
 
@@ -69,20 +68,20 @@ O PyPI é uma loja muito específica, não só porque oferece todos os seus prod
 
 Felizmente, esta ferramenta também é gratuita, por isso se quiser fazer o seu próprio cheeseburger digital utilizando a mercadoria oferecida pela Loja PyPI, necessitará de uma ferramenta gratuita chamada pip.
 
-Não, não leu mal. Apenas pip. É outro acrónimo, claro, mas a sua natureza é mais complexa do que o anteriormente mencionado PyPI, pois é um exemplo de um acrónimo recorrente, o que significa que o acrónimo se refere a si mesmo, o que significa que explicá-lo é um processo infinito.
+Não, não leu mal. Apenas pip. É outro acrônimo, claro, mas a sua natureza é mais complexa do que o anteriormente mencionado PyPI, pois é um exemplo de um acrônimo recorrente, o que significa que o acrônimo se refere a si mesmo, o que significa que explicá-lo é um processo infinito.
 
 Porquê? Porque pip significa *“pip installs packages”*, e o *pip* dentro de *“pip installs packages”* significa *“pip installs packages”* e...
 
 Vamos parar por aqui. Obrigado pela sua cooperação.
 
-A propósito, existem algumas outros acrónimos de recorrência muito famosas. Um deles é o Linux, que pode ser interpretado como *“Linux is Not Unix”.*
+A propósito, existem algumas outros acrônimos de recorrência muito famosas. Um deles é o Linux , que pode ser interpretado como *“Linux  is Not Unix”.*
 
 ## 1.4.1.5 Python Package Installer (PIP)
 
 ## Como instalar o pip
-A questão que deve ser colocada agora é: como obter uma faca de queijo adequada? Por outras palavras, como assegurar que o pip está instalado e pronto a funcionar?
+A questão que deve ser colocada agora é: como obter uma faca de queijo adequada? Por outras palavras, como assegurar que o pip está instalado e pronto para funcionar?
 
-A resposta mais precisa é “depende”. A sério.
+A resposta mais precisa é “depende”.
 
 Algumas instalações Python vêm com o pip, outras não. Além disso, não depende apenas do sistema operacional que utiliza, embora este seja um fator muito importante.
 
@@ -96,7 +95,7 @@ O instalador do MS Windows Python já contém o pip, e por isso não é necessá
 
 Para verificar que não o enganamos, tente fazer isto:
 
-* abra a consola do Windows (CMD ou PowerShell, o que preferir)
+* abra a console do Windows (CMD ou PowerShell, o que preferir)
 * execute o seguinte comando:
 ```
 pip --version
@@ -116,13 +115,13 @@ C:\Program Files\Python3\Scripts\;C:\Program Files\Python3\;
 
 * a maneira mais fácil de reconfigurar a variável PATH é **reinstalar o Python**, instruindo o instalador a defini-la por si.
 
-## 1.4.1.7 Instalação do pip em Linux
+## 1.4.1.7 Instalação do pip em Linux 
 
-## pip no Linux
+## pip no Linux 
 
-Diferentes distribuições de Linux podem comportar-se de forma diferente quando se trata de utilizar o pip. Algumas delas (como o Gentoo), que estão intimamente ligadas ao Python e que o utilizam internamente, podem ter o pip pré-instalado e estão imediatamente prontas a funcionar.
+Diferentes distribuições de Linux  podem comportar-se de forma diferente quando se trata de utilizar o pip. Algumas delas (como o Gentoo), que estão intimamente ligadas ao Python e que o utilizam internamente, podem ter o pip pré-instalado e estão imediatamente prontas a funcionar.
 
-Não esquecer que alguns Linuces podem utilizar mais de uma versão Python simultaneamente, por exemplo, um Python 2 e um Python 3 coexistentes lado a lado. Tais sistemas podem lançar o Python 2 como a versão padrão, e pode ser necessário especificar explicitamente o nome do programa como python3. Neste caso podem haver dois pips diferentes identificados como pip (ou pip2) e pip3. Verifique com cuidado.
+Não esquecer que alguns Linux  podem utilizar mais de uma versão Python simultaneamente, por exemplo, um Python 2 e um Python 3 coexistentes lado a lado. Tais sistemas podem lançar o Python 2 como a versão padrão, e pode ser necessário especificar explicitamente o nome do programa como python3. Neste caso podem haver dois pips diferentes identificados como pip (ou pip2) e pip3. Verifique com cuidado.
 
 Abra a janela do terminal e emita o seguinte comando:
 
@@ -133,7 +132,7 @@ pip --version
 
 pip —version, python 2.7
 
-![pipversion linux](../Imagens/pipversionlinux.jpg)
+![pipversion Linux ](../Imagens/pipversionLinux .jpg)
 
 
 Uma resposta semelhante à apresentada na imagem anterior determina que lançou o pip a partir do Python 2, pelo que a próxima tentativa deverá ser a seguinte:
@@ -145,28 +144,28 @@ pip3 --version
 
 pip —version, python 3.6
 
-![pip3 version linux](../Imagens/pip3versionlinux.jpg)
+![pip3 version Linux ](../Imagens/pip3versionLinux .jpg)
 
-Como pode ver, temos agora a certeza de que estamos a utilizar a versão apropriada do pip.
+Como pode ver, temos agora a certeza de que estamos utilizando a versão apropriada do pip.
 
-## 1.4.1.8 Instalação do pip em Linux
+## 1.4.1.8 Instalação do pip em Linux 
 
-## pip no Linux: continuação
+## pip no Linux : continuação
 
-Infelizmente, algumas distribuições Linux não têm o pip pré-instalado, mesmo que o próprio Python esteja instalado por padrão (algumas versões do Ubuntu podem-se comportar desta forma). Neste caso, tem duas possibilidades:
+Infelizmente, algumas distribuições Linux  não têm o pip pré-instalado, mesmo que o próprio Python esteja instalado por padrão (algumas versões do Ubuntu podem-se comportar desta forma). Neste caso, tem duas possibilidades:
 
 * instalar o pip como um pacote de sistema usando um gestor de pacotes dedicado (por exemplo, apt em sistemas tipo Debian)
 * instalar o pip usando mecanismos internos do Python.
 
-O primeiro é definitivamente melhor. Embora existam alguns scripts inteligentes que são capazes de descarregar e instalar o pip ignorando o SO, desencorajamo-lo de os usar. Este método pode colocá-lo em apuros.
+O primeiro é definitivamente melhor. Embora existam alguns scripts inteligentes que são capazes de descarregar e instalar o pip ignorando o SO, não aconselhamos usar. Este método pode colocá-lo em apuros.
 
-Veja - tentamos lançar o pip3 e falhamos. O nosso SO (desta vez utilizámos o Ubuntu Budgie) sugeriu a utilização do apt para instalar o pacote chamado python3-pip:
+Veja - tentamos lançar o pip3 e falhamos. O nosso SO (desta vez utilizamos o Ubuntu Budgie) sugeriu a utilização do apt para instalar o pacote chamado python3-pip:
 
 Captura de ecrã do terminal: sudo apt install python3-pip
 
 ![pip não instalado](../Imagens/pipnaoinstalado.jpg)
 
-É um bom conselho, e vamos segui-lo, mas precisaremos de direitos administrativos para o fazer. Não se esqueça que diferentes Linuces podem usar diferentes gestores de pacotes (por exemplo, pode ser pacman se usar o Arch Linux, ou yum usado por distribuições derivadas do Red Hat).
+É um bom conselho, e vamos segui-lo, mas precisaremos de direitos administrativos para o fazer. Não se esqueça que diferentes Linux podem usar diferentes gestores de pacotes (por exemplo, pode ser pacman se usar o Arch Linux, ou yum usado por distribuições derivadas do Red Hat).
 
 De qualquer forma, todos esses métodos devem obter o pip (ou pip3) instalado e a funcionar.
 
@@ -178,9 +177,9 @@ Captura de ecrã do terminal: seguindo a sugestão do SO
 
 Como pode ver, o SO decidiu instalar não só o próprio pip, mas também um par de componentes adicionais necessários ao pip. Isto é normal - não se alarme.
 
-## 1.4.1.9 Instalação do pip em Linux
+## 1.4.1.9 Instalação do pip em Linux 
 
-## pip no Linux: continuação
+## pip no Linux : continuação
 
 Quando o apt termina o seu trabalho, somos finalmente capazes de utilizar o pip3:
 
@@ -212,9 +211,9 @@ Imagine que criou uma brilhante aplicação Python chamada redsuspenders, capaz 
 
 Claro que utilizou algum código existente para atingir este objetivo - por exemplo, a sua aplicação importa um pacote chamado nyse contendo algumas funções e classes cruciais. Além disso, o pacote nyse importa outro pacote chamado wallstreet, enquanto o pacote wallstreet importa outros dois pacotes essenciais chamados bull e bear.
 
-Como já deve ter adivinhado, as ligações entre estes pacotes são cruciais, e se alguém decidir utilizar o seu código (mas lembre-se, já chamámos a atenção para isso) também terá de se assegurar de que todos os pacotes necessários estão no seu lugar.
+Como já deve ter adivinhado, as ligações entre estes pacotes são cruciais, e se alguém decidir utilizar o seu código (mas lembre-se, já chamamos a atenção para isso) também terá de se assegurar de que todos os pacotes necessários estão no seu lugar.
 
-Para resumir uma longa história, podemos dizer que **a dependência é um fenómeno que aparece sempre que se vai utilizar um pedaço de software que depende de outro software**. Note-se que a dependência pode incluir (e geralmente inclui) mais do que um nível de desenvolvimento de software.
+Para resumir uma longa história, podemos dizer que **a dependência é um fenômeno que aparece sempre que se vai utilizar um pedaço de software que depende de outro software**. Note-se que a dependência pode incluir (e geralmente inclui) mais do que um nível de desenvolvimento de software.
 
 Significa isto que um potencial utilizador de pacotes nyse é obrigado a localizar todas as dependências e instalar manualmente todos os pacotes necessários? Isso seria horrível, não seria?
 
@@ -235,7 +234,7 @@ Agora estamos prontos para perguntar ao pip o que pode fazer por nós. Vamos a i
 pip help
 ```
 
-e aguarde a respostado pip. É este o seu aspeto:
+e aguarde a respostado pip. É este o seu aspecto:
 
 pip help
 
@@ -243,7 +242,7 @@ pip help
 
 Não se esqueça que poderá ser obrigado a substituir o pip pelo pip3 se o seu ambiente assim o exigir.
 
-A lista produzida pelo pip resume todas as operações disponíveis, e a última delas é help, que já acabámos de utilizar.
+A lista produzida pelo pip resume todas as operações disponíveis, e a última delas é help, que já acabamos de utilizar.
 
 Se quiser saber mais sobre qualquer uma das operações listadas, pode utilizar a seguinte forma de invocação do pip:
 ```
@@ -301,7 +300,7 @@ Veja as duas linhas na parte inferior do output. Elas mostram:
 
 Como pode ver, ambas as propriedades estão vazias. Sinta-se à vontade para tentar usar o comando `show` em relação a qualquer outro pacote instalado.
 
-O poder do pip vem do fato de ele ser na realidade uma porta de entrada para o universo do software Python. Graças a isso, é possível navegar e instalar qualquer uma das centenas de pacotes prontos a usar reunidos nos repositórios PyPI. Não se esqueça que o pip não é capaz de armazenar todo o conteúdo PyPI localmente (é desnecessário e não seria rentável).
+O poder do pip vem do fato de ele ser na realidade uma porta de entrada para o universo do software Python. Graças a isso, é possível navegar e instalar qualquer uma das centenas de pacotes prontos a usar reunidos nos repositórios PyPI. Não se esqueça que o pip não é capaz de armazenar todo o conteúdo PyPI localmente (é desnecessário e não seria viável).
 
 Com efeito, o pip utiliza a Internet para consultar o PyPI e para descarregar os dados necessários. Isto significa que tem de ter uma ligação de rede a funcionar sempre que quiser pedir ao pip por qualquer coisa que possa envolver interações diretas com a infraestrutura PyPI.
 
@@ -322,7 +321,7 @@ pip search pip
 
 produz mais de 100 linhas de resultados (experimente-o você mesmo — não acredite na nossa palavra). A propósito — a pesquisa é case insensitive.
 
-Se não é fã de leitura na consola, pode utilizar a forma alternativa de navegar pelo conteúdo PyPI oferecida por um motor de busca, disponível em https://pypi.org/search.
+Se não é fã de leitura no console, pode utilizar a forma alternativa de navegar pelo conteúdo PyPI oferecida por um motor de busca, disponível em https://pypi.org/search.
 
 ## 1.4.1.13 Como utilizar o pip
 
@@ -341,14 +340,14 @@ Se não adicionar isto, o pip assume que você é como um administrador do siste
 
 No nosso caso, vamos instalar um pacote chamado pygame — é uma biblioteca extensa e complexa que permite aos programadores desenvolver jogos de computador usando Python.
 
-O projeto está em desenvolvimento desde 2000, por isso é um pedaço de código maduro e fiável. Se quiser saber mais sobre o projeto e sobre a comunidade que o lidera, visite https://www.pygame.org.
+O projeto está em desenvolvimento desde 2000, por isso é um pedaço de código maduro e confiável. Se quiser saber mais sobre o projeto e sobre a comunidade que o lidera, visite https://www.pygame.org.
 
 Se você é um administrador do sistema, pode instalar o pygame usando o seguinte comando:
 ```
 pip install pygame
 ```
 
-Se você não é um administrador, ou não quer engordar o seu sistema operativo instalando o sistema pygame em todo o sistema, pode instalá-lo apenas para si:
+Se você não é um administrador, ou não quer engordar o seu sistema operacional instalando o sistema pygame em todo o sistema, pode instalá-lo apenas para si:
 ```
 pip install --user pygame
 ```
@@ -428,7 +427,7 @@ Command prompt - python testpg.py
 
 O `pip install` tem duas capacidades adicionais importantes:
 
-* é capaz de atualizar um pacote instalado localmente - por exemplo, se quiser ter a certeza de que está a utilizar a última versão de um determinado pacote, pode executar o seguinte comando:
+* é capaz de atualizar um pacote instalado localmente - por exemplo, se quiser ter a certeza de que está utilizando a última versão de um determinado pacote, pode executar o seguinte comando:
 ```
 pip install -U package_name
 ```
@@ -464,7 +463,7 @@ pip uninstall pygame
 
 O pip vai querer saber se tem a certeza sobre a escolha que está a fazer - esteja preparado para dar a resposta certa.
 
-O processo tem este aspeto:
+O processo tem este aspecto:
 
 Command prompt - pip uninstall pygame
 
@@ -474,11 +473,11 @@ Command prompt - pip uninstall pygame
 
 ## Use o pip!
 
-As capacidades do pip não terminam aqui, mas o conjunto de comandos que lhe apresentámos é suficiente para começar a gerir com sucesso os pacotes que não fazem parte da instalação Python regular.
+As capacidades do pip não terminam aqui, mas o conjunto de comandos que lhe apresentamos é suficiente para começar a gerir com sucesso os pacotes que não fazem parte da instalação Python regular.
 
 Esperamos tê-lo encorajado a realizar as suas próprias experiências com o pip e com o universo dos pacotes Python. O PyPI convida-o a mergulhar nos seus vastos recursos.
 
-Alguns dizem que uma das virtudes mais importantes da programação é a **preguiça**. Não nos interprete mal - não queremos que passe o dia inteiro a dormir no sofá e a sonhar com código Python.
+Alguns dizem que uma das virtudes mais importantes da programação é a **preguiça**. Não nos interprete mal - não queremos que passe o dia inteiro dormindo no sofá e sonhando com código Python.
 
 Um programador preguiçoso é um programador que procura as soluções existentes e analisa o código disponível antes de começar a desenvolver o seu próprio software a partir do zero.
 
@@ -491,7 +490,7 @@ Um programador preguiçoso é um programador que procura as soluções existente
 1. Um **repositório** (ou **repo** para abreviar) concebido para recolher e partilhar código Python gratuito existe e funciona sob o nome **Python Package Index (PyPI)** embora também seja provável que o encontre com o nome de nicho **The Cheese Shop**. O site da Loja está disponível em https://pypi.org/.
 
 
-2. Para fazer uso da The Cheese Shop foi criada a ferramenta especializada chamada pip (pip installs packages enquanto pip significa... ok, não se importe). Como o pip pode não ser implantado como parte da instalação padrão Python, é possível que tenha de o instalar manualmente. O pip é uma ferramenta de consola.
+2. Para fazer uso da The Cheese Shop foi criada a ferramenta especializada chamada pip (pip installs packages enquanto pip significa... ok, não se importe). Como o pip pode não ser implantado como parte da instalação padrão Python, é possível que tenha de o instalar manualmente. O pip é uma ferramenta de console.
 
 
 3. Para verificar a versão do pip, devem ser emitidos os seguintes comandos:
@@ -506,7 +505,7 @@ ou
 pip3 --version
 ```
 
-Verifique você mesmo qual destes funciona para si no ambiente do seu sistema operativo.
+Verifique você mesmo qual destes funciona para si no ambiente do seu sistema operacional.
 
 
 4. A lista das principais atividades de pip é a seguinte:
