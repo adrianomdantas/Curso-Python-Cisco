@@ -470,3 +470,285 @@ Surpreendido? Carateres **principais** , espaços em branco principais. Mais uma
 
 ## 2.3.1.11 Métodos de String
 
+## Os loops replace() .
+
+O método de **dois parâmetros** `replace()` **devolve uma cópia da string original na qual todas as ocorrências do primeiro argumento foram substituídas pelo segundo argumento.**
+
+Veja o código de exemplo no editor. Execute-o.
+
+```
+# Demonstrating the replace() method:
+print("www.netacad.com".replace("netacad.com", "pythoninstitute.org"))
+print("This is it!".replace("is", "are"))
+print("Apple juice".replace("juice", ""))
+```
+
+O output do exemplo:
+
+output
+
+```
+www.pythoninstitute.org
+Thare are it!
+Apple
+```
+
+Se o segundo argumento for uma string vazia, a **substituição está na realidade a remover** a string do primeiro argumento. Que tipo de magia acontece se o primeiro argumento for uma string vazia?
+
+A variante de **três parâmetros** `replace()` utiliza o terceiro argumento (um número) para **limitar o número de substituições.**
+
+Veja o código de exemplo modificado abaixo:
+
+```
+print("This is it!".replace("is", "are", 1))
+print("This is it!".replace("is", "are", 2))
+```
+
+Consegue adivinhar o seu output? Execute o código e verifique as suas suposições.
+
+## 2.3.1.12 Métodos de String
+
+## Os loops rfind() .
+
+Os métodos de um, dois e três parâmetros chamados `rfind()` fazem quase as mesmas coisas que os seus homólogos (os desprovidos do prefixo r), mas **começam as suas buscas a partir do fim da string**, não do início (daí o prefixo r, para right).
+
+Veja o exemplo do código no editor e tente prever o seu output. Execute o código para verificar se estava certo.
+```
+# Demonstrating the rfind() method:
+print("tau tau tau".rfind("ta"))
+print("tau tau tau".rfind("ta", 9))
+print("tau tau tau".rfind("ta", 3, 9))
+```
+
+output
+
+```
+8
+-1
+4
+```
+
+## 2.3.1.13 Métodos de String
+## vOs loops rstrip() .
+
+Duas variantes do método `rstrip()` fazem quase o mesmo que `lstrip`, mas **afetam o lado oposto da string**.
+
+Veja o exemplo de código no editor. Consegue adivinhar o seu output? Execute o código para verificar as suas suposições.
+
+Como habitualmente, encorajamo-lo a experimentar os seus próprios exemplos.
+
+```
+# Demonstrating the rstrip() method:
+print("[" + " upsilon ".rstrip() + "]")
+print("cisco.com".rstrip(".com"))
+```
+
+output 
+
+```
+[ upsilon]
+cis
+```
+
+## 2.3.1.14 Métodos de String
+
+## Os loops split() .
+
+A classe `split()` faz o que diz - **divide a string e constrói uma lista de todas as substrings detetadas.**
+
+O método **assume que as substrings são delimitadas por espaços em branco** - os espaços não participam na operação, e não são copiados para a lista resultante.
+
+Se a string estiver vazia, a lista resultante também estará vazia.
+
+Veja o código no editor. O exemplo produz o seguinte output:
+
+```# Demonstrating the split() method:
+print("phi       chi\npsi".split())
+```
+
+output
+
+`['phi', 'chi', 'psi']`
+
+Nota: a operação inversa pode ser realizada pelo método join() .
+
+## 2.3.1.15 Métodos de String
+
+## Os loops startswith() .
+
+A classe `startswith()` é um reflexo espelhado de `endswith()` - **verifica se uma determinada string começa com a substring especificada.**
+
+Veja o exemplo no editor. Este é o resultado:
+
+```
+# Demonstrating the startswith() method:
+print("omega".startswith("meg"))
+print("omega".startswith("om"))
+
+print()
+```
+output
+```
+False
+True
+```
+
+## O método strip() .
+
+A classe `trip()` combina os efeitos causados por `rstrip()` e `lstrip()` - **faz uma nova string com falta de todos os espaços em branco à esquerda e à direita.**
+
+Veja o segundo exemplo no editor. Este é o resultado que ele devolve:
+
+```
+# Demonstrating the strip() method:
+print("[" + "   aleph   ".strip() + "]")
+```
+
+output
+
+`[aleph]`
+
+Agora, realize as suas próprias experiências com os dois métodos.
+
+## 2.3.1.16 Métodos de String
+
+## Os loops swapcase() .
+
+A classe `swapcase()` **faz uma nova string, trocando a maiúscula/minúscula de todas as letras dentro da source string:** carateres minúsculos tornam-se maiúsculas e vice-versa.
+
+Todos os outros carateres permanecem intocados.
+
+Veja o primeiro exemplo no editor. Consegue adivinhar o output? Não terá bom aspeto, mas tem de o ver:
+
+```# Demonstrating the swapcase() method:
+print("I know that I know nothing.".swapcase())
+
+print()
+```
+
+output
+
+`i KNOW THAT i KNOW NOTHING.`
+
+
+# O método title() .
+
+A classe `title()` desempenha uma função algo semelhante - **muda a primeira letra de cada palavra para maiúscula, transformando todas as outras em minúsculas.**
+
+Veja o segundo exemplo no editor. Consegue adivinhar o seu output? Este é o resultado:
+
+```
+# Demonstrating the title() method:
+print("I know that I know nothing. Part 1.".title())
+
+print()
+```
+output
+
+`I Know That I Know Nothing. Part 1.`
+
+## O método upper() .
+
+Por último, mas não menos importante, o método `upper()` **faz uma cópia da source string, substitui todas as letras minúsculas pelas suas contrapartes maiúsculas,** e devolve a string como resultado.
+
+Veja o terceiro exemplo no editor. O seu output é:
+
+```
+# Demonstrating the upper() method:
+print("I know that I know nothing. Part 2.".upper())
+```
+
+output
+
+`I KNOW THAT I KNOW NOTHING. PART 2.`
+
+Viva! Chegamos ao fim desta seção. Está surpreendido com algum dos métodos de string que discutimos até agora? Tire uns minutos para os rever, e passemos à próxima parte do curso onde lhe mostraremos as grandes coisas que podemos fazer com strings.
+
+## 2.3.1.17 RESUMO DA SECÇÃO
+
+1. Alguns dos métodos oferecidos por strings são:
+
+* `capitalize()` — alterar todas as letras da string para maiúsculas;
+* `center()` — centrar a string dentro do campo de um comprimento conhecido;
+* `count()` — contar as ocorrências de um determinado caratere;
+* `join()` — juntar todos os itens de uma tuple/lista numa string;
+* `lower()` — converter todas as letras da string em letras minúsculas;
+* `lstrip()` — remover os carateres brancos desde o início da string;
+* `replace()` — substituir uma determinada substring por outra;
+* `rfind()` — encontrar uma substring a partir do final da string;
+* `rstrip()` — remover os espaços em branco à direita do final da string;
+* `split()` — dividir a string numa substring usando um determinado delimitador;
+* `strip()` — remover os espaços em branco à esquerda e à direita;
+* `swapcase()` — trocar letras maiúsculas e minúsculas (minúsculas para maiúsculas e vice-versa)
+* `title()` — tornar a primeira letra de cada palavra uma maiúscula;
+* `upper()` — converter todas as letras da string em letras maiúsculas.
+
+2. O conteúdo das strings pode ser determinado utilizando os seguintes métodos (todos eles devolvem valores Booleanos):
+
+* `endswith()` — a string termina com uma determinada substring?
+* `isalnum()` — a string consiste apenas em letras e dígitos?
+* `isalpha()` — a string consiste apenas em letras?
+* `islower()` — a string consiste apenas em letras minúsculas?
+* `isspace()` — a string consiste apenas em espaços em branco?
+* `isupper()` — a string consiste apenas em letras maiúsculas?
+* `startswith()` — a string começa com uma determinada substring?
+
+**Exercício 1**
+
+Qual é o output esperado do seguinte código?
+```
+for ch in "abc123XYX":
+    if ch.isupper():
+        print(ch.lower(), end='')
+    elif ch.islower():
+        print(ch.upper(), end='')
+    else:
+        print(ch, end='')
+```
+
+Verifique
+
+`ABC123xyz`
+
+
+**Exercício 2**
+
+Qual é o output esperado do seguinte código?
+```
+s1 = 'Where are the snows of yesteryear?'
+s2 = s1.split()
+print(s2[-2])
+```
+
+Verifique
+
+`of`
+
+
+**Exercício 3**
+
+Qual é o output esperado do seguinte código?
+```
+the_list = ['Where', 'are', 'the', 'snows?']
+s = '*'.join(the_list)
+print(s)
+```
+
+Verifique
+
+`Where*are*the*snows?`
+
+
+**Exercício 4**
+
+Qual é o output esperado do seguinte código?
+```
+s = 'It is either easy or impossible'
+s = s.replace('easy', 'hard').replace('im', '')
+print(s)
+```
+
+Verifique
+
+`It is either hard or possible`
+
