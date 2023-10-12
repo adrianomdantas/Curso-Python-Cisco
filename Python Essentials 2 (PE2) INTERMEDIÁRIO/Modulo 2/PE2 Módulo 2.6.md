@@ -206,3 +206,336 @@ except:
 * se alguma coisa correr mal dentro do bloco `try:` e `except:` , a execução salta imediatamente para fora do bloco e para a primeira instrução localizada após a keyword `except:` ; isto significa que algumas das instruções do bloco podem ser silenciosamente omitidas.
 
 ## 2.6.1.7 Erros - o pão diário do programador | try-except
+
+## Exceções: continuação
+
+Veja o código no editor. Ajudá-lo-á a compreender este mecanismo.
+
+```
+try:
+    print("1")
+    x = 1 / 0
+    print("2")
+except:
+    print("Oh dear, something went wrong...")
+
+print("3")
+
+```
+
+Esta é o output que produz:
+
+output
+
+```
+1
+Oh dear, something went wrong...
+3
+```
+
+Nota: a instrução print("2") foi perdida no processo.
+
+## 2.6.1.8 Erros - o pão diário do programador | try-except
+
+## Exceções: continuação
+
+Esta abordagem tem uma desvantagem importante - se houver a possibilidade de mais do que uma exceção poder saltar para um ramo `except:` , poderá ter **dificuldade em descobrir o que realmente aconteceu.**
+
+Tal como no nosso código no editor. Execute-o e veja o que acontece.
+
+```
+try:
+    x = int(input("Enter a number: "))
+    y = 1 / x
+except:
+    print("Oh dear, something went wrong...")
+
+print("THE END.")
+```
+
+A mensagem: `Oh dear, something went wrong...` que aparece na consola nada diz sobre a razão, enquanto que existem duas causas possíveis para a exceção:
+
+* dados não inteiros inseridos pelo utilizador;
+* um valor inteiro igual a 0 atribuído à variável x .
+
+Tecnicamente, existem duas maneiras de resolver o problema:
+
+* construir dois blocos consecutivos try-except , um para cada possível motivo de exceção (fácil, mas causará um crescimento do código desfavorável)
+* utilizar uma variante mais avançada da instrução.
+
+É assim que se parece:
+
+```
+try:
+    :
+except exc1:
+    :
+except exc2:
+    :
+except:
+    :
+```
+
+É assim que funciona:
+
+* se o ramo `try` levanta a exceção `exc1` , será tratado pelo bloco `except exc1:` ;
+* da mesma forma, se o ramo `try` levanta a exceção `exc2` , será tratado pelo bloco except exc2: ;
+* se o ramo `try` levanta qualquer outra exceção, será tratado pelo bloco não nomeado except .
+
+Passemos à próxima parte do curso e vejamo-lo em ação.
+
+## 2.6.1.9 Erros - o pão diário do programador | try-except
+
+## Exceções: continuação
+
+Veja o código no editor. A nossa solução está lá.
+
+```
+try:
+    x = int(input("Enter a number: "))
+    y = 1 / x
+    print(y)
+except ZeroDivisionError:
+    print("You cannot divide by zero, sorry.")
+except ValueError:
+    print("You must enter an integer value.")
+except:
+    print("Oh dear, something went wrong...")
+
+print("THE END.")
+```
+
+O código, quando executado, produz uma das quatro variantes de output seguintes:
+
+* se introduzir um valor inteiro válido, não nulo (por exemplo 5) diz:
+
+output
+
+```
+0.2
+THE END.
+```
+
+se introduzir `0`, diz:
+
+output
+
+```
+You cannot divide by zero, sorry.
+THE END.
+```
+
+se introduzir qualquer string não inteira, verá:
+
+output
+
+```
+You must enter an integer value.
+THE END.
+```
+
+(localmente na sua máquina) se premir Ctrl-C enquanto o programa aguarda a entrada do utilizador (o que provoca uma exceção chamada KeyboardInterrupt), o programa diz:
+
+output
+
+```
+Oh dear, something went wrong...
+THE END.
+```
+
+## 2.6.1.10 Erros - o pão diário do programador | try-except
+
+## Exceções: continuação
+
+Não se esqueça:
+
+* os ramos `except` são pesquisados na mesma ordem em que aparecem no código;
+* não deve utilizar mais do que um, exceto um ramo com um certo nome de exceção;
+* o número de diferentes ramos `except` é arbitrário - a única condição é que se utilizar `try`, deve colocar pelo menos um `except` (nomeado ou não) depois dele;
+* a keyword `except` não deve ser utilizada sem um precedente `try`;
+* se algum dos ramos `except` for executado, nenhum outro ramo será visitado;
+* se nenhum dos ramos `except` especificados correspondem à exceção levantada, a exceção permanece sem ser tratada (discutiremos isso em breve)
+* se um não nomeado `except` ramo existir (um sem nome de exceção), tem de ser especificado como o último.
+
+```
+try:
+    :
+except exc1:
+    :
+except exc2:
+    :
+except:
+    :
+```
+
+Vamos continuar as experiências agora.
+
+Veja o código no editor. Modificámos o programa anterior - removemos o ramo `ZeroDivisionError` .
+
+```
+try:
+    x = int(input("Enter a number: "))
+    y = 1 / x
+    print(y)
+except ValueError:
+    print("You must enter an integer value.")
+except:
+    print("Oh dear, something went wrong...")
+
+print("THE END.")
+```
+
+O que acontece agora se o utilizador introduzir `0` como um input?
+
+Como **não há ramos dedicados** para divisão por zero, a exceção levantada cai no **ramo geral (sem nome)**; isto significa que, neste caso, o programa dirá:
+
+output
+
+```
+Oh dear, something went wrong...
+THE END.
+```
+
+Experimente você mesmo. Execute o programa.
+
+## 2.6.1.11 Erros - o pão diário do programador | try-except
+
+## Exceções: continuação
+
+Vamos estragar o código mais uma vez.
+
+Olhe para o programa no editor. Desta vez, retirámos o ramo não nomeado.
+
+```
+try:
+    x = int(input("Enter a number: "))
+    y = 1 / x
+    print(y)
+except ValueError:
+    print("You must enter an integer value.")
+
+print("THE END."
+```
+
+O utilizador insere `0` mais uma vez, e:
+
+* a exceção levantada não será tratada por `ValueError` - não tem nada a ver com isso;
+* uma vez que não há outro ramo, deve ver esta mensagem:
+
+output
+
+```
+Traceback (most recent call last):
+File "exc.py", line 3, in 
+y = 1 / x
+ZeroDivisionError: division by zero
+```
+
+Aprendeu bastante sobre o tratamento de exceções em Python. Na secção seguinte, centrar-nos-emos nas exceções incorporadas em Python e nas suas hierarquias.
+
+## 2.6.1.12 RESUMO DA SECÇÃO
+
+## Key takeaways
+
+1. Uma exceção é um evento na execução de um programa causado por uma situação anormal. A exceção deve ser tratada para evitar a terminação do programa. A parte do seu código que é suspeita de ser a origem da exceção deve ser colocada dentro do ramo `try` .
+
+Quando a exceção acontece, a execução do código não é terminada, mas em vez disso salta para o ramo `except` . Este é o local onde deve ter lugar o tratamento da exceção. O esquema geral de tal construção parece-se com o seguinte:
+
+```
+:
+# The code that always runs smoothly.
+:
+try:
+    :
+    # Risky code.
+    :
+except:
+    :
+    # Crisis management takes place here.
+    : 
+:
+# Back to normal.
+:
+```
+
+1. Se precisar de tratar de mais do que uma exceção proveniente do mesmo ramo `try` , pode adicionar mais do que um ramo `except` , mas é preciso rotulá-los com nomes de exceção diferentes, como este:
+
+```
+:
+# The code that always runs smoothly.
+:
+try:
+    :
+    # Risky code.
+    :
+except Except_1:
+    # Crisis management takes place here.
+except Except_2:
+    # We save the world here.
+:
+# Back to normal.
+:
+```
+
+No máximo, um dos ramos `except` é executado - nenhum dos ramos é executado quando a exceção levantada não coincide com as exceções especificadas.
+
+
+3. Não pode acrescentar mais do que um ramo anónimo (não nomeado) `except` após os nomeados.
+```
+:
+# The code that always runs smoothly.
+:
+try:
+    :
+    # Risky code.
+    :
+except Except_1:
+    # Crisis management takes place here.
+except Except_2:
+    # We save the world here.
+except:
+    # All other issues fall here.
+:
+# Back to normal.
+:
+```
+
+
+**Exercício 1**
+
+Qual é o output esperado do seguinte código?
+```
+try:
+    print("Let's try to do this")
+    print("#"[2])
+    print("We succeeded!")
+except:
+    print("We failed")
+print("We're done")
+```
+
+Verifique
+```
+Let's try to do this
+We failed
+We're done
+```
+
+**Exercício 2**
+
+Qual é o output esperado do seguinte código?
+```
+try:
+    print("alpha"[1/0])
+except ZeroDivisionError:
+    print("zero")
+except IndexingError:
+    print("index")
+except:
+    print("some")
+```
+
+Verifique
+
+`zero`
+
