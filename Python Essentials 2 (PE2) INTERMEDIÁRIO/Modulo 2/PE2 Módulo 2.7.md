@@ -22,11 +22,11 @@ Podemos descrevê-la da seguinte forma (note-se a direção das setas - apontam 
 
 <center>
   BaseException
-  <br>↑
+  <br>↑<br>
   Exception
-  <br>↑
+  <br>↑<br>
   ArithmeticError
-  <br>↑
+  <br>↑<br>
   ZeroDivisionError
 </center>
 
