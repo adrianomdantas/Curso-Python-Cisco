@@ -23,7 +23,25 @@ Podemos descrevê-la da seguinte forma (note-se a direção das setas - apontam 
 ![base Exception](../Imagens/baseException.jpg)
 
 <p align="center">
-  This text is centered.
+  BaseException
+</p>
+<p align="center">
+  ↑
+</p>
+<p align="center">
+  Exception
+</p>
+<p align="center">
+  ↑
+</p>
+<p align="center">
+  ArithmeticError
+</p>
+<p align="center">
+  ↑
+</p>
+<p align="center">
+  ZeroDivisionError
 </p>
 
 Vamos mostrar-lhe como funciona esta generalização. Vamos começar com um código realmente simples.
