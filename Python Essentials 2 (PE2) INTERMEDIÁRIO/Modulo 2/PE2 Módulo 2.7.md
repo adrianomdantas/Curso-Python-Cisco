@@ -20,7 +20,7 @@ Nota:
 
 Podemos descrevê-la da seguinte forma (note-se a direção das setas - apontam sempre para a entidade mais geral):
 
-<div text-align: center;>
+<div text-align: center:>
   BaseException
   <br>↑
   Exception
