@@ -20,13 +20,6 @@ Nota:
 
 Podemos descrevê-la da seguinte forma (note-se a direção das setas - apontam sempre para a entidade mais geral):
 
-
-  BaseException
-       ↑
-   Exception
-       ↑
-ArithmeticError
-       ↑
-ZeroDivisionError
+![base Exception](../Imagens/baseException.jpg)
 
 Vamos mostrar-lhe como funciona esta generalização. Vamos começar com um código realmente simples.
