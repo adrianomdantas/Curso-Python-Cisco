@@ -20,15 +20,13 @@ Nota:
 
 Podemos descrevê-la da seguinte forma (note-se a direção das setas - apontam sempre para a entidade mais geral):
 
-<div text-align: center:>
-  BaseException
-  <br>↑
-  Exception
-  <br>↑
-  ArithmeticError
-  <br>↑
-  ZeroDivisionError
-</div>
+<p style="text-align:center;">BaseException</p>
+<p style="text-align:center;">↑</p>
+<p style="text-align:center;">Exception</p>
+<p style="text-align:center;">↑</p>
+<p style="text-align:center;">ArithmeticError</p>
+<p style="text-align:center;">↑</p>
+<p style="text-align:center;">ZeroDivisionError</p>
 
 
 Vamos mostrar-lhe como funciona esta generalização. Vamos começar com um código realmente simples.
