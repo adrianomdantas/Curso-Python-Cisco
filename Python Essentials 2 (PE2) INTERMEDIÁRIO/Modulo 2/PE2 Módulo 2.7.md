@@ -21,12 +21,12 @@ Nota:
 Podemos descrevê-la da seguinte forma (note-se a direção das setas - apontam sempre para a entidade mais geral):
 
 
-<a href style="text-align:center;">BaseException:</a href>
-<p style="text-align:center;">↑</p>
-<p style="text-align:center;">Exception</p>
-<p style="text-align:center;">↑</p>
-<p style="text-align:center;">ArithmeticError</p>
-<p style="text-align:center;">↑</p>
-<p style="text-align:center;">ZeroDivisionError</p>
+  BaseException
+       ↑
+   Exception
+       ↑
+ArithmeticError
+       ↑
+ZeroDivisionError
 
 Vamos mostrar-lhe como funciona esta generalização. Vamos começar com um código realmente simples.
