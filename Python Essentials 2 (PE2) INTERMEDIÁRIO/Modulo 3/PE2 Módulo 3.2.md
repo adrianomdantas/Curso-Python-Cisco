@@ -642,6 +642,6 @@ class Snakes
 
 
 
-## 3.2.1.15 Queue, também conhecida como FIFO
+## 3.2.1.15 Queue, também conhecida como FIFO LAB
 
-## 3.2.1.16 Queue também conhecida como FIFO: parte 2
+## 3.2.1.16 Queue também conhecida como FIFO: parte 2 LAB
