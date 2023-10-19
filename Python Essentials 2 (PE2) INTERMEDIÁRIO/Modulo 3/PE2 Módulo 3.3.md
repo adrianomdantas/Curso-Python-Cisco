@@ -254,8 +254,210 @@ Observe que o `__dict__` do objeto está vazio - o objeto não tem variáveis de
 
 ## 3.3.1.6 OOP: Propriedades
 
+## Verificação da existência de um atributo
+
+A atitude do Python em relação à instanciação de objetos levanta uma questão importante - em contraste com outras linguagens de programação, **não se pode esperar que todos os objetos da mesma classe tenham o mesmo conjunto de propriedades.**
+
+Assim como no exemplo no editor. Olhe com atenção.
+
+```
+class ExampleClass:
+    def __init__(self, val):
+        if val % 2 != 0:
+            self.a = 1
+        else:
+            self.b = 1
+
+
+example_object = ExampleClass(1)
+
+print(example_object.a)
+print(example_object.b)
+```
+
+O objeto criado pelo construtor pode ter apenas um dos dois atributos possíveis: `a` ou `b`.
+
+A execução do código produzirá o seguinte output:
+
+output
+
+```
+1
+Traceback (most recent call last):
+  File ".main.py", line 11, in 
+    print(example_object.b)
+AttributeError: 'ExampleClass' object has no attribute 'b'
+```
+
+Como pode ver, o acesso a um atributo de objeto (classe) inexistente causa uma AttributeError exceção.
+
 ## 3.3.1.7 OOP: Propriedades
 
+## Verificação da existência de um atributo: continuação
+
+A instrução `try-except` dá-lhe a oportunidade de evitar problemas com propriedades inexistentes.
+
+É fácil - veja o código no editor.
+
+```
+class ExampleClass:
+    def __init__(self, val):
+        if val % 2 != 0:
+            self.a = 1
+        else:
+            self.b = 1
+
+
+example_object = ExampleClass(1)
+print(example_object.a)
+
+try:
+    print(example_object.b)
+except AttributeError:
+    pass
+```
+
+Como se pode ver, esta ação não é muito sofisticada. Essencialmente, apenas varremos o problema para debaixo do tapete.
+
+Felizmente, há mais uma forma de lidar com o problema.
+
+O Python fornece uma **função capaz de verificar com segurança se algum objeto/classe contém uma propriedade especificada.** A função é chamada hasattr, e espera que lhe sejam transmitidos dois argumentos:
+
+* A classe ou o objeto a ser verificado;
+* o nome da propriedade cuja existência tem de ser comunicada (nota: tem de ser uma string contendo o nome do atributo, e não apenas o nome)
+
+A função devolve `True` ou `False`.
+
+É assim que a pode utilizar:
+```
+class ExampleClass:
+    def __init__(self, val):
+        if val % 2 != 0:
+            self.a = 1
+        else:
+            self.b = 1
+
+
+example_object = ExampleClass(1)
+print(example_object.a)
+
+if hasattr(example_object, 'b'):
+    print(example_object.b)
+```
 ## 3.3.1.8 OOP: Propriedades
 
+## Verificação da existência de um atributo: continuação
+
+Não se esqueça que a função `hasattr()` também pode operar em classes. Pode utilizá-la **para descobrir se uma variável de classe está disponível**, tal como aqui no exemplo do editor.
+
+A função devolve `True` se a classe especificada contiver um determinado atributo, e `False` caso contrário.
+
+Consegue adivinhar o output do código? Execute-o para verificar as suas suposições.
+
+```
+class ExampleClass:
+    attr = 1
+
+
+print(hasattr(ExampleClass, 'attr'))
+print(hasattr(ExampleClass, 'prop'))
+```
+
+otput
+
+```
+True
+False
+```
+
+E mais um exemplo - veja o código abaixo e tente prever o seu output:
+```
+class ExampleClass:
+    a = 1
+    def __init__(self):
+        self.b = 2
+
+
+example_object = ExampleClass()
+
+print(hasattr(example_object, 'b'))
+print(hasattr(example_object, 'a'))
+print(hasattr(ExampleClass, 'b'))
+print(hasattr(ExampleClass, 'a'))
+```
+
+Foi bem sucedido? Execute o código para verificar as suas previsões.
+
+Muito bem, chegámos ao fim desta secção. Na secção seguinte vamos falar de métodos, uma vez que os métodos conduzem os objetos e os tornam ativos.
+
 ## 3.3.1.9 RESUMO DA SECÇÃO
+
+## Key takeaways
+
+1. Uma **variável de instância** é uma propriedade cuja existência depende da criação de um objeto. Cada objeto pode ter um conjunto diferente de variáveis de instância.
+
+Além disso, eles podem ser livremente adicionados aos, e removidos dos, objetos durante a sua vida útil. Todas as variáveis de instância de objeto são armazenadas dentro de um dicionário dedicado, chamado `__dict__`, contido em cada objeto separadamente.
+
+2. Uma variável de instância pode ser privada quando o seu nome começa por `__`, mas não se esqueça que tal propriedade ainda é acessível de fora da classe, utilizando um **nome mangled** construído como `_ClassName__PrivatePropertyName`.
+
+3. Uma **variável de classe** é uma propriedade que existe exatamente numa cópia, e não precisa de nenhum objeto criado para ser acessível. Tais variáveis não são mostradas como conteúdo `__dict__` .
+
+Todas as variáveis de classe de uma classe são armazenadas dentro de um dicionário dedicado, chamado `__dict__`, contido em cada classe separadamente.
+
+4. Uma função chamada `hasattr()` pode ser utilizada para determinar se um qualquer objeto/classe contém uma propriedade especificada.
+
+Por exemplo:
+```
+class Sample:
+    gamma = 0 # Class variable.
+    def __init__(self):
+        self.alpha = 1 # Instance variable.
+        self.__delta = 3 # Private instance variable.
+
+
+obj = Sample()
+obj.beta = 2  # Another instance variable (existing only inside the "obj" instance.)
+print(obj.__dict__)
+```
+
+Output do código:
+
+output
+
+`{'alpha': 1, '_Sample__delta': 3, 'beta': 2}`
+
+
+**Exercício 1**
+
+Quais das `Python` propriedades de classe são variáveis de instância, e quais são variáveis de classe? Quais delas são privadas?
+```
+class Python:
+    population = 1
+    victims = 0
+    def __init__(self):
+        self.length_ft = 3
+        self.__venomous = False
+```
+Verifique
+
+`population` e `victims` são variáveis de **classe**, enquanto `length` e `__venomous` são variáveis de **instância** (a última também é **privada**).
+
+**Exercício 2**
+
+Vai negar a `__venomous` propriedade do objeto version_2 , ignorando o facto de que a propriedade é privada. Como vai fazer isto?
+
+`version_2 = Python()`
+
+
+Verifique
+
+`version_2._Python__venomous = not version_2._Python__venomous`
+
+
+**Exercício 3**
+
+Escreva uma expressão que verifica se o objeto `version_2` contém uma propriedade de instância chamada `constrictor` (sim, constrictor!).
+
+Verifique
+
+`hasattr(version_2, 'constrictor')`
