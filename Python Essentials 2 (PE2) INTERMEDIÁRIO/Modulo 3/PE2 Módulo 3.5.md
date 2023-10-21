@@ -157,7 +157,7 @@ Vamos tornar o resultado mais legível:
 
 |↓ é uma subclasse de →	|Vehicle	|LandVehicle	|TrackedVehicle|
 |---|---|---|---|
-|Vehicle	`True`	`False`	`False`|
+|Vehicle	|`True`	|`False`	|`False`|
 |LandVehicle	|`True`	|`True`	|`False`|
 |TrackedVehicle	|`True`	|`True`	|`True`|
 
