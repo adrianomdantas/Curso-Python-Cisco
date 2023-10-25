@@ -1,18 +1,18 @@
-## 4.3.1.1 Trabalhar com ficheiros reais
+## 4.3.1.1 Trabalhar com arquivos reais
 
-## Processamento de ficheiros de texto
+## Processamento de arquivos de texto
 
-Nesta lição vamos preparar um ficheiro de texto simples com algum conteúdo curto e simples.
+Nesta lição vamos preparar um arquivo de texto simples com algum conteúdo curto e simples.
 
-Vamos mostrar-lhe algumas técnicas básicas que pode utilizar para **ler o conteúdo do ficheiro**, a fim de o processar.
+Vamos mostrar-lhe algumas técnicas básicas que pode utilizar para **ler o conteúdo do arquivo**, a fim de o processar.
 
-O processamento será muito simples - vai copiar o conteúdo do ficheiro para a consola, e contar todos os carateres que o programa tenha lido.
+O processamento será muito simples - vai copiar o conteúdo do arquivo para a consola, e contar todos os carateres que o programa tenha lido.
 
-Mas lembre-se - a nossa compreensão de um ficheiro de texto é muito rigorosa. No nosso sentido, é um ficheiro de texto simples - pode conter apenas texto, sem quaisquer decorações adicionais (formatação, tipos de letra diferentes, etc.).
+Mas lembre-se - a nossa compreensão de um arquivo de texto é muito rigorosa. No nosso sentido, é um arquivo de texto simples - pode conter apenas texto, sem quaisquer decorações adicionais (formatação, tipos de letra diferentes, etc.).
 
-É por isso que deve evitar criar o ficheiro utilizando qualquer processador de texto avançado como MS Word, LibreOffice Writer, ou algo do género. Utilize os básicos que o seu sistema operativo oferece: Bloco de notas, vim, gedit, etc.
+É por isso que deve evitar criar o arquivo utilizando qualquer processador de texto avançado como MS Word, LibreOffice Writer, ou algo do género. Utilize os básicos que o seu sistema operativo oferece: Bloco de notas, vim, gedit, etc.
 
-Se os seus ficheiros de texto contiverem alguns carateres nacionais não abrangidos pelo padrão de carateres ASCII, poderá necessitar de um passo adicional. A sua invocação de função `open()` pode exigir um argumento que denote uma codificação de texto específica.
+Se os seus arquivos de texto contiverem alguns carateres nacionais não abrangidos pelo padrão de carateres ASCII, poderá necessitar de um passo adicional. A sua invocação de função `open()` pode exigir um argumento que denote uma codificação de texto específica.
 
 Por exemplo, se estiver a usar um SO Unix/Linux configurado para usar o UTF-8 como uma configuração de todo o sistema, a função `open()` pode ter o seguinte aspeto:
 
@@ -26,7 +26,7 @@ Consulte a documentação do seu SO para encontrar um nome codificador adequado 
 
 **Nota**
 
-Para os fins das nossas experiências com processamento de ficheiros realizadas nesta secção, vamos utilizar um conjunto de ficheiros pré-carregados (ou seja, ficheiros `tzop.txt`, ou `text.txt` ) com os quais poderá trabalhar. Se desejar trabalhar com os seus próprios ficheiros localmente na sua máquina, encorajamo-lo vivamente a fazê-lo, e a utilizar o IDLE (ou qualquer outro IDE que possa preferir) para realizar os seus próprios testes.
+Para os fins das nossas experiências com processamento de arquivos realizadas nesta secção, vamos utilizar um conjunto de arquivos pré-carregados (ou seja, arquivos `tzop.txt`, ou `text.txt` ) com os quais poderá trabalhar. Se desejar trabalhar com os seus próprios arquivos localmente na sua máquina, encorajamo-lo vivamente a fazê-lo, e a utilizar o IDLE (ou qualquer outro IDE que possa preferir) para realizar os seus próprios testes.
 
 ```
 # Opening tzop.txt in read mode, returning it as a file object:
@@ -69,23 +69,23 @@ The Zen of Python
 source: https://github.com/python/peps/blob/master/pep-0020.txt
 ```
 
-## 4.3.1.2 Trabalhar com ficheiros reais
+## 4.3.1.2 Trabalhar com arquivos reais
 
-## Processamento de ficheiros de texto: continuação
+## Processamento de arquivos de texto: continuação
 
-A leitura do conteúdo de um ficheiro de texto pode ser feita usando vários métodos diferentes - nenhum deles é melhor ou pior do que qualquer outro. Depende de si qual deles prefere e gosta.
+A leitura do conteúdo de um arquivo de texto pode ser feita usando vários métodos diferentes - nenhum deles é melhor ou pior do que qualquer outro. Depende de si qual deles prefere e gosta.
 
 Alguns deles serão por vezes mais práticos, e por vezes mais problemáticos. Seja flexível. Não tenha medo de mudar as suas preferências.
 
 O mais básico destes métodos é o que é oferecido pela função `read()` , que foi capaz de ver em ação na lição anterior.
 
-Se aplicada a um ficheiro de texto, a função é capaz de:
+Se aplicada a um arquivo de texto, a função é capaz de:
 
-* ler um número desejado de carateres (incluindo apenas um) do ficheiro, e devolvê-los como uma string;
-* ler todo o conteúdo do ficheiro, e devolvê-lo como uma string;
-* se não houver mais nada para ler (a cabeça de leitura virtual chega ao fim do ficheiro), a função devolve uma string vazia.
+* ler um número desejado de carateres (incluindo apenas um) do arquivo, e devolvê-los como uma string;
+* ler todo o conteúdo do arquivo, e devolvê-lo como uma string;
+* se não houver mais nada para ler (a cabeça de leitura virtual chega ao fim do arquivo), a função devolve uma string vazia.
 
-Começaremos com a variante mais simples e utilizaremos um ficheiro com o nome `text.txt`. O ficheiro tem o seguinte conteúdo:
+Começaremos com a variante mais simples e utilizaremos um arquivo com o nome `text.txt`. O arquivo tem o seguinte conteúdo:
 ```
 Beautiful is better than ugly.
 Explicit is better than implicit.
@@ -115,19 +115,19 @@ except IOError as e:
 
 A rotina é bastante simples:
 
-* utilizar o mecanismo try-except e abrir o ficheiro do nome pré-determinado (text.txt no nosso caso)
-* tentar ler o primeiro caratere do ficheiro (`ch = s.read(1)`)
+* utilizar o mecanismo try-except e abrir o arquivo do nome pré-determinado (text.txt no nosso caso)
+* tentar ler o primeiro caratere do arquivo (`ch = s.read(1)`)
 * se for bem sucedido (isto é comprovado por um resultado positivo da verificação do estado `while` ), fazer output do caratere (note o argumento `end=` - é importante! Não se quer saltar para uma nova linha depois de cada caratere!);
 * atualizar o contador (`cnt`), também;
 * tentar ler o próximo caratere, e o processo repete-se.
 
-## 4.3.1.3 Trabalhar com ficheiros reais
+## 4.3.1.3 Trabalhar com arquivos reais
 
-## Processamento de ficheiros de texto: continuação
+## Processamento de arquivos de texto: continuação
 
-Se tem a certeza absoluta de que o comprimento do ficheiro é seguro e pode ler todo o ficheiro para a memória de uma só vez, pode fazê-lo - a função `read()` , invocada sem quaisquer argumentos ou com um argumento que avalia `None`, vai fazer o trabalho por si.
+Se tem a certeza absoluta de que o comprimento do arquivo é seguro e pode ler todo o arquivo para a memória de uma só vez, pode fazê-lo - a função `read()` , invocada sem quaisquer argumentos ou com um argumento que avalia `None`, vai fazer o trabalho por si.
 
-Lembre-se - **a leitura de um ficheiro de um terabyte usando este método pode corromper o seu sistema operativo.**
+Lembre-se - **a leitura de um arquivo de um terabyte usando este método pode corromper o seu sistema operativo.**
 
 Não espere milagres - a memória do computador não é esticável.
 
@@ -151,19 +151,19 @@ except IOError as e:
 
 Vamos analisá-lo:
 
-* abra o ficheiro como anteriormente;
+* abra o arquivo como anteriormente;
 * leia o seu conteúdo através de uma invocação da função `read()` ;
 * em seguida, processe o texto, iterando através dele com um loop `for` , e atualizando o valor do contador a cada turno do loop;
   
 O resultado será exatamente o mesmo que anteriormente.
 
-## 4.3.1.4 Trabalhar com ficheiros reais
+## 4.3.1.4 Trabalhar com arquivos reais
 
-## Processamento de ficheiros de texto: readline()
+## Processamento de arquivos de texto: readline()
 
-Se quiser tratar o conteúdo do ficheiro **como um conjunto de linhas** e não como um monte de carateres, o método `readline()` irá ajudá-lo com isso.
+Se quiser tratar o conteúdo do arquivo **como um conjunto de linhas** e não como um monte de carateres, o método `readline()` irá ajudá-lo com isso.
 
-O método tenta **ler uma linha completa de texto do ficheiro**, e devolve-a como uma string em caso de sucesso. Caso contrário, ele devolve uma string vazia.
+O método tenta **ler uma linha completa de texto do arquivo**, e devolve-a como uma string em caso de sucesso. Caso contrário, ele devolve uma string vazia.
 
 Isto abre novas oportunidades - agora também se podem contar linhas facilmente, não apenas carateres.
 
@@ -191,15 +191,15 @@ except IOError as e:
 
 Como se pode ver, a ideia geral é exatamente a mesma que nos dois exemplos anteriores.
 
-## 4.3.1.5 Trabalhar com ficheiros reais
+## 4.3.1.5 Trabalhar com arquivos reais
 
-## Processamento de ficheiros de texto: readlines()
+## Processamento de arquivos de texto: readlines()
 
-Outro método, que trata o ficheiro de texto como um conjunto de linhas e não de carateres, é `readlines()`.
+Outro método, que trata o arquivo de texto como um conjunto de linhas e não de carateres, é `readlines()`.
 
-A classe `readlines()` , quando invocado sem argumentos, tenta **ler todo o conteúdo do ficheiro, e devolve uma lista de strings, um elemento por linha de ficheiro.**
+A classe `readlines()` , quando invocado sem argumentos, tenta **ler todo o conteúdo do arquivo, e devolve uma lista de strings, um elemento por linha de arquivo.**
 
-Se não tiver a certeza se o tamanho do ficheiro é suficientemente pequeno e não quiser testar o SO, pode convencer o método `readlines()` a ler não mais do que um número especificado de bytes ao mesmo tempo (o valor de retorno permanece o mesmo - é uma lista de uma string).
+Se não tiver a certeza se o tamanho do arquivo é suficientemente pequeno e não quiser testar o SO, pode convencer o método `readlines()` a ler não mais do que um número especificado de bytes ao mesmo tempo (o valor de retorno permanece o mesmo - é uma lista de uma string).
 
 Sinta-se à vontade para experimentar o seguinte código de exemplo para compreender como o método `readlines()` funciona:
 
@@ -214,9 +214,9 @@ s.close()
 
 **O tamanho máximo aceite do buffer de input é passado para o método como seu argumento.**
 
-Pode esperar que `readlines()` pode processar o conteúdo de um ficheiro de forma mais eficaz do que `readline()`, uma vez que pode precisar de ser invocado menos vezes.
+Pode esperar que `readlines()` pode processar o conteúdo de um arquivo de forma mais eficaz do que `readline()`, uma vez que pode precisar de ser invocado menos vezes.
 
-Nota: quando não há nada a ler do ficheiro, o método devolve uma lista vazia. Utilize-o para detetar o fim do ficheiro.
+Nota: quando não há nada a ler do arquivo, o método devolve uma lista vazia. Utilize-o para detetar o fim do arquivo.
 
 Na medida do tamanho do buffer, é de esperar que o seu aumento possa melhorar o desempenho de input, mas não há nenhuma regra de ouro para isso - tente você mesmo encontrar os valores ótimos.
 
@@ -246,15 +246,15 @@ except IOError as e:
 
 Decidimos usar um buffer de 15 bytes. Não pense que se trata de uma recomendação.
 
-Utilizámos esse valor para evitar a situação em que a primeira invocação `readlines()` consome o ficheiro inteiro.
+Utilizámos esse valor para evitar a situação em que a primeira invocação `readlines()` consome o arquivo inteiro.
 
 Queremos que o método seja forçado a trabalhar mais, e a demonstrar as suas capacidades.
 
 Existem **dois nested loops no código:** o externo utiliza o resultado de `readlines()` para iterar através dele, enquanto que o interior imprime as linhas caratere a caratere.
 
-## 4.3.1.6 Trabalhar com ficheiros reais
+## 4.3.1.6 Trabalhar com arquivos reais
 
-## Processamento de ficheiros de texto: continuação
+## Processamento de arquivos de texto: continuação
 
 O último exemplo que queremos apresentar mostra uma característica muito interessante do objeto devolvido pela função `open()` no modo de texto.
 
@@ -262,9 +262,9 @@ Achamos que pode surpreendê-lo - **o objeto é uma instância da classe iteráv
 
 Estranho? De modo algum. Utilizável? Sim, completamente.
 
-O **protocolo de iteração definido para o objeto de ficheiro** é muito simples - o seu método `__next__` **apenas devolve a próxima linha lida a partir do ficheiro.**
+O **protocolo de iteração definido para o objeto de arquivo** é muito simples - o seu método `__next__` **apenas devolve a próxima linha lida a partir do arquivo.**
 
-Além disso, pode esperar que o objeto invoque automaticamente `close()` quando qualquer uma das leituras do ficheiro chegar ao fim do ficheiro.
+Além disso, pode esperar que o objeto invoque automaticamente `close()` quando qualquer uma das leituras do arquivo chegar ao fim do arquivo.
 
 Olhe para o editor e veja como o código se tornou agora simples e claro.
 
@@ -284,24 +284,24 @@ except IOError as e:
 	print("I/O error occurred: ", strerror(e.errno))
 ```
 
-## 4.3.1.7 Trabalhar com ficheiros reais
+## 4.3.1.7 Trabalhar com arquivos reais
 
-## Lidar com ficheiros de texto: write()
+## Lidar com arquivos de texto: write()
 
-Escrever ficheiros de texto parece ser mais simples, pois de facto existe um método que pode ser utilizado 
+Escrever arquivos de texto parece ser mais simples, pois de fato existe um método que pode ser utilizado 
 para realizar tal tarefa.
 
-O método é chamado `write()` e espera apenas um argumento - uma string que será transferida para um ficheiro aberto (não esquecer - o modo aberto deve refletir a forma como os dados são transferidos - **escrever um ficheiro aberto em modo de leitura não será bem sucedido).**
+O método é chamado `write()` e espera apenas um argumento - uma string que será transferida para um arquivo aberto (não esquecer - o modo aberto deve refletir a forma como os dados são transferidos - **escrever um arquivo aberto em modo de leitura não será bem sucedido).**
 
-Nenhum caratere newline é adicionado ao argumento `write()`, pelo que terá de ser você próprio a adicioná-lo se quiser que o ficheiro seja preenchido com um certo número de linhas.
+Nenhum caratere newline é adicionado ao argumento `write()`, pelo que terá de ser você próprio a adicioná-lo se quiser que o arquivo seja preenchido com um certo número de linhas.
 
-O exemplo no editor mostra um código muito simples que cria um ficheiro com o nome newtext.txt (nota: o modo aberto `w` assegura que **o ficheiro será criado do zero**, mesmo que este exista e contenha dados) e depois coloca dez linhas no mesmo.
+O exemplo no editor mostra um código muito simples que cria um arquivo com o nome newtext.txt (nota: o modo aberto `w` assegura que **o arquivo será criado do zero**, mesmo que este exista e contenha dados) e depois coloca dez linhas no mesmo.
 
 A string a ser gravada consiste na linha da palavra, seguida do número da linha. Decidimos escrever o conteúdo da string caratere a caratere (isto é feito pelo loop `for` interno) mas não é obrigado a fazê-lo desta forma.
 
 Só queríamos mostrar-lhe que `write()` é capaz de operar em carateres individuais.
 
-O código cria um ficheiro preenchido com o seguinte texto:
+O código cria um arquivo preenchido com o seguinte texto:
 
 output
 
@@ -318,7 +318,7 @@ line #9
 line #10
 ```
 
-Pode imprimir o conteúdo do ficheiro para a consola?
+Pode imprimir o conteúdo do arquivo para a consola?
 
 ```
 from os import strerror
@@ -336,11 +336,11 @@ except IOError as e:
 
 Encorajamo-lo a testar o comportamento do método `write()` localmente na sua máquina.
 
-## 4.3.1.8 Trabalhar com ficheiros reais
+## 4.3.1.8 Trabalhar com arquivos reais
 
-## Lidar com ficheiros de texto: continuação
+## Lidar com arquivos de texto: continuação
 
-Veja o exemplo no editor. Modificámos o código anterior para escrever linhas inteiras no ficheiro de texto.
+Veja o exemplo no editor. Modificámos o código anterior para escrever linhas inteiras no arquivo de texto.
 
 ```
 from os import strerror
@@ -354,7 +354,7 @@ except IOError as e:
     print("I/O error occurred: ", strerror(e.errno))
 ```
 
-O conteúdo do ficheiro recentemente criado é o mesmo.
+O conteúdo do arquivo recentemente criado é o mesmo.
 
 Nota: pode usar o mesmo método para escrever para o stream `stderr` , mas não tente abri-lo, pois está sempre aberto implicitamente.
 
@@ -366,11 +366,11 @@ sys.stderr.write("Error message")
 ```
 
 
-## 4.3.1.9 Trabalhar com ficheiros reais
+## 4.3.1.9 Trabalhar com arquivos reais
 
 ## O que é um bytearray?
 
-Antes de começarmos a falar de ficheiros binários, temos de lhe falar de uma das **classes especializadas que o Python utiliza para armazenar dados amorfos.**
+Antes de começarmos a falar de arquivos binários, temos de lhe falar de uma das **classes especializadas que o Python utiliza para armazenar dados amorfos.**
 
 **Dados amorfos são dados que não têm formato ou forma específica** - são apenas uma série de bytes.
 
@@ -394,7 +394,7 @@ Tal invocação cria um objeto bytearray capaz de armazenar dez bytes.
 
 Nota: tal construtor **preenche todo o array com zeros.**
 
-## 4.3.1.10 Trabalhar com ficheiros reais
+## 4.3.1.10 Trabalhar com arquivos reais
 
 ## Bytearrays: continuação
 
@@ -416,13 +416,13 @@ for b in data:
     print(hex(b))
 ```
 
-Agora vamos mostrar-lhe como **escrever um byte array num ficheiro binário** - binário, pois não queremos guardar a sua representação legível - queremos escrever uma cópia um-para-um do conteúdo da memória física, byte por byte.
+Agora vamos mostrar-lhe como **escrever um byte array num arquivo binário** - binário, pois não queremos guardar a sua representação legível - queremos escrever uma cópia um-para-um do conteúdo da memória física, byte por byte.
 
-## 4.3.1.11 Trabalhar com ficheiros reais
+## 4.3.1.11 Trabalhar com arquivos reais
 
 ## Bytearrays: continuação
 
-Então, como escrevemos uma byte array para um ficheiro binário?
+Então, como escrevemos uma byte array para um arquivo binário?
 
 Veja o código no editor. Vamos analisá-lo:
 
@@ -444,9 +444,9 @@ except IOError as e:
 # Your code that reads bytes from the stream should go here.
 ```
 
-* primeiro, inicializamos `bytearray` com valores subsequentes a partir de `10`; se quiser que o conteúdo do ficheiro seja claramente legível, substitua `10` por algo como `ord('a')` - isto produzirá bytes contendo valores correspondentes à parte alfabética do código ASCII (não pense que fará do ficheiro um ficheiro de texto - ainda é binário, pois foi criado com uma bandeira `wb` );
-* em seguida, criamos o ficheiro usando a função `open()` - a única diferença em comparação com as variantes anteriores é o modo aberto que contém a bandeira `b` ;
-* o método `write()` toma o seu argumento (`bytearray`) e envia-o (como um todo) para o ficheiro;
+* primeiro, inicializamos `bytearray` com valores subsequentes a partir de `10`; se quiser que o conteúdo do arquivo seja claramente legível, substitua `10` por algo como `ord('a')` - isto produzirá bytes contendo valores correspondentes à parte alfabética do código ASCII (não pense que fará do arquivo um arquivo de texto - ainda é binário, pois foi criado com uma bandeira `wb` );
+* em seguida, criamos o arquivo usando a função `open()` - a única diferença em comparação com as variantes anteriores é o modo aberto que contém a bandeira `b` ;
+* o método `write()` toma o seu argumento (`bytearray`) e envia-o (como um todo) para o arquivo;
 * a stream é então fechada de forma rotineira.
 
 O método `write()` devolve uma série de bytes escritos com sucesso.
@@ -455,19 +455,19 @@ Se os valores diferirem do comprimento dos argumentos do método, poderá anunci
 
 Neste caso, não fizemos uso do resultado - isto pode não ser apropriado em todos os casos.
 
-Tente executar o código e analisar o conteúdo do ficheiro de output recém-criado.
+Tente executar o código e analisar o conteúdo do arquivo de output recém-criado.
 
 Vai utilizá-lo na próxima etapa.
 
 
 ## Como ler bytes de uma stream
 
-A leitura a partir de um ficheiro binário requer o uso de um nome de método especializado `readinto()`, uma vez que o método não cria um novo objeto de bytearray, mas preenche um previamente criado com os valores retirados do ficheiro binário.
+A leitura a partir de um arquivo binário requer o uso de um nome de método especializado `readinto()`, uma vez que o método não cria um novo objeto de bytearray, mas preenche um previamente criado com os valores retirados do arquivo binário.
 
 Nota:
 
 * o método devolve o número de bytes lidos com sucesso;
-* o método tenta preencher todo o espaço disponível dentro do seu argumento; se houver mais dados no ficheiro do que espaço no argumento, a operação lida para antes do fim do ficheiro; caso contrário, o resultado do método pode indicar que a bytearray só foi preenchida de forma fragmentada (o resultado mostrá-lo-á, também, e a parte do array que não está a ser utilizada pelo conteúdo recentemente lido permanece intacta)
+* o método tenta preencher todo o espaço disponível dentro do seu argumento; se houver mais dados no arquivo do que espaço no argumento, a operação lida para antes do fim do arquivo; caso contrário, o resultado do método pode indicar que a bytearray só foi preenchida de forma fragmentada (o resultado mostrá-lo-á, também, e a parte do array que não está a ser utilizada pelo conteúdo recentemente lido permanece intacta)
 
 Veja o código completo abaixo:
 ```
@@ -488,18 +488,18 @@ except IOError as e:
 
 Vamos analisá-lo:
 
-* primeiro, abrimos o ficheiro (aquele que criou utilizando o código anterior) com o modo descrito como `rb`;
+* primeiro, abrimos o arquivo (aquele que criou utilizando o código anterior) com o modo descrito como `rb`;
 * em seguida, lemos seu conteúdo na bytearray chamada `data`, de tamanho dez bytes;
 * finalmente, imprimimos o conteúdo da bytearray - são os mesmos que você esperava?
 Execute o código e verifique se está a funcionar.
 
-## 4.3.1.12 Trabalhar com ficheiros reais
+## 4.3.1.12 Trabalhar com arquivos reais
 
 ## Como ler bytes de uma stream
 
-Uma forma alternativa de ler o conteúdo de um ficheiro binário é oferecida pelo método denominado `read()`.
+Uma forma alternativa de ler o conteúdo de um arquivo binário é oferecida pelo método denominado `read()`.
 
-Invocado sem argumentos, tenta **ler todo o conteúdo do ficheiro na memória**, tornando-os parte de um objeto recentemente criado da classe bytes.
+Invocado sem argumentos, tenta **ler todo o conteúdo do arquivo na memória**, tornando-os parte de um objeto recentemente criado da classe bytes.
 
 Esta classe tem algumas semelhanças com `bytearray`, com exceção de uma diferença significativa - é **imutável**.
 
@@ -520,7 +520,7 @@ except IOError as e:
     print("I/O error occurred:", strerror(e.errno))
 ```
 
-Tenha cuidado - **não utilize este tipo de leitura se não tiver a certeza de que o conteúdo do ficheiro se adequa à memória disponível.**
+Tenha cuidado - **não utilize este tipo de leitura se não tiver a certeza de que o conteúdo do arquivo se adequa à memória disponível.**
 
 ```
 from os import strerror
@@ -540,13 +540,13 @@ except IOError as e:
 # Your code that reads bytes from the stream should go here.
 ```
 
-## 4.3.1.13 Trabalhar com ficheiros reais
+## 4.3.1.13 Trabalhar com arquivos reais
 
 ## Como ler bytes de uma stream: continuação
 
 Se o método `read()` é invocado com um argumento, **especifica o número máximo de bytes a serem lidos.**
 
-O método tenta ler o número desejado de bytes do ficheiro, e o comprimento do objeto devolvido pode ser utilizado para determinar o número de bytes efetivamente lidos.
+O método tenta ler o número desejado de bytes do arquivo, e o comprimento do objeto devolvido pode ser utilizado para determinar o número de bytes efetivamente lidos.
 
 Pode usar o método tal como aqui:
 ```
@@ -562,7 +562,7 @@ except IOError as e:
     print("I/O error occurred:", strerror(e.errno))
 ```
 
-Nota: os primeiros cinco bytes do ficheiro foram lidos pelo código - os cinco seguintes ainda estão à espera de ser processados.
+Nota: os primeiros cinco bytes do arquivo foram lidos pelo código - os cinco seguintes ainda estão à espera de ser processados.
 
 ```
 from os import strerror
@@ -583,11 +583,11 @@ except IOError as e:
 
 ```
 
-## 4.3.1.14 Trabalhar com ficheiros reais
+## 4.3.1.14 Trabalhar com arquivos reais
 
-## Cópia de ficheiros - uma ferramenta simples e funcional
+## Cópia de arquivos - uma ferramenta simples e funcional
 
-Agora vai amalgamar todos estes novos conhecimentos, adicionar-lhe alguns elementos novos, e utilizá-los para escrever um código real que seja capaz de copiar efetivamente o conteúdo de um ficheiro.
+Agora vai amalgamar todos estes novos conhecimentos, adicionar-lhe alguns elementos novos, e utilizá-los para escrever um código real que seja capaz de copiar efetivamente o conteúdo de um arquivo.
 
 Claro que o objetivo não é fazer um melhor substituto para comandos como copy (MS Windows) ou cp (Unix/Linux), mas ver uma forma possível de criar uma ferramenta de trabalho, mesmo que ninguém a queira utilizar.
 
@@ -629,15 +629,15 @@ dst.close()
 
 ```
 
-* linhas 3 a 8: pedir ao utilizador o nome do ficheiro a copiar, e tentar abri-lo para ler; terminar a execução do programa se a abertura falhar; nota: utilizar a função `exit()` para parar a execução do programa e para passar o código de conclusão para o SO; qualquer código de conclusão que não 0 diz que o programa encontrou alguns problemas; use o valor `errno` para especificar a natureza do problema;
-* linhas 10 a 16: repetir quase a mesma ação, mas desta vez para o ficheiro de output;
-* linha 18: preparar um pedaço de memória para transferir dados do source file para o ficheiro alvo; essa área de transferência é muitas vezes chamada de buffer, daí o nome da variável; o tamanho do buffer é arbitrário - neste caso, decidimos usar 64 kilobytes; tecnicamente, um buffer maior é mais rápido a copiar itens, pois um buffer maior significa menos operações I/O; na verdade, há sempre um limite, cujo cruzamento não traz mais melhorias; teste-o você mesmo se quiser.
+* linhas 3 a 8: pedir ao utilizador o nome do arquivo a copiar, e tentar abri-lo para ler; terminar a execução do programa se a abertura falhar; nota: utilizar a função `exit()` para parar a execução do programa e para passar o código de conclusão para o SO; qualquer código de conclusão que não 0 diz que o programa encontrou alguns problemas; use o valor `errno` para especificar a natureza do problema;
+* linhas 10 a 16: repetir quase a mesma ação, mas desta vez para o arquivo de output;
+* linha 18: preparar um pedaço de memória para transferir dados do source file para o arquivo alvo; essa área de transferência é muitas vezes chamada de buffer, daí o nome da variável; o tamanho do buffer é arbitrário - neste caso, decidimos usar 64 kilobytes; tecnicamente, um buffer maior é mais rápido a copiar itens, pois um buffer maior significa menos operações I/O; na verdade, há sempre um limite, cujo cruzamento não traz mais melhorias; teste-o você mesmo se quiser.
 * linha 19: contar os bytes copiados - este é o contador e o seu valor inicial;
 * linha 21: tentar preencher o buffer pela primeira vez;
 * linha 22: desde que se obtenha um número não nulo de bytes, repetir as mesmas ações;
-* linha 23: escrever o conteúdo do buffer no ficheiro de output (nota: utilizámos uma slice para limitar o número de bytes a escrever, uma vez que `write()` prefere sempre escrever todo o buffer)
+* linha 23: escrever o conteúdo do buffer no arquivo de output (nota: utilizámos uma slice para limitar o número de bytes a escrever, uma vez que `write()` prefere sempre escrever todo o buffer)
 * linha 24: atualizar o contador;
-* linha 25: ler o próximo pedaço de ficheiro;
+* linha 25: ler o próximo pedaço de arquivo;
 * linhas 30 a 32: alguma limpeza final - o trabalho está feito.
 
 ## 4.3.1.15 LAB: Histograma de frequência de carateres
@@ -650,31 +650,31 @@ dst.close()
 
 ## Key takeaways
 
-1. Para ler o conteúdo de um ficheiro, podem ser utilizados os seguintes métodos de stream:
+1. Para ler o conteúdo de um arquivo, podem ser utilizados os seguintes métodos de stream:
 
-* `read(number)` — lê os carateres/bytes `number` do ficheiro e devolve-os como uma string; é capaz de ler o ficheiro inteiro de uma só vez;
-* `readline()` — lê uma única linha do ficheiro de texto;
-* `readlines(number)` — lê as linhas `number` do ficheiro de texto; é capaz de ler todas as linhas ao mesmo tempo;
-* `readinto(bytearray)` — lê os bytes do ficheiro e preenche o bytearray com eles;
+* `read(number)` — lê os carateres/bytes `number` do arquivo e devolve-os como uma string; é capaz de ler o arquivo inteiro de uma só vez;
+* `readline()` — lê uma única linha do arquivo de texto;
+* `readlines(number)` — lê as linhas `number` do arquivo de texto; é capaz de ler todas as linhas ao mesmo tempo;
+* `readinto(bytearray)` — lê os bytes do arquivo e preenche o bytearray com eles;
 
-2. Para escrever novos conteúdos num ficheiro, podem ser utilizados os seguintes métodos de stream:
+2. Para escrever novos conteúdos num arquivo, podem ser utilizados os seguintes métodos de stream:
 
-* `write(string)` — escreve um `string` para um ficheiro de texto;
-* `write(bytearray)` — escreve todos os bytes de `bytearray` para um ficheiro;
+* `write(string)` — escreve um `string` para um arquivo de texto;
+* `write(bytearray)` — escreve todos os bytes de `bytearray` para um arquivo;
 
-3. Os loops `open()` devolve um objeto iterável que pode ser utilizado para iterar através de todas as linhas do ficheiro dentro de um loop `for` . Por exemplo:
+3. Os loops `open()` devolve um objeto iterável que pode ser utilizado para iterar através de todas as linhas do arquivo dentro de um loop `for` . Por exemplo:
 
 ```
 for line in open("file", "rt"):
     print(line, end='')
 ```
 
-O código copia o conteúdo do ficheiro para a consola, linha a linha. **Nota**: o stream fecha-se **automaticamente** quando chega ao fim do ficheiro.
+O código copia o conteúdo do arquivo para a consola, linha a linha. **Nota**: o stream fecha-se **automaticamente** quando chega ao fim do arquivo.
 
 
 **Exercício 1**
 
-O que esperamos do método `readlines()` quando o stream está associado a um ficheiro vazio?
+O que esperamos do método `readlines()` quando o stream está associado a um arquivo vazio?
 
 Verifique
 
@@ -694,13 +694,13 @@ for line in open("file", "rt"):
 
 Verifique
 
-Copia o conteúdo do ficheiro para a consola, ignorando todas as vogais.
+Copia o conteúdo do arquivo para a consola, ignorando todas as vogais.
 
 
 
 **Exercício 3**
 
-Vai processar um bitmap armazenado num ficheiro com o nome `image.png`, e deseja ler o seu conteúdo como um todo numa variável de bytearray chamada `image`. Adicione uma linha ao seguinte código para atingir este objetivo.
+Vai processar um bitmap armazenado num arquivo com o nome `image.png`, e deseja ler o seu conteúdo como um todo numa variável de bytearray chamada `image`. Adicione uma linha ao seguinte código para atingir este objetivo.
 ```
 try:
     stream = open("image.png", "rb")
