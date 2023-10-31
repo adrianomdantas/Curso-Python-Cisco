@@ -68,7 +68,7 @@ Ao criar um objeto de data, tenha em mente as seguintes restrições:
 |---|---|
 |`year`| O parâmetro ano deve ser maior ou igual a 1 (constante MINYEAR) e menor ou igual a 9999 (constante MAXYEAR).|
 |`month`|	O parâmetro mês deve ser maior ou igual a 1 e menor ou igual a 12.|
-|day|O parâmetro dia deve ser maior ou igual a 1 e menor ou igual ao último dia do mês e ano em questão.|
+|`day`|O parâmetro dia deve ser maior ou igual a 1 e menor ou igual ao último dia do mês e ano em questão.|
 
 **Nota**: Mais tarde neste curso aprenderá a alterar o formato padrão da data.
 
@@ -215,16 +215,29 @@ A função `time` aceita os seguintes parâmetros opcionais:
 
 |Parâmetro	|Restrições|
 |---|---|
-|hour |O parâmetro hora deve ser maior ou igual a 0 e inferior a 23.|
-|minute	|O parâmetro minuto deve ser maior ou igual a 0 e inferior a 59.|
-|second	|O parâmetro segundo deve ser maior ou igual a 0 e inferior a 59.|
-|microsecond|O parâmetro microssegundo deve ser maior ou igual a 0 e inferior a 1000000.|
-|tzinfo	|O parâmetro tzinfo deve ser um objeto de subclasse tzinfo ou None (default).|
-|fold|O parâmetro fold deve ser 0 ou 1 (padrão 0).|
+|`hour` |O parâmetro hora deve ser maior ou igual a 0 e inferior a 23.|
+|`minute`	|O parâmetro minuto deve ser maior ou igual a 0 e inferior a 59.|
+|`second`	|O parâmetro segundo deve ser maior ou igual a 0 e inferior a 59.|
+|`microsecond`|O parâmetro microssegundo deve ser maior ou igual a 0 e inferior a 1000000.|
+|`tzinfo`	|O parâmetro tzinfo deve ser um objeto de subclasse tzinfo ou None (default).|
+|`fold`|O parâmetro fold deve ser 0 ou 1 (padrão 0).|
 
 O parâmetro *tzinfo* está associado a fusos horários, enquanto o *fold* está associado a tempo de relógio. Não os utilizaremos durante este curso, mas encorajamo-lo a familiarizar-se com eles.
 
 Vejamos como criar um objeto time na prática. Execute o código no editor.
+
+```
+from datetime import time
+
+t = time(14, 53, 20, 1)
+
+print("Time:", t)
+print("Hour:", t.hour)
+print("Minute:", t.minute)
+print("Second:", t.second)
+print("Microsecond:", t.microsecond)
+
+```
 
 Resultado:
 
@@ -244,32 +257,658 @@ No exemplo, passámos quatro parâmetros para o construtor de classe: *hora, min
 
 ## 4.5.1.8 O módulo time
 
+## Os loops time .
+
+Para além dos módulos `time` , a biblioteca padrão de Python oferece um módulo chamado `time`, que fornece uma função relacionada com o tempo. Já teve a oportunidade de aprender a função chamada `time` ao discutir a classe `date` . Agora vamos olhar para outra função útil disponível neste módulo.
+
+Deve passar muitas horas em frente de um computador enquanto faz este curso. Por vezes pode sentir a necessidade de fazer uma sesta. Porque não? Vamos escrever um programa que simula a curta sesta de um estudante. Dê uma vista de olhos ao código no editor.
+
+```
+import time
+
+class Student:
+    def take_nap(self, seconds):
+        print("I'm very tired. I have to take a nap. See you later.")
+        time.sleep(seconds)
+        print("I slept well! I feel great!")
+
+student = Student()
+student.take_nap(5)
+```
+
+Resultado:
+
+output
+
+```
+I'm very tired. I have to take a nap. See you later.
+I slept well! I feel great!
+```
+
+A parte mais importante do código de exemplo é o uso da função `sleep` (sim, pode recordá-la de um dos labs anteriores do curso), o que suspende a execução do programa durante um determinado número de segundos.
+
+No nosso exemplo são 5 segundos. Tem razão, é uma sesta muito curta.
+
+Prolongue o sesta do aluno alterando o número de segundos. Note que a função `sleep` aceita apenas um número inteiro ou um número floating-point.
+
 ## 4.5.1.9 O módulo time
+
+## Os loops ctime() .
+
+A função `time` fornece uma função chamada `ctime`, que **converte o tempo em segundos desde 1 de janeiro de 1970 (época Unix) para uma string.**
+
+Lembra-se do resultado da função `time` ? É isso que precisa de passar para `ctime`. Dê uma vista de olhos no exemplo no editor.
+
+```
+import time
+
+timestamp = 1572879180
+print(time.ctime(timestamp))
+```
+
+Resultado:
+
+output
+
+`Mon Nov  4 14:53:00 2019`
+
+A função `ctime` devolve uma string para o timestamp passado. No nosso exemplo, o timestamp expressa 4 de novembro de 2019 às 14:53:00.
+
+Também é possível chamar a função `ctime` sem especificar o tempo em segundos. Neste caso, a hora atual será devolvida:
+
+```
+import time
+print(time.ctime())
+```
 
 ## 4.5.1.10 O módulo time
 
+## Os loops gmtime() e localtime() .
+
+Algumas das funções disponíveis no módulo `time` requerem conhecimento da classe struct_time, mas antes de os conhecermos, vamos ver como é a classe:
+
+```
+time.struct_time:
+    tm_year   # specifies the year
+    tm_mon    # specifies the month (value from 1 to 12)
+    tm_mday   # specifies the day of the month (value from 1 to 31)
+    tm_hour   # specifies the hour (value from 0 to 23)
+    tm_min    # specifies the minute (value from 0 to 59)
+    tm_sec    # specifies the second (value from 0 to 61 )
+    tm_wday   # specifies the weekday (value from 0 to 6)
+    tm_yday   # specifies the year day (value from 1 to 366)
+    tm_isdst  # specifies whether daylight saving time applies (1 – yes, 0 – no, -1 – it isn't known)
+    tm_zone   # specifies the timezone name (value in an abbreviated form)
+    tm_gmtoff # specifies the offset east of UTC (value in seconds)
+```
+
+A classe struct_time também permite o acesso a valores utilizando indexes. Index `0` devolve o valor em tm_year, enquanto `8` devolve o valor em tm_isdst.
+
+As exceções são tm_zone e tm_gmoff, que não podem ser acedidas utilizando indexes. Vejamos como utilizar na prática a classe *struct_time*. Execute o código no editor.
+
+```
+import time
+
+timestamp = 1572879180
+print(time.gmtime(timestamp))
+print(time.localtime(timestamp))
+```
+
+Resultado:
+
+output
+
+```
+time.struct_time(tm_year=2019, tm_mon=11, tm_mday=4, tm_hour=14, tm_min=53, tm_sec=0, tm_wday=0, tm_yday=308, tm_isdst=0)
+time.struct_time(tm_year=2019, tm_mon=11, tm_mday=4, tm_hour=14, tm_min=53, tm_sec=0, tm_wday=0, tm_yday=308, tm_isdst=0)
+```
+
+O exemplo mostra duas funções que convertem o tempo decorrido da época Unix para o objeto *struct_time*. A diferença entre eles é que a função `gmtime` devolve o objeto struct_time em UTC, enquanto a função `localtime` devolve a hora local. Para a função `gmtime` , o atributo *tm_isdst* é sempre 0.
+
 ## 4.5.1.11 O módulo time
+
+## Os loops asctime() e mktime() .
+
+O módulo `time` tem funções que esperam um objeto *struct_time* ou um tuple que armazena valores de acordo com os indexes apresentados quando se discute a classe struct_time. Execute o exemplo no editor.
+
+```
+import time
+
+timestamp = 1572879180
+st = time.gmtime(timestamp)
+
+print(time.asctime(st))
+print(time.mktime((2019, 11, 4, 14, 53, 0, 0, 308, 0)))
+```
+
+Resultado:
+
+output
+
+```
+Mon Nov  4 14:53:00 2019
+1572879180.0
+```
+
+A primeira das funções, chamada `asctime`, converte um objeto `struct_time` ou um tuple numa string. Note-se que a função familiar `gmtime` é usada para obter o objeto *struct_time*. Se não fornecer um argumento à função `asctime` , o tempo devolvido pela função `localtime` será usado.
+
+A segunda função chamada `mktime` converte um objeto struct_time ou um tuple que expressa a hora local para o número de segundos desde a época Unix. No nosso exemplo, passamos-lhe um tuple, que consiste nos seguintes valores:
+
+2019 => tm_year
+11 => tm_mon
+4 => tm_mday
+14 => tm_hour
+53 => tm_min
+0 => tm_sec
+0 => tm_wday
+308 => tm_yday
+0 => tm_isdst
 
 ## 4.5.1.12 Os módulos datetime e time (continuação)
 
+## Criar objetos datetime .
+
+No módulo `datetime` , data e hora podem ser representados como objetos separados ou como um só. A classe que combina data e hora é chamada `datetime`.
+
+`datetime(year, month, day, hour, minute, second, microsecond, tzinfo, fold)`
+
+O seu construtor aceita os seguintes parâmetros:
+
+|Parâmetro	|Restrições|
+|---|---|
+|`year`|O parâmetro ano deve ser maior ou igual a 1 (constante MINYEAR) e menor ou igual a 9999 (constante MAXYEAR).|
+|`month`|O parâmetro mês deve ser maior ou igual a 1 e menor ou igual a 12.|
+|`day`|O parâmetro dia deve ser maior ou igual a 1 e menor ou igual ao último dia do mês e ano em questão.|
+|`hour`|O parâmetro hora deve ser maior ou igual a 0 e inferior a 23.|
+|`minute`	|O parâmetro minuto deve ser maior ou igual a 0 e inferior a 59.|
+|`second`	|O parâmetro segundo deve ser maior ou igual a 0 e inferior a 59.|
+|`microsecond`	|O parâmetro microssegundo deve ser maior ou igual a 0 e inferior a 1000000.|
+|`tzinfo`	|O parâmetro tzinfo deve ser um objeto de subclasse tzinfo ou None (default).|
+|`fold`	|O parâmetro fold deve ser 0 ou 1 (padrão 0).|
+
+Agora vejamos o código no editor para ver como criamos um objeto de datetime.
+
+```
+from datetime import datetime
+
+dt = datetime(2019, 11, 4, 14, 53)
+
+print("Datetime:", dt)
+print("Date:", dt.date())
+print("Time:", dt.time())
+```
+
+Resultado:
+
+output
+
+```
+Datetime: 2019-11-04 14:53:00
+Date: 2019-11-04
+Time: 14:53:00
+```
+
+O exemplo cria um objeto `datetime` representando 4 de novembro de 2019 às 14:53:00. Todos os parâmetros passados para o construtor vão para atributos de classe só de leitura. São *ano, mês, dia, hora, minuto, segundo, microssegundo, tzinfoe fold.*
+
+O exemplo mostra dois métodos que devolvem dois objetos diferentes. O método chamado `date` devolve o objeto date com o ano, mês e dia dados, enquanto o método chamado time devolve o objeto `time` com a hora e o minuto dados.
+
 ## 4.5.1.13 Os módulos datetime e time (continuação)
+
+## Métodos que devolvem a data e hora atuais
+
+A classe `datetime` tem vários métodos que devolvem a data e hora atuais. Estes métodos são:
+
+* `today()` — devolve a data e hora locais atuais com o atributo tzinfo definido para *None*;
+* `now()` — devolve a data e hora local atuais, tal como o método today, a menos que lhe passemos o argumento opcional tz. O argumento deste método deve ser um objeto da subclasse *tzinfo*;
+* `utcnow()` — devolve a data e hora UTC atuais com o atributo tzinfo definido para *None*.
+
+Execute o código no editor para os ver a todos na prática. O que pode dizer sobre o output?
+
+```
+from datetime import datetime
+
+print("today:", datetime.today())
+print("now:", datetime.now())
+print("utcnow:", datetime.utcnow())
+
+```
+
+output
+
+```
+today: 2023-10-31 13:00:18.710600
+now: 2023-10-31 13:00:18.711423
+utcnow: 2023-10-31 13:00:18.711603
+```
+
+Como pode ver, o resultado de todos os três métodos é o mesmo. As pequenas diferenças são causadas pelo tempo decorrido entre chamadas subsequentes.
+
+**Nota:** Pode ler mais sobre os objetos tzinfo na documentação.
 
 ## 4.5.1.14 Os módulos datetime e time (continuação)
 
+## Obter um timestamp
+
+Existem muitos conversores disponíveis na Internet que podem calcular um timestamp com base numa determinada data e hora, mas como o podemos fazer no módulo `datetime` ?
+
+Isto é possível graças ao método `timestamp` fornecido pela classe `datetime` . Veja o código no editor.
+
+```
+from datetime import datetime
+
+dt = datetime(2020, 10, 4, 14, 55)
+print("Timestamp:", dt.timestamp())
+```
+
+Resultado:
+
+output
+
+`Timestamp: 1601823300.0`
+
+
+A função `timestamp` devolve um valor float expressando o número de segundos decorridos entre a data e a hora indicada pelo objeto datetime e 1 de janeiro de 1970, 00:00:00 (UTC).
+
+
 ## 4.5.1.15 Os módulos datetime e time (continuação)
+
+## Formatação de data e hora (parte 1)
+
+Todas as classes de módulo `datetime` apresentadas até agora têm um método chamado `strftime`. Este é um método muito importante, porque nos permite devolver a data e a hora no formato que especificamos.
+
+O método `strftime` só aceita um argumento sob a forma de uma string especificando o formato que pode consistir em diretivas.
+
+Uma diretiva é uma string que consiste no caratere `%` (percentagem) e uma letra minúscula ou maiúscula, por exemplo, a diretiva `%Y` significa o ano com o século como um número decimal. Vejamo-lo num exemplo. Execute o código no editor.
+
+```
+from datetime import date
+
+d = date(2020, 1, 4)
+print(d.strftime('%Y/%m/%d'))
+```
+
+Resultado:
+
+output
+
+`2020/01/04`
+
+No exemplo, passámos um formato constituído por três diretivas separadas por `/` (barra) para o método `strftime` . É claro que o caratere separador pode ser substituído por outro caratere, ou mesmo por uma string.
+
+Pode colocar quaisquer carateres no formato, mas apenas as diretivas reconhecíveis serão substituídas pelos valores apropriados. No nosso formato, utilizámos as seguintes diretivas:
+
+* `%Y` — devolve o ano com o século como um número decimal. No nosso exemplo, é 2020.
+* `%m` — devolve o mês como um número decimal de zero. No nosso exemplo, é 01.
+* `%d` — devolve o dia como um número decimal de zero. No nosso exemplo, é 04.
+
+Nota: Pode encontrar todas as diretivas disponíveis [aqui](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes).
 
 ## 4.5.1.16 Os módulos datetime e time (continuação)
 
+## Formatação de data e hora (parte 2)
+
+A formatação do tempo funciona da mesma forma que a formatação da data, mas requer a utilização de diretivas apropriadas. Vamos dar uma vista de olhos mais atenta a algumas delas no editor.
+
+```
+from datetime import time
+from datetime import datetime
+
+t = time(14, 53)
+print(t.strftime("%H:%M:%S"))
+
+dt = datetime(2020, 11, 4, 14, 53)
+print(dt.strftime("%y/%B/%d %H:%M:%S"))
+```
+
+Resultado:
+
+output
+
+```
+14:53:00
+20/November/04 14:53:00
+```
+
+O primeiro dos formatos usados diz respeito apenas ao tempo. Como pode adivinhar, `%H` devolve a hora como um número decimal de zero, `%M` devolve o minuto como um número decimal de zero, enquanto `%S` devolve o segundo como um número decimal de zero. No nosso exemplo, `%H` é substituído por 14, `%M` por 53, e `%S` por 00.
+
+O segundo formato usado combina diretivas de data e hora. Existem duas novas directivas, `%Y` e `%B`. A diretiva `%Y` devolve o ano sem um século como um número decimal de zero (no nosso exemplo, é 20). A diretiva `%B` devolve o mês como o nome completo do local (no nosso exemplo, é novembro).
+
+Em geral, tem muita liberdade na criação de formatos, mas deve lembrar-se de utilizar corretamente as diretivas. Como um exercício, pode verificar o que acontece se, por exemplo, tentar usar a diretiva `%Y` no formato passado para o método strftime do objeto de tempo. Tente descobrir você mesmo porque obteve este resultado. Boa sorte!
+
 ## 4.5.1.17 Os módulos datetime e time (continuação)
+
+## Os loops strftime() no módulo time .
+
+Provavelmente não ficará surpreendido por saber que a função `strftime` está disponível no módulo `time` . Difere ligeiramente dos métodos `strftime` nas classes fornecidas pelo módulo `datetime` porque, para além do argumento format, também pode levar (opcionalmente) um tuple ou um objeto struct_time.
+
+Se não passar um tuple ou um objeto *struct_time*, a formatação será feita utilizando a hora local atual. Dê uma vista de olhos no exemplo no editor.
+
+```
+import time
+
+timestamp = 1572879180
+st = time.gmtime(timestamp)
+
+print(time.strftime("%Y/%m/%d %H:%M:%S", st))
+print(time.strftime("%Y/%m/%d %H:%M:%S"))
+
+```
+
+O nosso resultado é o seguinte:
+
+output de amostra
+
+```
+2019/11/04 14:53:00
+2020/10/12 12:19:40
+```
+
+A criação de um format tem o mesmo aspeto que para os métodos `strftime` no módulo `datetime` . No nosso exemplo, usamos as diretivas `%Y`, `%m`, `%d`, `%H`, `%M`, e `%S` que já conhece.
+
+Na primeira chamada de função, formatamos o objeto struct_time, enquanto na segunda chamada (sem o argumento opcional), formatamos a hora local. Pode encontrar todas as diretivas disponíveis no módulo `time` [aqui](https://docs.python.org/3/library/time.html#time.strftime).
 
 ## 4.5.1.18 Os módulos datetime e time (continuação)
 
+## Os loops strptime() método
+
+Saber como criar um formato pode ser útil ao usar um método chamado `strptime` na `datetime` classe. Ao contrário do método `strftime` , este cria um objeto `datetime` a partir de uma string representando uma data e hora.
+
+O método `strptime` requer que se especifique o formato em que se guardou a data e hora. Vejamo-lo num exemplo. Dê uma vista de olhos ao código no editor.
+
+```
+from datetime import datetime
+print(datetime.strptime("2019/11/04 14:53:00", "%Y/%m/%d %H:%M:%S"))
+
+```
+
+Resultado:
+
+output
+
+`2019-11-04 14:53:00`
+
+
+No exemplo, especificámos dois argumentos necessários. O primeiro é uma data e hora como uma string: `"2019/11/04 14:53:00"`, enquanto o segundo é um formato que facilita a análise para um `datetime` objeto. Tenha cuidado, porque se o formato especificado não corresponder à data e hora na string, levantará um *ValueError*.
+
+**Nota:** No módulo `time` , pode encontrar uma função chamada `strptime`, que analisa uma string representando um tempo para um objeto *struct_time*. A sua utilização é análoga à do módulo `strptime` na classe `datetime` :
+
+```
+import time
+print(time.strptime("2019/11/04 14:53:00", "%Y/%m/%d %H:%M:%S"))
+```
+
+O seu resultado será o seguinte:
+
+output
+
+```
+time.struct_time(tm_year=2019, tm_mon=11, tm_mday=4, tm_hour=14, tm_min=53, tm_sec=0, tm_wday=0, tm_yday=308, tm_isdst=-1)
+```
+
 ## 4.5.1.19 Os módulos datetime e time (continuação)
+
+## Operações de data e hora
+
+Mais cedo ou mais tarde, terá de efetuar alguns cálculos sobre a data e hora. Felizmente, há uma classe chamada `timedelta` no módulo `datetime` que foi criado precisamente para esse fim.
+
+Para criar um objeto `timedelta` , basta fazer a subtração nos objetos `date` ou `datetime` , assim como fizemos no exemplo no editor. Execute-o.
+
+```
+from datetime import date
+from datetime import datetime
+
+d1 = date(2020, 11, 4)
+d2 = date(2019, 11, 4)
+
+print(d1 - d2)
+
+dt1 = datetime(2020, 11, 4, 0, 0, 0)
+dt2 = datetime(2019, 11, 4, 14, 53, 0)
+
+print(dt1 - dt2)
+```
+
+Resultado:
+
+output
+
+```
+366 days, 0:00:00
+365 days, 9:07:00
+```
+
+O exemplo mostra a subtração para ambos os objetos `date` e `datetime` . No primeiro caso, recebemos a diferença em dias, que é de 366 dias. Observe que a diferença em horas, minutos e segundos também é exibida. No segundo caso, recebemos um resultado diferente, porque especificámos o tempo que foi incluído nos cálculos. Como resultado, recebemos 365 dias, 9 horas e 7 minutos.
+
+Daqui a pouco irá aprender mais sobre a criação de objetos `timedelta` e sobre as operações que pode fazer com eles.
 
 ## 4.5.1.20 Os módulos datetime e time (continuação)
 
+## Criar objetos timedelta .
+
+Já aprendeu que um objeto `timedelta` pode ser devolvido como o resultado de subtrair dois objetos `date` ou `datetime` .
+
+É claro que também pode criar um objeto por si próprio. Para este efeito, vamos conhecer os argumentos aceites pelo construtor da classe, que são: `days`, `seconds`, `microseconds`, `milliseconds`, `minutes`, `hours`, e `weeks`. Cada um deles é opcional e o padrão é 0.
+
+Os argumentos devem ser números inteiros ou floating point, e podem ser positivos ou negativos. Vejamos um exemplo simples no editor.
+
+```
+from datetime import timedelta
+
+delta = timedelta(weeks=2, days=2, hours=3)
+print(delta)
+```
+
+Resultado:
+
+output
+
+`16 days, 3:00:00`
+
+O resultado de 16 dias é obtido através da conversão do argumento `weeks` para dias (2 semanas = 14 dias) e adicionando o argumento `days` (2 dias). Este é um comportamento normal, porque o objeto `timedelta` armazena internamente apenas dias, segundos e microssegundos. Da mesma forma, o argumento `hour` é convertido em minutos. Veja o exemplo abaixo:
+
+```
+from datetime import timedelta
+
+delta = timedelta(weeks=2, days=2, hours=3)
+print("Days:", delta.days)
+print("Seconds:", delta.seconds)
+print("Microseconds:", delta.microseconds)
+```
+
+Resultado:
+
+output
+
+```
+Days: 16
+Seconds: 10800
+Microseconds: 0
+```
+
+O resultado de 10800 é obtido convertendo 3 horas em segundos. Desta forma, o objeto `timedelta` armazena os argumentos passados durante a sua criação. As semanas são convertidas em dias, horas e minutos em segundos, e milissegundos em microssegundos.
+
 ## 4.5.1.21 Os módulos datetime e time (continuação)
+
+## Criar objetos timedelta : continuação
+
+Já sabe como o objeto `timedelta` armazena os argumentos passados internamente. É tempo de ver como pode ser utilizado na prática.
+
+Vejamos algumas operações apoiadas pelas classes do módulo `datetime` . Execute o código que fornecemos no editor.
+
+```
+from datetime import timedelta
+from datetime import date
+from datetime import datetime
+
+delta = timedelta(weeks=2, days=2, hours=2)
+print(delta)
+
+delta2 = delta * 2
+print(delta2)
+
+d = date(2019, 10, 4) + delta2
+print(d)
+
+dt = datetime(2019, 10, 4, 14, 53) + delta2
+print(dt)
+
+```
+
+Resultado:
+
+output
+
+```
+16 days, 2:00:00
+32 days, 4:00:00
+2019-11-05
+2019-11-05 18:53:00
+```
+
+A função `timedelta` pode ser multiplicado por um inteiro. No nosso exemplo, multiplicamos o objeto que representa 16 dias e 2 horas por 2. Como resultado, recebemos um objeto `timedelta` representando 32 dias e 4 horas.
+
+Note que tanto os dias como as horas foram multiplicados por 2. Outra operação interessante usando o objeto `timedelta` é a adição. No exemplo, adicionamos o objeto `timedelta` à *data* e `datetime` objetos.
+
+Como resultado destas operações, recebemos data e objetos `datetime` aumentados em dias e horas armazenados no `timedelta` objeto.
+
+A operação de multiplicação apresentada permite-lhe aumentar rapidamente o valor do objeto `timedelta` , enquanto a multiplicação pode também ajudá-lo a obter uma data no futuro.
+
+Claro, as classes `timedelta`, `date`, e `datetime` suportam muitas mais operações. Encorajamo-lo a familiarizar-se com elas na documentação.
 
 ## 4.5.1.22 LAB: Os módulos datetime e time
 
 ## 4.5.1.23 RESUMO DA SECÇÃO
+
+## Key takeaways
+
+1. Para criar um objeto `date` , deve passar os argumentos do ano, mês e dia como se segue:
+
+```
+from datetime import date
+
+my_date = date(2020, 9, 29)
+print("Year:", my_date.year) # Year: 2020
+print("Month:", my_date.month) # Month: 9
+print("Day:", my_date.day) # Day: 29
+```
+
+O objeto `date` tem três atributos (somente de leitura): ano, mês e dia.
+
+
+2. O método `today` devolve um objeto de data que representa a data local atual:
+
+```
+from datetime import date
+print("Today:", date.today()) # Displays: Today: 2020-09-29
+```
+
+3. Em Unix, o timestamp expressa o número de segundos desde 1 de janeiro de 1970, 00:00:00 (UTC). Esta data é chamada "época Unix", porque começou a contagem do tempo nos sistemas Unix. O timestamp é na realidade a diferença entre uma determinada data (incluindo a hora) e 1 de janeiro de 1970, 00:00:00 (UTC), expressa em segundos. Para criar um objeto de data a partir de um timestamp, temos de passar um timestamp Unix para o método `fromtimestamp` :
+
+```
+from datetime import date
+import time
+
+timestamp = time.time()
+d = date.fromtimestamp(timestamp)
+```
+
+**Note:** A função `time` devolve o número de segundos desde 1 de janeiro de 1970 até ao momento atual sob a forma de um número float.
+
+
+4. O construtor da classe `time` aceita seis argumentos (hora, minuto, segundo, microssegundo, tzinfoe fold). Cada um destes argumentos é opcional.
+
+```
+from datetime import time
+
+t = time(13, 22, 20)
+
+print("Hour:", t.hour) # Hour: 13
+print("Minute:", t.minute) # Minute: 22
+print("Second:", t.second) # Second: 20
+```
+
+5. O módulo `time` contém a função `sleep` , que suspende a execução do programa por um determinado número de segundos, por exemplo:
+
+```
+import time
+
+time.sleep(10)
+print("Hello world!") # This text will be displayed after 10 seconds.
+```
+
+6. no módulo `datetime` , data e hora podem ser representados como objetos separados ou como um único objeto. A classe que combina data e hora é chamada datetime. Todos os argumentos passados ao construtor vão para atributos de classe só de leitura. São *ano, mês, dia, hora, minuto, segundo, microssegundo, tzinfoe fold*:
+
+```
+from datetime import datetime
+
+dt = datetime(2020, 9, 29, 13, 51)
+print("Datetime:", dt) # Displays: Datetime: 2020-09-29 13:51:00
+```
+
+7. O método `strftime` só aceita um argumento sob a forma de uma string especificando um formato que pode consistir em diretivas. Uma diretiva é uma string que consiste no caratere `%` (percentagem) e uma letra minúscula ou maiúscula. Abaixo estão algumas diretivas úteis:
+
+* `%Y` – devolve o ano com o século como um número decimal;
+* `%m` — devolve o mês como um número decimal de zero;
+* `%d` — devolve o dia como um número decimal de zero;
+* `%H` — devolve a hora como um número decimal de zero;
+* `%M` — devolve o minuto como um número decimal de zero;
+* `%S` — devolve o segundo como um número decimal de zero.
+
+Exemplo:
+
+```
+from datetime import date
+
+d = date(2020, 9, 29)
+print(d.strftime('%Y/%m/%d')) # Displays: 2020/09/29
+```
+
+8. É possível realizar cálculos em objetos `date` e `datetime` , por exemplo:
+
+```
+from datetime import date
+
+d1 = date(2020, 11, 4)
+d2 = date(2019, 11, 4)
+
+d = d1 - d2
+print(d) # Displays: 366 days, 0:00:00.
+print(d * 2) # Displays: 732 days, 0:00:00.
+```
+
+O resultado da subtração é devolvido como um objeto `timedelta` que expressa a diferença em dias entre as duas datas no exemplo acima.
+
+Observe que a diferença em horas, minutos e segundos também é exibida. O objeto `timedelta` pode ser usado para cálculos adicionais (por exemplo, pode multiplicá-lo por 2).
+
+
+**Exercício 1**
+
+Qual é o output do seguinte snippet?
+
+```
+from datetime import time
+
+t = time(14, 39)
+print(t.strftime("%H:%M:%S"))
+```
+
+Verifique
+
+`14:53:00`
+
+
+**Exercício 2**
+
+Qual é o output do seguinte snippet?
+```
+from datetime import datetime
+
+dt1 = datetime(2020, 9, 29, 14, 41, 0)
+dt2 = datetime(2020, 9, 28, 14, 41, 0)
+
+print(dt1 - dt2)
+```
+
+Verifique
+
+`1 day, 0:00:00`
