@@ -25,13 +25,13 @@ Neste curso irá aprender:
 
 O curso está dividido em 4 módulos:
 
-1. Módulo 1
+1. **Módulo 1**  
     Módulos, Pacotes e PIP;
-1. Módulo 2
+1. **Módulo 2**  
     Strings, métodos de string e de lista, e exceções;
-1. Módulo 3
+1. **Módulo 3**  
     Programação Orientada ao Objeto;
-1. Módulo 4
+1. **Módulo 4**  
     Diversos (geradores, iteradores, closures, streams de arquivos, processamento de texto e arquivos binários, o módulo *os, time, datetime, e calendar*)
 
 
@@ -43,7 +43,7 @@ Há também um par de fatores que tornam o Python ótimo para aprendizagem:
 
 * É fácil de aprender - o tempo necessário para aprender Python é menor do que para muitas outras linguagens; isto significa que é possível iniciar a programação em si mais rapidamente;
 * É fácil de usar para escrever novo software - é muitas vezes possível escrever código mais rapidamente quando se usa o Python;
-* É fácil de obter, instalar e implementar - o Python é gratuito, aberto e multiplataforma; nem todas as linguagens se podem gabar disso.
+* É fácil de obter, instalar e implementar - o Python é gratuito, aberto e multiplataforma; nem todas as linguagens podem se gabar disso.
 
 A conclusão deste curso pode ser um trampolim para aprender qualquer outra linguagem de programação, e para explorar tecnologias usando Python como base (por exemplo, Django). O curso distingue-se pela sua acessibilidade, simpatia, e abertura ao aluno.
 
@@ -53,7 +53,7 @@ A primeira parte partiu do básico absoluto, guiando-o passo a passo para proble
 
 ## Onde se usa o Python?
 
-Lembra-se do Battlefield 2, Battlefield 2142 e Battlefield Heroes - jogos de estratégia e de tiros em primeira pessoa da EA DICE? Todos os jogos usam Python para controles de lógica e de servidor. O Python é frequentemente utilizado para a criação de jogos gratuitos de open-source, por exemplo, OpenRTS, PySol, Metin 2, ou Frets On Fire - famosos jogos semelhantes a Guitar Heroes, escritos em pygame.
+Lembra-se do Battlefield 2, Battlefield 2142 e Battlefield Heroes - jogos de estratégia e de tiros em primeira pessoa da EA DICE? Todos estes jogos usam Python para controles de lógica e de servidor. O Python é frequentemente utilizado para a criação de jogos gratuitos de open-source, por exemplo, OpenRTS, PySol, Metin 2, ou Frets On Fire - famosos jogos semelhantes a Guitar Heroes, escritos em pygame.
 
 E quanto aos principais sites e serviços? Dropbox? UBER? Spotify? Pintrest? BuzzFeed? Sim. Todos eles foram escritos, em maior ou menor grau, em Python. Outros exemplos?
 
