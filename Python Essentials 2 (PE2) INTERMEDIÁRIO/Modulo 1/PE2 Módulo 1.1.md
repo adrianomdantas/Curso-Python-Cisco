@@ -16,9 +16,9 @@ Neste módulo, aprenderá sobre:
 
 ## O que é um módulo?
 
-O código de programação tem uma tendência para crescer. Podemos dizer que o código que não cresce é provavelmente completamente inutilizável ou abandonado. Um código real, procurado e amplamente utilizado desenvolve-se continuamente, à medida que tanto as exigências dos utilizadores como as expetativas dos utilizadores se desenvolvem nos seus próprios ritmos.
+O código de programação tem uma tendência a crescer. Podemos dizer que o código que não cresce é provavelmente completamente inutilizável ou abandonado. Um código real, procurado e amplamente utilizado desenvolve-se continuamente, à medida que tanto as exigências dos utilizadores como as expetativas dos utilizadores se desenvolvem nos seus próprios ritmos.
 
-Um código que não seja capaz de responder às necessidades dos utilizadores será rapidamente esquecido, e imediatamente substituído por um código novo, melhor e mais flexível. Esteja preparado para isto, e nunca pense que algum dos seus programas acabe por ser concluído. A conclusão é um estado de transição e normalmente passa rapidamente, após o primeiro relatório de bug. O próprio Python é um bom exemplo de como a regra atua.
+Um código que não seja capaz de responder às necessidades dos utilizadores será rapidamente esquecido, e imediatamente substituído por um código novo, melhor e mais flexível. Esteja preparado para isto, e nunca pense que algum dos seus programas acabe ao ser concluído. A conclusão é um estado de transição e normalmente passa rapidamente, após o primeiro relatório de bug. O próprio Python é um bom exemplo de como a regra atua.
 
 Código em crescimento é, de fato, um problema em crescimento. Um código maior significa sempre uma manutenção mais dura. A procura de bugs é sempre mais fácil onde o código é menor (tal como encontrar uma quebra mecânica é mais simples quando a maquinaria é mais simples e pequena).
 
