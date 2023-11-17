@@ -47,7 +47,7 @@ Como se divide um software em partes separadas mas cooperantes? Esta é a quest�
 
 ## Como fazer uso de um módulo?
 
-Então, o que é um módulo? O [Tutorial Python](https://docs.python.org/3/tutorial/modules.html) define-o como **um arquivo contendo definições e declarações Python**, que pode ser posteriormente importado e utilizado quando necessário.
+Então, o que é um módulo? O [Tutorial Python](https://docs.python.org/3/tutorial/modules.html) o define como **um arquivo contendo definições e declarações Python**, que pode ser posteriormente importado e utilizado quando necessário.
 
 A manipulação de módulos consiste em duas questões diferentes:
 
@@ -122,7 +122,7 @@ Se o módulo de um nome especificado **existir e for acessível** (um módulo é
 
 Isto significa que pode ter as suas próprias entidades nomeadas `sin` ou `pi` e não serão de forma alguma afetadas pela importação.
 
-A este ponto, poderá estar se perguntando como pode aceder à `pi` vinda do módulo `math` .
+A este ponto, você pode estar se perguntando como pode aceder à `pi` vinda do módulo `math` .
 
 Para fazer isso, tem de qualificar o `pi` com o nome do seu módulo original.
 
@@ -138,7 +138,7 @@ math.sin
 
 É simples, coloca:
 
-* o nome do módulo (por exemplo, `math`)
+* **o nome do módulo** (por exemplo, `math`)
 * um **ponto** (i.e., `.`)
 * o **nome da entidade** (por exemplo, `pi`)
 

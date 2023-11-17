@@ -2,7 +2,7 @@
 
 ## Trabalhar com módulos padrão
 
-Antes de começarmos a passar por alguns módulos Python padrão, queremos introduzir-lhe a função `dir()` . Não tem nada a ver com o comando `dir` que conhece de consoles Windows e Unix, visto dir() não mostrar o conteúdo de um diretorio/pasta de disco, mas não há como negar que tem algo+_+ realmente semelhante - é capaz de revelar todos os nomes fornecidos através de um determinado módulo.
+Antes de começarmos a passar por alguns módulos Python padrão, queremos apresentar-lhe a função `dir()` . Não tem nada a ver com o comando `dir` que conhece de consoles Windows e Unix, visto dir() não mostrar o conteúdo de um diretorio/pasta de disco, mas não há como negar que tem algo+_+ realmente semelhante - é capaz de revelar todos os nomes fornecidos através de um determinado módulo.
 
 Há uma condição: o módulo tem de ter sido previamente importado como um todo (isto é, utilizar a `import module` instrução - `from module` não é suficiente).
 
@@ -67,7 +67,7 @@ print(sin(ar) / cos(ar) == tan(ar))
 print(asin(sin(ar)) == ar)
 ```
 
-Escolhemo arbitrariamente, mas isso não significa que as funções que não mencionamos aqui sejam menos significativas. Mergulhe você mesmo nas profundezas dos módulos - não temos aqui espaço nem tempo para falar de tudo em pormenor.
+Escolhemos arbitrariamente, mas isso não significa que as funções que não mencionamos aqui sejam menos significativas. Mergulhe você mesmo nas profundezas dos módulos - não temos aqui espaço nem tempo para falar de tudo em pormenor.
 
 O primeiro grupo das funções de `math` estão relacionadas com **trigonometria**:
 
@@ -93,6 +93,19 @@ Para operar eficazmente em medições de ângulos, o módulo math fornece-lhe as
 
 Agora veja o código no editor. O programa de exemplo não é muito sofisticado, mas consegue prever os seus resultados?
 
+```
+from math import pi, radians, degrees, sin, cos, tan, asin
+
+ad = 90
+ar = radians(ad)
+ad = degrees(ar)
+
+print(ad == 90.)
+print(ar == pi / 2.)
+print(sin(ar) / cos(ar) == tan(ar))
+print(asin(sin(ar)) == ar)
+```
+
 Além das funções circulares (listadas acima) o módulo `math` também contém um conjunto dos seus **análogos hiperbólicos**:
 
 * `sinh(x)` → o seno hiperbólico;
@@ -117,7 +130,7 @@ print(log(e, e) == exp(0))
 ```
 
 * `e` → uma constante com um valor que é uma aproximação do número de Euler (e)
-* `exp(x)` → encontrar o valor de ex;
+* `exp(x)` → encontrar o valor de e<sup>x</sup>;
 * `log(x)` → o logaritmo natural de x
 * `log(x, b)` → o logaritmo de x para base b
 * `log10(x)` → o logaritmo decimal de x (mais preciso do que `log(x, 10)`)
@@ -125,11 +138,20 @@ print(log(e, e) == exp(0))
 
 Nota: a função `pow()` .
 
-* `pow(x, y)` → encontrar o valor de xy (atenção aos domínios)
+* `pow(x, y)` → encontrar o valor de x<sup>y</sup> (atenção aos domínios)
 
 Esta é uma função integrada, e não tem de ser importada.
 
 Veja o código no editor. Consegue prever o seu output?
+
+```
+from math import e, exp, log
+
+print(pow(e, 1) == exp(log(e)))
+print(pow(2, 2) == exp(2 * log(2)))
+print(log(e, e) == exp(0))
+
+```
 
 ## 1.2.1.4 Módulos úteis | math
 
