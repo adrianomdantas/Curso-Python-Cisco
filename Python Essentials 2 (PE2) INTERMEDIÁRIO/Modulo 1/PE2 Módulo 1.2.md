@@ -167,10 +167,6 @@ O último grupo é constituído por algumas funções de caráter geral, como po
 
 Veja o código no editor. Analise o programa com cuidado.
 
-Demonstra as diferenças fundamentais entre `ceil()`, `floor()` e `trunc()`.
-
-Execute o programa e verifique o seu output.
-
 ```
 from math import ceil, floor, trunc
 
@@ -183,9 +179,14 @@ print(ceil(x), ceil(y))
 print(ceil(-x), ceil(-y))
 print(trunc(x), trunc(y))
 print(trunc(-x), trunc(-y))
-``` 
 
-outpuy
+```
+
+Demonstra as diferenças fundamentais entre `ceil()`, `floor()` e `trunc()`.
+
+Execute o programa e verifique o seu output.
+
+output
 ```
 1 2
 -2 -3
@@ -334,7 +335,7 @@ output de amostra
 
 #### A `choice` e `sample` funções
 
-Como pode ver, esta não é uma boa ferramenta para gerar números numa lotaria. Felizmente, existe uma solução melhor do que escrever o seu próprio código para verificar a singularidade dos números "sorteados".
+Como pode ver, esta não é uma boa ferramenta para gerar números numa loteria. Felizmente, existe uma solução melhor do que escrever o seu próprio código para verificar a singularidade dos números "sorteados".
 
 É uma função chamada de uma maneira muito sugestiva - `choice`:
 
@@ -367,8 +368,9 @@ Novamente, o output do programa não é previsível. Os nossos resultados foram 
 
 ## 1.2.1.9 Módulos Úteis | platform
 
-Como saber onde se encontra?
-Por vezes, pode ser necessário descobrir informações não relacionadas com Python. Por exemplo, pode precisar de saber a localização do seu programa dentro do ambiente maior do computador.
+## Como saber onde se encontra?
+
+Por vezes, pode ser necessário descobrir informações não relacionadas com Python. Por exemplo, pode precisar saber a localização do seu programa dentro de um ambiente maior do computador.
 
 Imagine o ambiente do seu programa como uma pirâmide constituída por uma série de camadas ou plataformas.
 
@@ -617,7 +619,7 @@ for atr in python_version_tuple():
     print(atr)
 ```
 
-* `python_implementation()` → devolve uma string denotando a implementação do Python (esperar `CPython` aqui, a menos que decida utilizar qualquer ramo de Python não canónico)
+* `python_implementation()` → devolve uma string denotando a implementação do Python (esperar `CPython` aqui, a menos que decida utilizar qualquer ramo de Python não canonico)
 
 * `python_version_tuple()` → devolve um tuple de três elementos preenchido com:
     * a parte **principal** da versão do Python
@@ -680,7 +682,7 @@ imprime a lista de todas as facilidades do módulo `os` que pode utilizar no seu
 4. O objeto da exceção `platform` contém cerca de 70 funções que lhe permitem mergulhar nas camadas inferiores do SO e hardware. A sua utilização permite-lhe saber mais sobre o ambiente em que o seu código é executado.
 
 
-5. O **Python Module Index** https://docs.python.org/3/py-modindex.html é uma diretoria de módulos disponíveis no universo Python, dirigido pela comunidade. Se quiser encontrar um módulo adequado às suas necessidades, inicie aí a sua pesquisa.
+5. O **Python Module Index** https://docs.python.org/3/py-modindex.html é um diretorio de módulos disponíveis no universo Python, dirigido pela comunidade. Se quiser encontrar um módulo adequado às suas necessidades, inicie aí a sua pesquisa.
 
 
 
